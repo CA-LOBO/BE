@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Economics · Study Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --teal-900:#0B3A45;
+  --teal-700:#0F4C5C;
+  --teal-600:#136577;
+  --teal-100:#E4F1F3;
+  --amber-500:#FF8A3D;
+  --amber-600:#F26A1B;
+  --amber-100:#FFEEE0;
+  --ink-900:#16202B;
+  --ink-700:#3A4756;
+  --ink-500:#6B7785;
+  --ink-300:#AAB4BF;
+  --line:#E3E8EC;
+  --bg:#F5F7F8;
+  --card:#FFFFFF;
+  --green:#1C8A53;
+  --green-bg:#EAF8EF;
+  --red:#C8442A;
+  --red-bg:#FDECE8;
+  --blue:#2563AA;
+  --blue-bg:#EBF3FC;
+  --font-display:'Sora',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+  --radius:14px;
+  --shadow:0 1px 2px rgba(16,40,48,.04), 0 6px 20px rgba(16,40,48,.06);
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html,body{height:100%;}
+body{
+  font-family:var(--font-body);
+  background:var(--bg);
+  color:var(--ink-900);
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
+::selection{background:var(--amber-100); color:var(--teal-900);}
+
+a{color:var(--teal-600); text-decoration:none;}
+
+/* scrollbars */
+*::-webkit-scrollbar{width:9px; height:9px;}
+*::-webkit-scrollbar-track{background:transparent;}
+*::-webkit-scrollbar-thumb{background:#C7D2D8; border-radius:10px;}
+*::-webkit-scrollbar-thumb:hover{background:#AAB8C0;}
+
+/* ============ APP SHELL ============ */
+.app{display:flex; height:100vh; width:100vw;}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar{
+  width:300px; min-width:300px;
+  background:linear-gradient(180deg, var(--teal-900) 0%, #0A2E37 100%);
+  color:#EAF4F5;
+  display:flex; flex-direction:column;
+  height:100vh;
+  position:relative;
+  z-index:5;
+  transition:margin-left .25s ease, width .25s ease, min-width .25s ease;
+}
+.sidebar.collapsed{margin-left:-300px;}
+
+.sb-brand{
+  padding:22px 20px 18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  display:flex; align-items:center; gap:12px;
+}
+.sb-brand-mark{
+  width:38px; height:38px; border-radius:10px;
+  background:linear-gradient(135deg, var(--amber-500), var(--amber-600));
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-weight:800; font-size:17px; color:#fff;
+  flex-shrink:0;
+  box-shadow:0 4px 10px rgba(242,106,27,.35);
+}
+.sb-brand-text .t1{font-family:var(--font-display); font-weight:700; font-size:15px; letter-spacing:.2px; color:#fff;}
+.sb-brand-text .t2{font-size:11.5px; color:#8FB3B8; margin-top:2px; letter-spacing:.3px;}
+
+.sb-search{padding:14px 16px 8px;}
+.sb-search input{
+  width:100%; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1);
+  border-radius:10px; padding:9px 12px 9px 34px; color:#EAF4F5; font-size:13px;
+  font-family:var(--font-body);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238FB3B8' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:12px center;
+}
+.sb-search input::placeholder{color:#7A9EA3;}
+.sb-search input:focus{outline:2px solid var(--amber-500); outline-offset:1px; background-color:rgba(255,255,255,.1);}
+
+.sb-scroll{flex:1; overflow-y:auto; padding:10px 12px 16px;}
+
+.sb-section-label{
+  font-size:10.5px; letter-spacing:1.2px; text-transform:uppercase;
+  color:#5E8B91; font-weight:600; padding:14px 10px 6px;
+}
+
+.sb-chapter{margin-bottom:4px;}
+.sb-chapter-hdr{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 10px; border-radius:10px; cursor:pointer;
+  transition:background .15s ease;
+}
+.sb-chapter-hdr:hover{background:rgba(255,255,255,.06);}
+.sb-chapter-hdr.active{background:rgba(255,255,255,.09);}
+
+.sb-ring{
+  width:30px; height:30px; border-radius:50%; flex-shrink:0; position:relative;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-mono); font-size:10px; font-weight:600; color:#BFD9DC;
+  background:conic-gradient(var(--amber-500) calc(var(--pct,0)*1%), rgba(255,255,255,.12) 0);
+}
+.sb-ring::after{
+  content:""; position:absolute; inset:3px; border-radius:50%; background:#0E3D47;
+}
+.sb-ring span{position:relative; z-index:1;}
+
+.sb-chapter-title{flex:1; font-size:13px; font-weight:600; color:#EAF4F5; line-height:1.3;}
+.sb-chapter-title small{display:block; font-weight:400; font-size:11px; color:#7FA6AB; margin-top:1px;}
+
+.sb-chevron{color:#6F9CA1; transition:transform .2s ease; flex-shrink:0;}
+.sb-chapter-hdr.open .sb-chevron{transform:rotate(90deg);}
+
+.sb-unit-list{
+  max-height:0; overflow:hidden; transition:max-height .25s ease;
+  padding-left:40px;
+}
+.sb-chapter.open .sb-unit-list{max-height:600px;}
+
+.sb-unit-item{
+  display:flex; align-items:center; gap:8px;
+  padding:8px 10px; margin:2px 0; border-radius:8px; cursor:pointer;
+  font-size:12.5px; color:#B9D6D9; transition:all .15s ease;
+}
+.sb-unit-item:hover{background:rgba(255,255,255,.06); color:#fff;}
+.sb-unit-item.active{background:var(--amber-500); color:#1A1206; font-weight:600;}
+.sb-unit-dot{width:6px; height:6px; border-radius:50%; background:#3E6A6F; flex-shrink:0;}
+.sb-unit-item.active .sb-unit-dot{background:#1A1206;}
+
+.sb-coming{
+  margin-top:6px; padding:14px 12px; border-radius:10px;
+  border:1px dashed rgba(255,255,255,.18); color:#7FA6AB; font-size:12px; line-height:1.5;
+}
+
+.sb-footer{
+  padding:14px 18px; border-top:1px solid rgba(255,255,255,.08);
+  font-size:11px; color:#5E8B91; display:flex; justify-content:space-between; align-items:center;
+}
+
+/* ---------- MAIN ---------- */
+.main{flex:1; display:flex; flex-direction:column; height:100vh; min-width:0;}
+
+.topbar{
+  height:60px; flex-shrink:0;
+  display:flex; align-items:center; gap:14px;
+  padding:0 22px;
+  background:var(--card); border-bottom:1px solid var(--line);
+  z-index:4;
+}
+.btn-icon{
+  width:34px; height:34px; border-radius:9px; border:1px solid var(--line);
+  background:#fff; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; color:var(--ink-700); transition:all .15s ease; flex-shrink:0;
+}
+.btn-icon:hover{background:var(--teal-100); border-color:var(--teal-600); color:var(--teal-700);}
+
+.crumb{font-size:13px; color:var(--ink-500); display:flex; align-items:center; gap:8px; min-width:0; overflow:hidden;}
+.crumb b{color:var(--ink-900); font-weight:600; white-space:nowrap;}
+.crumb .sep{color:var(--ink-300);}
+.crumb span.unit-name{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+.topbar-right{margin-left:auto; display:flex; align-items:center; gap:10px;}
+.print-btn{
+  display:flex; align-items:center; gap:7px; font-size:12.5px; font-weight:600;
+  color:var(--teal-700); background:var(--teal-100); border:1px solid transparent;
+  padding:8px 13px; border-radius:9px; cursor:pointer; transition:all .15s ease;
+}
+.print-btn:hover{background:var(--teal-600); color:#fff;}
+
+/* section pill nav */
+.sectionbar{
+  flex-shrink:0; background:var(--card); border-bottom:1px solid var(--line);
+  padding:12px 22px; display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;
+}
+.sectionbar::-webkit-scrollbar{display:none;}
+.pill{
+  flex-shrink:0; padding:8px 16px; border-radius:999px; font-size:13px; font-weight:600;
+  color:var(--ink-700); background:var(--bg); border:1px solid var(--line);
+  cursor:pointer; transition:all .15s ease; white-space:nowrap;
+  display:flex; align-items:center; gap:6px;
+}
+.pill:hover{border-color:var(--teal-600); color:var(--teal-700);}
+.pill.active{background:var(--teal-700); border-color:var(--teal-700); color:#fff;}
+.pill .pill-n{
+  font-family:var(--font-mono); font-size:10px; background:rgba(255,255,255,.25);
+  padding:1px 6px; border-radius:6px;
+}
+.pill:not(.active) .pill-n{background:rgba(15,76,92,.08); color:var(--teal-700);}
+
+/* content scroll area */
+.content{flex:1; overflow-y:auto; padding:28px 32px 80px;}
+.content-inner{max-width:880px; margin:0 auto;}
+
+.panel{display:none;}
+.panel.active{display:block; animation:fadeUp .25s ease;}
+@keyframes fadeUp{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+
+.chapter-wrap{display:none;}
+.chapter-wrap.active{display:flex; flex-direction:column; flex:1; min-height:0;}
+
+/* ============ CONTENT TYPOGRAPHY & COMPONENTS ============ */
+.page-title{font-family:var(--font-display); font-weight:800; font-size:26px; color:var(--teal-900); letter-spacing:-.3px; margin-bottom:4px;}
+.page-sub{font-size:14px; color:var(--ink-500); margin-bottom:22px; line-height:1.5;}
+
+.lo-box{
+  background:linear-gradient(135deg, var(--teal-700), var(--teal-900));
+  color:#EAF4F5; border-radius:var(--radius); padding:18px 22px; margin-bottom:24px;
+  box-shadow:var(--shadow);
+}
+.lo-box .lo-label{font-family:var(--font-mono); font-size:10.5px; letter-spacing:1.5px; color:var(--amber-500); font-weight:700; margin-bottom:8px;}
+.lo-box ul{list-style:none; display:grid; gap:7px;}
+.lo-box li{font-size:13.5px; line-height:1.5; padding-left:20px; position:relative;}
+.lo-box li::before{content:"→"; position:absolute; left:0; color:var(--amber-500); font-weight:700;}
+
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:20px 22px; margin-bottom:18px; box-shadow:var(--shadow);
+}
+.card-title{
+  font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--teal-800,var(--teal-700));
+  margin-bottom:12px; display:flex; align-items:center; gap:8px;
+}
+.card-title .num{
+  width:22px; height:22px; border-radius:7px; background:var(--teal-100); color:var(--teal-700);
+  display:flex; align-items:center; justify-content:center; font-size:11px; font-family:var(--font-mono); font-weight:700; flex-shrink:0;
+}
+
+h3.sub-h{font-family:var(--font-display); font-weight:700; font-size:14.5px; color:var(--ink-900); margin:18px 0 10px;}
+h3.sub-h:first-child{margin-top:0;}
+
+p{font-size:14px; line-height:1.7; color:var(--ink-700); margin-bottom:10px;}
+.note-list{list-style:none; display:grid; gap:9px; margin:6px 0 4px;}
+.note-list li{font-size:14px; line-height:1.6; color:var(--ink-700); padding-left:20px; position:relative;}
+.note-list li::before{content:"●"; position:absolute; left:2px; top:1px; color:var(--amber-500); font-size:7px;}
+.note-list.numbered{counter-reset:nl;}
+.note-list.numbered li{counter-increment:nl; padding-left:26px;}
+.note-list.numbered li::before{content:counter(nl); font-size:11px; font-family:var(--font-mono); font-weight:700; color:var(--teal-700); background:var(--teal-100); width:17px; height:17px; border-radius:5px; display:flex; align-items:center; justify-content:center; top:0;}
+
+.kt{color:var(--teal-700); font-weight:700; background:var(--teal-100); padding:1px 5px; border-radius:5px;}
+.gt{color:var(--green); font-weight:700;}
+.nt{color:var(--red); font-weight:700;}
+.yt{color:var(--amber-600); font-weight:700;}
+
+.callout{border-radius:10px; padding:14px 16px; margin:14px 0; border-left:4px solid; font-size:13.5px; line-height:1.6;}
+.callout .ct{font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:.4px; margin-bottom:4px; display:flex; align-items:center; gap:6px;}
+.callout.imp{background:var(--blue-bg); border-color:var(--blue); color:#1E3A5F;}
+.callout.imp .ct{color:var(--blue);}
+.callout.warn{background:var(--amber-100); border-color:var(--amber-600); color:#7A3B0E;}
+.callout.warn .ct{color:var(--amber-600);}
+.callout.exam{background:var(--green-bg); border-color:var(--green); color:#0F4A2C;}
+.callout.exam .ct{color:var(--green);}
+.callout.def{background:#F4F2FF; border-color:#7C5CFC; color:#372C7A;}
+.callout.def .ct{color:#5B3FE0;}
+
+.tbl-wrap{overflow-x:auto; margin:14px 0;}
+table.tbl{width:100%; border-collapse:collapse; font-size:13.5px;}
+table.tbl th{background:var(--teal-700); color:#fff; text-align:left; padding:10px 14px; font-weight:600; font-size:12.5px;}
+table.tbl th:first-child{border-radius:8px 0 0 0;}
+table.tbl th:last-child{border-radius:0 8px 0 0;}
+table.tbl td{padding:10px 14px; border-bottom:1px solid var(--line); color:var(--ink-700); vertical-align:top;}
+table.tbl tr:nth-child(even) td{background:#FAFBFC;}
+table.tbl tr:last-child td{border-bottom:none;}
+
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0;}
+.grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:14px 0;}
+@media (max-width:760px){.grid2,.grid3{grid-template-columns:1fr;}}
+.mini-card{background:#FAFBFC; border:1px solid var(--line); border-radius:10px; padding:14px 16px;}
+.mini-card .mc-title{font-weight:700; font-size:13px; color:var(--teal-700); margin-bottom:6px;}
+.mini-card .mc-val{font-size:13px; color:var(--ink-700); line-height:1.55;}
+
+.flow-row{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin:16px 0;}
+.flow-step{
+  background:var(--card); border:1.5px solid var(--teal-600); border-radius:10px;
+  padding:10px 14px; font-size:12.5px; font-weight:600; color:var(--teal-800,var(--teal-700));
+  text-align:center; flex:1; min-width:110px;
+}
+.flow-arr{color:var(--amber-500); font-size:18px; font-weight:700; flex-shrink:0;}
+
+.eq-box{
+  background:#0E2A30; color:#CFEFE7; border-radius:10px; padding:16px 20px; margin:14px 0;
+  font-family:var(--font-mono); font-size:14px; text-align:center; line-height:1.8;
+}
+
+.illus-box{background:#FFF7EE; border:1px solid #F3D8B6; border-radius:12px; padding:16px 18px; margin:16px 0;}
+.illus-box .il-h{font-family:var(--font-display); font-weight:700; font-size:13px; color:var(--amber-600); margin-bottom:8px; display:flex; align-items:center; gap:6px;}
+.illus-box .il-q{font-style:italic; color:var(--ink-700); font-size:13.5px; margin-bottom:10px; line-height:1.6;}
+.illus-box .il-a{font-size:13.5px; color:var(--ink-900); line-height:1.7;}
+.illus-box .il-a strong{color:var(--amber-600);}
+
+.divider{height:1px; background:var(--line); margin:22px 0;}
+
+/* compare two-column */
+.compare-wrap{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); border-radius:12px; overflow:hidden; margin:16px 0;}
+@media (max-width:760px){.compare-wrap{grid-template-columns:1fr;}}
+.compare-col{padding:16px 18px;}
+.compare-col.left{background:var(--blue-bg); border-right:1px solid var(--line);}
+.compare-col.right{background:var(--amber-100);}
+.compare-col .cc-h{font-weight:700; font-size:13px; margin-bottom:10px; display:flex; align-items:center; gap:6px;}
+.compare-col.left .cc-h{color:var(--blue);}
+.compare-col.right .cc-h{color:var(--amber-600);}
+.compare-col ul{list-style:none; display:grid; gap:7px;}
+.compare-col li{font-size:13px; line-height:1.5; color:var(--ink-700); padding-left:14px; position:relative;}
+.compare-col li::before{content:"–"; position:absolute; left:0; font-weight:700;}
+
+/* MCQ */
+.mcq-card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:12px;}
+.mcq-q{font-size:13.5px; font-weight:600; color:var(--ink-900); margin-bottom:10px; line-height:1.5; display:flex; gap:8px;}
+.mcq-q .qn{font-family:var(--font-mono); color:var(--teal-700); background:var(--teal-100); border-radius:6px; padding:1px 7px; font-size:11.5px; flex-shrink:0; height:fit-content;}
+.mcq-opts{display:grid; gap:7px; margin-left:30px;}
+.mcq-opt{
+  font-size:13px; color:var(--ink-700); padding:8px 12px; border:1px solid var(--line); border-radius:8px;
+  cursor:pointer; transition:all .15s ease; display:flex; gap:8px;
+}
+.mcq-opt:hover{border-color:var(--teal-600); background:var(--teal-100);}
+.mcq-opt .ol{font-weight:700; color:var(--ink-500); flex-shrink:0;}
+.mcq-opt.correct{background:var(--green-bg); border-color:var(--green); color:#0F4A2C;}
+.mcq-opt.correct .ol{color:var(--green);}
+.mcq-opt.wrong{background:var(--red-bg); border-color:var(--red); color:#7A2615;}
+.mcq-opt.wrong .ol{color:var(--red);}
+.mcq-reveal{margin-left:30px; margin-top:6px;}
+.mcq-reveal-btn{
+  font-size:11.5px; font-weight:600; color:var(--teal-700); background:none; border:1px dashed var(--teal-600);
+  padding:5px 11px; border-radius:7px; cursor:pointer;
+}
+.mcq-reveal-btn:hover{background:var(--teal-100);}
+
+.mcq-toolbar{display:flex; align-items:center; gap:10px; margin-bottom:16px; flex-wrap:wrap;}
+.mcq-score{
+  font-family:var(--font-mono); font-size:13px; font-weight:600; color:var(--teal-700);
+  background:var(--teal-100); padding:7px 14px; border-radius:9px;
+}
+.mcq-reset-btn{
+  font-size:12.5px; font-weight:600; color:var(--ink-700); background:#fff; border:1px solid var(--line);
+  padding:7px 13px; border-radius:9px; cursor:pointer;
+}
+.mcq-reset-btn:hover{border-color:var(--red); color:var(--red);}
+
+/* summary chips */
+.summary-list{list-style:none; display:grid; gap:10px;}
+.summary-list li{
+  background:var(--teal-100); border-radius:10px; padding:12px 16px; font-size:13.5px; line-height:1.6; color:var(--teal-900);
+  padding-left:38px; position:relative;
+}
+.summary-list li::before{
+  content:"✓"; position:absolute; left:14px; top:11px; color:#fff; background:var(--teal-700);
+  width:18px; height:18px; border-radius:50%; font-size:11px; display:flex; align-items:center; justify-content:center;
+}
+
+/* mobile sidebar toggle */
+@media (max-width:880px){
+  .sidebar{position:fixed; left:0; top:0; margin-left:-300px;}
+  .sidebar.mobile-open{margin-left:0; box-shadow:8px 0 30px rgba(0,0,0,.25);}
+  .grid2,.grid3{grid-template-columns:1fr;}
+  .content{padding:20px 16px 60px;}
+}
+
+/* empty state for coming-soon chapters */
+.empty-state{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:80px 20px; text-align:center; color:var(--ink-500);
+}
+.empty-state .es-icon{font-size:40px; margin-bottom:14px;}
+.empty-state .es-title{font-family:var(--font-display); font-weight:700; font-size:17px; color:var(--ink-900); margin-bottom:6px;}
+.empty-state .es-sub{font-size:13.5px; max-width:340px; line-height:1.6;}
+
+/* print */
+@media print{
+  .sidebar,.topbar,.sectionbar,.mcq-reveal-btn,.mcq-toolbar,.btn-icon,.print-btn{display:none !important;}
+  .content{overflow:visible; height:auto; padding:0;}
+  .panel{display:block !important;}
+  .chapter-wrap{display:block !important;}
+  body{overflow:visible;}
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-brand">
+      <div class="sb-brand-mark">BE</div>
+      <div class="sb-brand-text">
+        <div class="t1">Business Economics</div>
+        <div class="t2">CA Foundation · Study Notes</div>
+      </div>
+    </div>
+
+    <div class="sb-search">
+      <input type="text" id="sbSearch" placeholder="Search chapters, units…" oninput="filterSidebar(this.value)">
+    </div>
+
+    <div class="sb-scroll" id="sbScroll">
+      <div class="sb-section-label">Module 1</div>
+
+      <!-- CHAPTER 1 -->
+      <div class="sb-chapter open" data-chapter="ch1" id="ch1Group">
+        <div class="sb-chapter-hdr active" onclick="toggleChapter('ch1Group')">
+          <div class="sb-ring" id="ringCh1" style="--pct:0"><span>0%</span></div>
+          <div class="sb-chapter-title">Ch 1 · Nature &amp; Scope<small>of Business Economics</small></div>
+          <svg class="sb-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+        <div class="sb-unit-list">
+          <div class="sb-unit-item active" id="navCh1U1" onclick="goToUnit('ch1u1', this)"><span class="sb-unit-dot"></span>Unit 1 · Introduction</div>
+          <div class="sb-unit-item" id="navCh1U2" onclick="goToUnit('ch1u2', this)"><span class="sb-unit-dot"></span>Unit 2 · Basic Problems &amp; Price Mechanism</div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 2 -->
+      <div class="sb-chapter" data-chapter="ch2" id="ch2Group">
+        <div class="sb-chapter-hdr" onclick="toggleChapter('ch2Group')">
+          <div class="sb-ring" id="ringCh2" style="--pct:0"><span>0%</span></div>
+          <div class="sb-chapter-title">Ch 2 · Theory of<small>Demand &amp; Supply</small></div>
+          <svg class="sb-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+        <div class="sb-unit-list">
+          <div class="sb-unit-item" id="navCh2U1" onclick="goToUnit('ch2u1', this)"><span class="sb-unit-dot"></span>Unit 1 · Law of Demand &amp; Elasticity</div>
+          <div class="sb-unit-item disabled" id="navCh2U2" onclick="showComingSoon('Unit 2 · Theory of Consumer Behaviour')"><span class="sb-unit-dot"></span>Unit 2 · Consumer Behaviour</div>
+          <div class="sb-unit-item disabled" id="navCh2U3" onclick="showComingSoon('Unit 3 · Theory of Supply')"><span class="sb-unit-dot"></span>Unit 3 · Theory of Supply</div>
+        </div>
+      </div>
+
+      <!-- FUTURE CHAPTERS PLACEHOLDER -->
+      <div class="sb-coming">
+        📘 Chapters 3–5 (Production &amp; Cost, Price Determination, Business Cycles) will appear here as they're added.
+      </div>
+    </div>
+
+    <div class="sb-footer">
+      <span>v1.0</span>
+      <span id="overallProgress">0% complete</span>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main">
+    <div class="topbar">
+      <div class="btn-icon" id="sidebarToggle" onclick="toggleSidebar()" title="Toggle sidebar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+      </div>
+      <div class="crumb">
+        <b id="crumbChapter">Chapter 1</b>
+        <span class="sep">/</span>
+        <span class="unit-name" id="crumbUnit">Unit 1 · Introduction</span>
+      </div>
+      <div class="topbar-right">
+        <div class="print-btn" onclick="window.print()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print / Save PDF
+        </div>
+      </div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 1 UNIT 1 WRAP                                -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap active" id="ch1u1Wrap">
+      <div class="sectionbar" id="secbarCh1U1"></div>
+      <div class="content"><div class="content-inner" id="panelsCh1U1"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 1 UNIT 2 WRAP                                -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch1u2Wrap">
+      <div class="sectionbar" id="secbarCh1U2"></div>
+      <div class="content"><div class="content-inner" id="panelsCh1U2"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 2 UNIT 1 WRAP                                -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch2u1Wrap">
+      <div class="sectionbar" id="secbarCh2U1"></div>
+      <div class="content"><div class="content-inner" id="panelsCh2U1"></div></div>
+    </div>
+
+    <!-- COMING SOON WRAP -->
+    <div class="chapter-wrap" id="comingSoonWrap">
+      <div class="content"><div class="content-inner">
+        <div class="empty-state">
+          <div class="es-icon">🚧</div>
+          <div class="es-title" id="csTitle">Coming soon</div>
+          <div class="es-sub">This unit hasn't been added to the notes yet. Check back after the next update.</div>
+        </div>
+      </div></div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+/* ===========================================================
+   Business Economics Study Notes — Content Data
+   Each unit = { chapterLabel, unitLabel, sections:[{label, html}] }
+   Add new units by following this exact shape, then wire them
+   into index.html (wrap div + sidebar item) and app.js capWrap().
+   =========================================================== */
+
+const UNIT_DATA = {};
+
+/* =====================================================================
+   CHAPTER 1 · UNIT 1 — NATURE AND SCOPE OF BUSINESS ECONOMICS
+   ===================================================================== */
+UNIT_DATA['ch1u1'] = {
+  chapterLabel: 'Chapter 1 · Nature & Scope of Business Economics',
+  unitLabel: 'Unit 1 · Introduction',
+  sections: [
+
+  /* ---------------- SECTION 0: OVERVIEW ---------------- */
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">Nature and Scope of Business Economics</div>
+      <div class="page-sub">Unit 1 · Introduction — how Economics becomes Business Economics</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Explain the meaning of Economics.</li>
+          <li>Describe the meaning and nature of Business Economics.</li>
+          <li>Describe the scope of Business Economics.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Chapter Map</div>
+        <div class="flow-row">
+          <div class="flow-step">Definition &amp; Scope<br><small>(Micro + Macro)</small></div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Nature<br><small>Science · Art · Pragmatic · Normative</small></div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Basic Economic Problems<br><small>What / How / For whom</small></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>The Core Idea Driving Everything</div>
+        <p>Two fundamental facts create the entire subject of Economics:</p>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">😋 ENDS — Human Wants</div>
+            <ul><li>Unlimited in number</li><li>Vary in priority (graded / prioritised)</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">⚙️ MEANS — Resources</div>
+            <ul><li>Limited in supply</li><li>Have alternative uses</li></ul>
+          </div>
+        </div>
+        <div class="callout def">
+          <div class="ct">📌 Definition</div>
+          Economics is the study of how <span class="kt">relatively scarce resources</span> are allocated to satisfy the <span class="kt">competing unlimited wants</span> of human beings in a society.
+        </div>
+        <p>This mismatch — unlimited ends vs. limited means with alternative uses — is what creates <strong>scarcity of resources</strong>, and scarcity is what forces every individual, firm, and nation to make <strong>choices</strong>.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>A Bit of History</div>
+        <ul class="note-list">
+          <li>The word 'Economics' comes from the Greek word <span class="kt">'Oikonomia'</span>, meaning "household".</li>
+          <li>Until the 19th century, Economics was called <span class="kt">'Political Economy'</span>.</li>
+          <li><strong>Adam Smith's</strong> <em>"An Inquiry into the Nature and Causes of the Wealth of Nations"</em> (1776) — usually called <em>The Wealth of Nations</em> — is considered the first modern work of Economics.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Why Business Needs Economics</div>
+        <p>A business is fundamentally an <span class="kt">economic activity</span> — it transforms inputs (land, labour, capital, entrepreneurship) into outputs (goods and services) to create <strong>net value added</strong>.</p>
+        <div class="grid2">
+          <div class="mini-card">
+            <div class="mc-title">Inputs</div>
+            <div class="mc-val">Men, materials, machines, management → Land, Labour, Capital, Entrepreneurship</div>
+          </div>
+          <div class="mini-card">
+            <div class="mc-title">Outputs</div>
+            <div class="mc-val">Consumer goods, producer goods, capital goods, private/public goods, merit/non-merit goods</div>
+          </div>
+        </div>
+        <div class="callout imp">
+          <div class="ct">💡 Key Point</div>
+          Even Non-Profit Organisations (NPOs) are economic activities — they don't target private profit, but they do target <span class="kt">social benefit</span>, which still requires efficient resource decisions.
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 1: MEANING OF BUSINESS ECONOMICS ---------------- */
+  {
+    label: 'Meaning',
+    html: `
+      <div class="page-title">Meaning of Business Economics</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Boardroom Story</div>
+        <p>The textbook illustrates this with a hypothetical case: <strong>Mr. G. Ramamurthy</strong>, CEO of Worldwide Food Limited, proposes entering the soft drink business. The Board raises real concerns:</p>
+        <ul class="note-list">
+          <li>Long-term impact of the decision on company direction</li>
+          <li>Tough competition from established players (White Soft Drinks Ltd., Black Nectar Ltd.)</li>
+          <li>Past failures in the same market (Swati Foods)</li>
+          <li>Reliability of 10-year-old projections amid changing health consciousness</li>
+        </ul>
+        <div class="callout exam">
+          <div class="ct">🎯 What This Shows</div>
+          The CEO's team had analysed <span class="kt">production, cost, pricing, distribution, and financing</span> data to judge whether returns would beat the existing food business. This is <strong>decision making under uncertainty</strong> — the essence of Business Economics.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>What Is Decision Making?</div>
+        <div class="callout def">
+          <div class="ct">📌 Definition</div>
+          Decision making is the process of selecting the most efficient alternative among two or more options to attain a desired end. It involves evaluating feasible alternatives and exercising rational judgment.
+        </div>
+        <p>Choice arises because productive resources (land, labour, capital, management) are <span class="kt">limited</span> and have <span class="kt">alternative uses</span> — so more efficient alternatives must be chosen and less efficient ones rejected.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Typical Business Decisions</div>
+        <ul class="note-list numbered">
+          <li>Should our firm be in this business?</li>
+          <li>Should the firm launch a product given competitive conditions?</li>
+          <li>Which production technique should be used?</li>
+          <li>From where, and at what price, should inputs be procured?</li>
+          <li>Make components in-house, or buy from other firms?</li>
+          <li>What is the optimum output and selling price?</li>
+          <li>How to place the product, target customer segments, and set the marketing budget?</li>
+          <li>How to combat risks and uncertainty?</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Definition of Business Economics</div>
+        <div class="callout def">
+          <div class="ct">📌 Core Definition</div>
+          Business Economics (a.k.a. <span class="kt">Managerial Economics</span>) is the use of economic analysis to make business decisions involving the best use of an organisation's scarce resources.
+        </div>
+        <ul class="note-list">
+          <li><strong>Joel Dean</strong> defined it as the use of economic analysis in the formulation of business policies.</li>
+          <li>It is a component of <span class="kt">Applied Economics</span> — applying quantitative techniques like linear programming, regression analysis, capital budgeting, break-even analysis, and cost analysis.</li>
+        </ul>
+        <div class="callout imp">
+          <div class="ct">💡 One-Line Summary</div>
+          Business Economics = <strong>Economic Theory + Business Practice</strong>. It fills the gap between abstract theory and real managerial problems, drawing on Micro &amp; Macro Economics, Operations Research, Statistics, Mathematics, and Decision Theory.
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 2: NATURE — MICRO vs MACRO ---------------- */
+  {
+    label: 'Micro vs Macro',
+    html: `
+      <div class="page-title">Nature of Business Economics — Micro &amp; Macro Foundations</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Two Branches of Economics</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">🔬 Microeconomics</div>
+            <ul>
+              <li>Studies behaviour of individual units (consumers/firms)</li>
+              <li>Focuses on a small group, not the whole economy</li>
+              <li>Covers: product pricing, consumer behaviour, factor pricing, behaviour of firms, location of industry</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">🌍 Macroeconomics</div>
+            <ul>
+              <li>Studies the economy as a whole — large aggregates</li>
+              <li>Covers: national income/output, price level, employment, savings &amp; investment, balance of trade, interest rates</li>
+              <li>Represents the combined effect of millions of micro decisions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Why Business Economics Leans on Both</div>
+        <p>Business Economics is <span class="kt">primarily Micro</span> (a firm cares about its own decisions) but it must <span class="kt">incorporate Macro elements</span> because no business operates in a vacuum — it's affected by the general price level, employment levels, and government policy on taxation, interest rates, exchange rates, and monopoly regulation.</p>
+        <div class="callout imp">
+          <div class="ct">💡 Exam Angle</div>
+          A very common confusion: students think Business Economics = Microeconomics only. Correct framing: it is <strong>based largely on Microeconomics</strong> but <strong>incorporates elements of Macroeconomics</strong> for the business environment.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Nature of Business Economics — The Full List</div>
+        <table class="tbl">
+          <tr><th>Characteristic</th><th>What It Means</th></tr>
+          <tr><td><strong>A Science</strong></td><td>Systematised body of knowledge; integrates Mathematics, Statistics, Econometrics with Economic Theory; uses scientific method &amp; empirical testing</td></tr>
+          <tr><td><strong>Based on Microeconomics</strong></td><td>Concerned with decision-making of individual establishments — relies heavily on micro techniques</td></tr>
+          <tr><td><strong>Incorporates Macro elements</strong></td><td>Must consider price level, income, employment, govt. policy — the external environment</td></tr>
+          <tr><td><strong>Also an Art</strong></td><td>Involves practical application of rules &amp; principles to attain set objectives</td></tr>
+          <tr><td><strong>Uses Theory of Markets &amp; Private Enterprise</strong></td><td>Applies theory of the firm &amp; resource allocation in a private-enterprise backdrop</td></tr>
+          <tr><td><strong>Pragmatic in Approach</strong></td><td>Tackles real-world problems (unlike pure Microeconomics, which is abstract/theoretical)</td></tr>
+          <tr><td><strong>Interdisciplinary</strong></td><td>Draws from Mathematics, Operations Research, Management Theory, Accounting, Marketing, Finance, Statistics, Econometrics</td></tr>
+          <tr><td><strong>Normative in Nature</strong></td><td>Prescriptive — suggests "what should be done"; combines normative + positive theory, with emphasis on normative</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Positive vs Normative — Don't Mix These Up</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">📊 Positive Science</div>
+            <ul>
+              <li>States <span class="kt">"what is"</span></li>
+              <li>Objective, cause-and-effect, no value judgement</li>
+              <li>Descriptive in nature</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">⚖️ Normative Science</div>
+            <ul>
+              <li>States <span class="kt">"what ought to be"</span></li>
+              <li>Involves value judgements &amp; welfare considerations</li>
+              <li>Prescriptive in nature</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout exam">
+          <div class="ct">🎯 Exam Tip</div>
+          Business Economics is mainly <strong>normative</strong> (prescribes policy) but still needs <strong>positive</strong> theory to understand the real environment before prescribing anything. "Combines essentials of normative and positive theory, emphasis being more on the former."
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 3: SCOPE ---------------- */
+  {
+    label: 'Scope',
+    html: `
+      <div class="page-title">Scope of Business Economics</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Two Categories of Business Issues</div>
+        <div class="flow-row">
+          <div class="flow-step">Internal / Operational Issues<br><small>→ solved via Microeconomics</small></div>
+          <div class="flow-arr">+</div>
+          <div class="flow-step">External / Environmental Issues<br><small>→ solved via Macroeconomics</small></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>1. Microeconomics → Operational Issues</div>
+        <p>These are issues <span class="kt">within</span> the organisation's control: choice of business &amp; size, product decisions, technology, pricing, financing, inventory.</p>
+        <table class="tbl">
+          <tr><th>Microeconomic Tool</th><th>What It Helps With</th></tr>
+          <tr><td><strong>Demand Analysis &amp; Forecasting</strong></td><td>Studies consumer behaviour &amp; predicts future demand so firms produce the right quantity at the right time</td></tr>
+          <tr><td><strong>Production &amp; Cost Analysis</strong></td><td>Decides optimum output, least-cost input mix, and how costs behave as output/time/plant size change</td></tr>
+          <tr><td><strong>Inventory Management</strong></td><td>Minimises costs of holding work-in-process, raw materials, finished goods (uses ABC analysis, simulation, mathematical models)</td></tr>
+          <tr><td><strong>Market Structure &amp; Pricing Policy</strong></td><td>Understands competition intensity &amp; market power; guides pricing strategy</td></tr>
+          <tr><td><strong>Resource Allocation</strong></td><td>Uses tools like linear programming for optimum use of available resources</td></tr>
+          <tr><td><strong>Capital &amp; Investment Theory</strong></td><td>Provides criteria for choosing investment projects &amp; assessing capital efficiency</td></tr>
+          <tr><td><strong>Profit Analysis</strong></td><td>Guides measurement &amp; management of profit under uncertainty; aids future profit planning</td></tr>
+          <tr><td><strong>Risk &amp; Uncertainty Analysis</strong></td><td>Helps firms plan using past data, current information, and future prediction</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>2. Macroeconomics → Environmental Issues</div>
+        <p>These are issues the firm <span class="kt">cannot control</span> but must adapt to:</p>
+        <ul class="note-list">
+          <li>Type of economic system (capitalist / socialist / mixed)</li>
+          <li>Stage of the business cycle</li>
+          <li>National income, employment, price &amp; saving/investment trends</li>
+          <li>Government policy: industrial, competition, fiscal, foreign trade, globalisation</li>
+          <li>Central banks, financial sector &amp; capital market regulation</li>
+          <li>Socio-economic bodies — trade unions, cooperatives, consumer unions</li>
+          <li>Social &amp; political environment</li>
+        </ul>
+        <div class="callout warn">
+          <div class="ct">⚠️ Important</div>
+          Since management has <strong>no control</strong> over these external factors, the firm's job is to <strong>fine-tune its own policies</strong> to minimise their adverse effects — not to try to change them.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Outside the Scope of This Book (CA Foundation Level)</div>
+        <p>The ICAI study material flags these topics as covered <em>elsewhere</em> at higher levels (Financial Management, Strategic Management):</p>
+        <ul class="note-list"><li>Inventory Management</li><li>Product &amp; Promotion Policy</li><li>Resource Allocation</li><li>Capital Budgeting</li><li>Risk &amp; Uncertainty Analysis</li></ul>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 4: ECONOMICS vs BUSINESS ECONOMICS ---------------- */
+  {
+    label: 'Eco vs Bus. Eco',
+    html: `
+      <div class="page-title">Economics vs Business Economics</div>
+      <div class="page-sub">The single most exam-favourite comparison table in this unit</div>
+
+      <div class="card">
+        <table class="tbl">
+          <tr><th>Basis</th><th>Economics</th><th>Business Economics</th></tr>
+          <tr><td><strong>Meaning</strong></td><td>Frames economic principles to solve economic problems</td><td>Applies economic principles to solve economic problems</td></tr>
+          <tr><td><strong>Character</strong></td><td>Both Micro and Macro</td><td>Microeconomic only</td></tr>
+          <tr><td><strong>Main Task</strong></td><td>Fulfilment of needs of individuals &amp; entities</td><td>Proper decision making in a particular business entity</td></tr>
+          <tr><td><strong>Nature</strong></td><td>Positive as well as Normative</td><td>Only Normative</td></tr>
+          <tr><td><strong>Scope</strong></td><td>Wider scope</td><td>Comparatively narrow scope</td></tr>
+          <tr><td><strong>Branches</strong></td><td>Has Business Economics as its applied branch</td><td>Is itself an applied branch of Economics</td></tr>
+          <tr><td><strong>Concerned With</strong></td><td>All theories — production to consumption, including distribution</td><td>Mainly profit theory, ignoring others</td></tr>
+          <tr><td><strong>Analysis Involved</strong></td><td>Macro-level: growth, inflation, employment</td><td>Micro-level: demand, supply, profit</td></tr>
+          <tr><td><strong>Concentration</strong></td><td>Only economic aspects of a problem</td><td>Both economic AND non-economic aspects</td></tr>
+          <tr><td><strong>Validity of Assumptions</strong></td><td>Based on certain assumptions</td><td>Some assumptions become invalid when applied to real cases</td></tr>
+        </table>
+        <div class="callout exam">
+          <div class="ct">🎯 Memory Hook</div>
+          Economics = the <span class="kt">theory factory</span> (frames principles, wide scope, both positive &amp; normative). Business Economics = the <span class="kt">applied workshop</span> (uses those principles for one firm's decisions, narrow scope, only normative).
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 5: SUMMARY ---------------- */
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 1 — Quick Revision Summary</div>
+      <ul class="summary-list">
+        <li>An economy exists because human wants are <strong>unlimited</strong> and resources are <strong>scarce</strong>.</li>
+        <li>Economics studies how scarce resources are allocated to satisfy competing unlimited wants.</li>
+        <li>Economics splits into <strong>Microeconomics</strong> (individual units) and <strong>Macroeconomics</strong> (the whole economy).</li>
+        <li>Business Economics integrates economic theory with business practice for rational decision-making.</li>
+        <li>It is mainly <strong>Microeconomic</strong> in character but incorporates <strong>Macroeconomic</strong> elements for the business environment.</li>
+        <li>Business Economics is a <strong>normative</strong>, <strong>interdisciplinary</strong>, and <strong>pragmatic</strong> science (and also an art).</li>
+        <li>Its scope splits into <strong>Internal/Operational issues</strong> (Microeconomics) and <strong>External/Environmental issues</strong> (Macroeconomics).</li>
+        <li>Business Economics has a <strong>narrower scope</strong> than Economics and focuses mainly on <strong>profit theory</strong>.</li>
+      </ul>
+
+      <div class="card" style="margin-top:18px;">
+        <div class="card-title"><span class="num">📖</span>Key Terms Glossary</div>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">Scarcity</div><div class="mc-val">Resources insufficient relative to unlimited wants</div></div>
+          <div class="mini-card"><div class="mc-title">Net Value Added</div><div class="mc-val">The basic objective of any economic/business activity</div></div>
+          <div class="mini-card"><div class="mc-title">Applied Economics</div><div class="mc-val">Economics put to practical use — Business Economics is one branch</div></div>
+          <div class="mini-card"><div class="mc-title">Decision Making</div><div class="mc-val">Selecting the most efficient alternative among feasible choices</div></div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 6: PRACTICE MCQs ---------------- */
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 1</div>
+      <div class="page-sub">Click an option to answer instantly, or use "Reveal answer" to check without guessing.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch1u1" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch1u1')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q1</span>Business Economics is —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Abstract and applies the tools of Microeconomics</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Involves practical application of economic theory in business decision making</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Incorporates tools from multiple disciplines</div>
+          <div class="mcq-opt"><span class="ol">D.</span>(B) and (C) above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q2</span>The managerial economics —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Is just a theory concept</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Trains managers how to behave in recession</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Is Applied Economics that fills the gap between economic theory and business practice</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Provides the tools which explain various concepts</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q3</span>Which of the following statements is correct?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Microeconomics is important for the study of a particular household and a particular firm</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Macroeconomics is important for the study of economic conditions of a country</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Both (A) and (B)</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q4</span>Mr. Satish hired a business consultant who suggested changes regarding staff appointment and loan availability for his factory. Which approach is the consultant using?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Microeconomics</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Macroeconomics</div>
+          <div class="mcq-opt"><span class="ol">C.</span>None of the above</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Both (A) and (B)</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q5</span>Which of the following statements is/are correct regarding business economics?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>It attempts to indicate how business policies are firmly rooted in economic principles</div>
+          <div class="mcq-opt"><span class="ol">B.</span>It uses microeconomic analysis of the business unit and macroeconomic analysis of the business environment</div>
+          <div class="mcq-opt"><span class="ol">C.</span>It takes a pragmatic approach towards integrating economic theory and business practice</div>
+          <div class="mcq-opt"><span class="ol">D.</span>All the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q6</span>Which of the following statements is incorrect?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Business economics is normative in nature</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Business Economics has a close connection with statistics</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Business Economist need not worry about macro variables</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Business Economics is also called Managerial Economics</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q7</span>Which of the following is not within the scope of Business Economics (at this level)?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Capital Budgeting</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Risk Analysis</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Business Cycles</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Accounting Standards</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 1 · UNIT 2 — BASIC PROBLEMS OF AN ECONOMY & ROLE OF PRICE MECHANISM
+   ===================================================================== */
+UNIT_DATA['ch1u2'] = {
+  chapterLabel: 'Chapter 1 · Nature & Scope of Business Economics',
+  unitLabel: 'Unit 2 · Basic Problems & Price Mechanism',
+  sections: [
+
+  /* ---------------- SECTION 0: OVERVIEW ---------------- */
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">Basic Problems of an Economy &amp; Role of Price Mechanism</div>
+      <div class="page-sub">Unit 2 — How societies decide what, how, and for whom to produce</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Explain the basic problems faced by an economy.</li>
+          <li>Describe how different economies solve their basic economic problems.</li>
+          <li>Explain the role of price mechanism in solving the basic problems of an economy.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Big Picture</div>
+        <p>Every economic system — <span class="kt">capitalist</span>, <span class="kt">socialist</span>, or <span class="kt">mixed</span> — faces the same root issue: <strong>scarcity of resources relative to wants</strong>. This is the <span class="kt">central economic problem</span>, and it splits into four basic problems.</p>
+        <div class="flow-row">
+          <div class="flow-step">What to produce?</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">How to produce?</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">For whom to produce?</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Provision for growth?</div>
+        </div>
+        <div class="callout def">
+          <div class="ct">📌 Key Insight</div>
+          If resources were unlimited — or if a resource had only a <strong>single use</strong> — the economic problem would not arise at all. It is the combination of <span class="kt">scarcity</span> + <span class="kt">alternative uses</span> that creates the problem.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Three Ways to Solve It</div>
+        <div class="grid3">
+          <div class="mini-card"><div class="mc-title">🏛️ Capitalist Economy</div><div class="mc-val">Solved by the <strong>Price Mechanism</strong> — markets, profit motive, consumer sovereignty</div></div>
+          <div class="mini-card"><div class="mc-title">🏗️ Socialist Economy</div><div class="mc-val">Solved by <strong>Central Planning</strong> — the State decides what, how, for whom</div></div>
+          <div class="mini-card"><div class="mc-title">⚖️ Mixed Economy</div><div class="mc-val">Solved by a <strong>blend</strong> of price mechanism + planning</div></div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 1: FOUR BASIC PROBLEMS ---------------- */
+  {
+    label: 'The 4 Basic Problems',
+    html: `
+      <div class="page-title">The Four Basic Economic Problems</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>What to Produce?</div>
+        <p>Since resources are limited, society must decide <span class="kt">which goods and services</span> to produce, and <span class="kt">how many units</span> of each.</p>
+        <ul class="note-list">
+          <li>Guns vs. butter? Capital goods (machines, dams) vs. consumer goods (cell phones)?</li>
+          <li>How much wheat, how many hospitals, schools, machines, metres of cloth?</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>How to Produce?</div>
+        <p>For any commodity there are <span class="kt">alternative techniques</span> of production.</p>
+        <div class="compare-wrap">
+          <div class="compare-col left"><div class="cc-h">🧵 Labour-Intensive</div><ul><li>Handlooms for cotton cloth</li><li>More labour, less capital</li></ul></div>
+          <div class="compare-col right"><div class="cc-h">⚙️ Capital-Intensive</div><ul><li>Automatic looms for cotton cloth</li><li>More machines, less labour</li></ul></div>
+        </div>
+        <div class="callout imp"><div class="ct">💡 Deciding Factor</div>The choice depends on the <strong>availability</strong> and <strong>relative prices</strong> of labour vs. capital — society should use whichever technique makes the best use of available resources.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>For Whom to Produce?</div>
+        <p>A society cannot satisfy every want of every person — so it must decide <span class="kt">who gets how much</span> of the total output, i.e. how goods/services are distributed, or "shares in the national cake."</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>What Provision for Economic Growth?</div>
+        <p>If <em>all</em> scarce resources go to current consumption, production capacity never increases — incomes stagnate and may even decline. Society must decide how much <span class="kt">saving and investment</span> (i.e. sacrifice of current consumption) to make for future progress.</p>
+        <div class="callout exam"><div class="ct">🎯 Exam Tip</div>This 4th problem is often missed by students who only remember "what, how, for whom" — but the ICAI syllabus explicitly lists <strong>4 basic problems</strong>, not 3.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">⑤</span>What Is an "Economic System"?</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>An economic system is the sum total of arrangements for the production and distribution of goods and services in a society — the sum of devices that give effect to economic choice, including individuals and economic institutions.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 2: CAPITALIST ECONOMY ---------------- */
+  {
+    label: 'Capitalist Economy',
+    html: `
+      <div class="page-title">Capitalist Economy</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Definition</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>Capitalism is an economic system in which all means of production are owned and controlled by <span class="kt">private individuals for profit</span>. Private property is the mainstay; profit motive is the driving force.</div>
+        <p>Also called a <span class="kt">free market</span> or <span class="kt">laissez-faire</span> economy. Examples (not pure forms): USA, UK, Hong Kong, South Korea.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Seven Defining Characteristics</div>
+        <table class="tbl">
+          <tr><th>Feature</th><th>Meaning</th></tr>
+          <tr><td><strong>Right to Private Property</strong></td><td>Land, factories, machinery, mines can be privately owned, used, and bequeathed (subject to govt. restriction for social benefit)</td></tr>
+          <tr><td><strong>Freedom of Enterprise</strong></td><td>Anyone can set up any type of firm and produce goods/services of choice</td></tr>
+          <tr><td><strong>Freedom of Economic Choice</strong></td><td>Free choice regarding consumption, work, production, exchange</td></tr>
+          <tr><td><strong>Profit Motive</strong></td><td>The driving force directing all economic activity</td></tr>
+          <tr><td><strong>Consumer Sovereignty</strong></td><td>Buyers ultimately decide what's produced, via their purchases ("consumer is king")</td></tr>
+          <tr><td><strong>Competition</strong></td><td>Brings out the best in buyers &amp; sellers → efficient resource use</td></tr>
+          <tr><td><strong>Absence of Govt. Interference</strong></td><td>No central planning — price mechanism operates automatically</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>How Capitalism Solves the Central Problems</div>
+        <p>Through the <span class="kt">impersonal forces of market demand &amp; supply</span> — the price mechanism — without any central authority.</p>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">What to produce?</div><div class="mc-val">Consumer demand ↑ → price ↑ → profit ↑ → producers make <strong>more</strong> of it. Decided ultimately by <strong>consumers' spending</strong>.</div></div>
+          <div class="mini-card"><div class="mc-title">How to produce?</div><div class="mc-val">Entrepreneur picks the technique that <strong>minimises cost</strong> — labour-intensive if labour is cheap, capital-intensive if capital is cheap.</div></div>
+          <div class="mini-card"><div class="mc-title">For whom to produce?</div><div class="mc-val">For those with <strong>buying capacity</strong> — determined by income, which depends on work, factor prices owned, and property owned.</div></div>
+          <div class="mini-card"><div class="mc-title">Saving &amp; Investment?</div><div class="mc-val">Savings driven by <strong>interest rate</strong>; investment driven by <strong>expected rate of return on capital</strong>.</div></div>
+        </div>
+        <div class="callout exam"><div class="ct">🎯 One-Liner</div>"What goods are produced, by which methods, for whom, and what provision for growth — all decided by <strong>price mechanism / market mechanism</strong>."</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Merits vs Demerits</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">✅ Merits</div>
+            <ul>
+              <li>Self-regulating — no cost of planning/monitoring</li>
+              <li>Greater efficiency &amp; incentive to work</li>
+              <li>Faster economic growth (only feasible projects funded)</li>
+              <li>Optimum allocation of resources</li>
+              <li>Lower cost of production</li>
+              <li>Variety, quality, reasonable prices benefit consumers</li>
+              <li>Encourages innovation, technological progress</li>
+              <li>Preserves freedom &amp; private property rights</li>
+              <li>Rewards initiative; usually functions within democracy</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">❌ Demerits</div>
+            <ul>
+              <li>Vast economic inequality &amp; social injustice ("haves" vs "have-nots")</li>
+              <li>Property rights take precedence over human rights</li>
+              <li>Exploitation of labour; no job security</li>
+              <li>Consumer sovereignty is partly a "myth" — exploitation occurs</li>
+              <li>Misallocation toward luxury goods; fewer wage goods/merit goods</li>
+              <li>Unplanned production → instability, depression, unemployment</li>
+              <li>Wasteful advertising/sales-promotion spending</li>
+              <li>Leads to monopolies</li>
+              <li>Environmental degradation from excessive consumption</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 3: SOCIALIST ECONOMY ---------------- */
+  {
+    label: 'Socialist Economy',
+    html: `
+      <div class="page-title">Socialist Economy</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Origin &amp; Definition</div>
+        <ul class="note-list">
+          <li>Propounded by <strong>Karl Marx &amp; Frederic Engels</strong> in <em>The Communist Manifesto</em> (1848).</li>
+          <li>Material means of production (factories, capital, mines) are owned by the <span class="kt">whole community</span>, represented by the State.</li>
+          <li>Also called <span class="kt">"Command Economy"</span> or <span class="kt">"Centrally Planned Economy"</span>.</li>
+        </ul>
+        <div class="callout imp"><div class="ct">💡 Examples</div>USSR (1917–1990, historical). Today: Vietnam, China, Cuba show socialist features; North Korea is described as the world's most totalitarian state.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Six Characteristics</div>
+        <table class="tbl">
+          <tr><th>Feature</th><th>Meaning</th></tr>
+          <tr><td><strong>Collective Ownership</strong></td><td>All major means of production owned collectively (small farms/workshops may stay private)</td></tr>
+          <tr><td><strong>Economic Planning</strong></td><td>Central Planning Authority sets &amp; accomplishes socio-economic goals</td></tr>
+          <tr><td><strong>Absence of Consumer Choice</strong></td><td>Freedom from hunger guaranteed, but choice limited by planned production; right to work guaranteed but occupation choice restricted</td></tr>
+          <tr><td><strong>Relatively Equal Income Distribution</strong></td><td>Inequality narrowed by lack of opportunity to accumulate private capital</td></tr>
+          <tr><td><strong>Minimum Role of Price Mechanism</strong></td><td>Prices are "administered prices" set by the planning authority, only secondary role</td></tr>
+          <tr><td><strong>Absence of Competition</strong></td><td>State is the sole entrepreneur</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Merits vs Demerits</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">✅ Merits</div>
+            <ul>
+              <li>Equitable wealth/income distribution → social justice</li>
+              <li>Rapid, balanced development via central coordination</li>
+              <li>Better resource utilisation, no wasted ad-spend</li>
+              <li>Minimised unemployment, no business fluctuations</li>
+              <li>Co-operative mentality (no profit-driven class war)</li>
+              <li>Guaranteed right to work &amp; minimum living standard</li>
+              <li>Protection from exploitation by employers/monopolies</li>
+              <li>Comprehensive social security</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">❌ Demerits</div>
+            <ul>
+              <li>Bureaucracy → inefficiency, delays, corruption, favouritism</li>
+              <li>Restricts individual freedom; loses private property rights</li>
+              <li>No profit incentive for hard work</li>
+              <li>Administered prices lack proper cost-calculation basis</li>
+              <li>State monopolies can be uncontrollable</li>
+              <li>Limited consumer freedom of choice</li>
+              <li>No reward for personal efficiency → disincentive to work</li>
+              <li>Extreme socialism is impractical</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 4: MIXED ECONOMY ---------------- */
+  {
+    label: 'Mixed Economy',
+    html: `
+      <div class="page-title">Mixed Economy</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Concept</div>
+        <p>A mixed economy depends on <span class="kt">both markets and governments</span> for resource allocation — in fact every real-world economy is "mixed" to some degree. It aims to combine the best of capitalism (private enterprise, profit motive) with the best of socialism (state control to protect community welfare) while excluding the demerits of both.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Three Sectors</div>
+        <div class="grid3">
+          <div class="mini-card"><div class="mc-title">🏢 Private Sector</div><div class="mc-val">Managed by private individuals/groups; self-interest &amp; profit motive; may be regulated by govt.</div></div>
+          <div class="mini-card"><div class="mc-title">🏛️ Public Sector</div><div class="mc-val">Set up by the State for community welfare, not primarily profit-driven</div></div>
+          <div class="mini-card"><div class="mc-title">🤝 Combined Sector</div><div class="mc-val">Govt. + private enterprises jointly produce — "joint sectors"</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Merits vs Demerits</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">✅ Merits</div>
+            <ul>
+              <li>Economic freedom + private property → incentive to work</li>
+              <li>Price mechanism + competition → efficient decisions</li>
+              <li>Consumer sovereignty &amp; freedom of choice</li>
+              <li>Incentives for innovation</li>
+              <li>Advantages of planning + rapid development</li>
+              <li>Greater equality via state participation</li>
+              <li>Cut-throat competition curbed by regulation</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">❌ Demerits</div>
+            <ul>
+              <li>Excessive state control → reduced incentives, higher taxation</li>
+              <li>Corruption, wastage, delays, poor public-sector performance</li>
+              <li>Hard to balance public vs private sector</li>
+              <li>Without strong govt. initiative, private sector may grow disproportionately, mimicking capitalism's flaws</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout warn"><div class="ct">⚠️ Exam Trap</div>Mixed economy is <strong>not automatically</strong> a "golden path" — the textbook explicitly says it "could also suffer from substantial uncertainties."</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 5: COMPARISON TABLE ---------------- */
+  {
+    label: 'Side-by-Side',
+    html: `
+      <div class="page-title">Capitalist vs Socialist vs Mixed — Side by Side</div>
+      <div class="card">
+        <table class="tbl">
+          <tr><th>Aspect</th><th>🏛️ Capitalist</th><th>🏗️ Socialist</th><th>⚖️ Mixed</th></tr>
+          <tr><td><strong>Ownership</strong></td><td>Private</td><td>Collective / State</td><td>Both private &amp; public</td></tr>
+          <tr><td><strong>Driving Force</strong></td><td>Profit motive</td><td>Welfare of community</td><td>Profit + welfare</td></tr>
+          <tr><td><strong>Allocation Mechanism</strong></td><td>Price mechanism</td><td>Central planning</td><td>Price mechanism + planning</td></tr>
+          <tr><td><strong>Govt. Role</strong></td><td>Minimal</td><td>Total control</td><td>Regulatory + participative</td></tr>
+          <tr><td><strong>Consumer Choice</strong></td><td>Full (sovereignty)</td><td>Restricted</td><td>Substantial, but regulated</td></tr>
+          <tr><td><strong>Income Distribution</strong></td><td>Unequal</td><td>Relatively equal</td><td>Moderately equal</td></tr>
+          <tr><td><strong>Examples</strong></td><td>USA, UK, Hong Kong (broadly)</td><td>Vietnam, China, Cuba, North Korea</td><td>Most real-world economies, incl. India</td></tr>
+        </table>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 6: SUMMARY ---------------- */
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 2 — Quick Revision Summary</div>
+      <ul class="summary-list">
+        <li>The basic problem of <strong>scarcity</strong> gives rise to the central economic problem in every economy.</li>
+        <li>Unlimited wants + scarce resources → <strong>4 basic problems</strong>: What, How, For Whom to produce, and Provision for growth.</li>
+        <li>A <strong>capitalist</strong> economy uses the <strong>price mechanism</strong> to solve these problems.</li>
+        <li>A <strong>socialist</strong> economy uses <strong>central planning</strong>.</li>
+        <li>A <strong>mixed</strong> economy uses a blend of price mechanism + central planning.</li>
+        <li>In capitalism: consumer spending decides <em>what</em>, relative factor prices decide <em>how</em>, income/buying-capacity decides <em>for whom</em>.</li>
+        <li>Every real-world economy today is mixed to some degree — pure capitalism and pure socialism are largely theoretical extremes.</li>
+      </ul>
+    `
+  },
+
+  /* ---------------- SECTION 7: PRACTICE MCQs ---------------- */
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 2</div>
+      <div class="page-sub">Click an option to answer, or reveal the answer directly.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch1u2" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch1u2')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q1</span>The central problem in economics is that of —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Comparing the success of command versus market economies</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Guaranteeing that production occurs in the most efficient manner</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Guaranteeing a minimum level of income for every citizen</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Allocating scarce resources so that society's unlimited wants are satisfied in the best possible manner</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q2</span>A capitalist economy uses ___________ as the principal means of allocating resources.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Demand</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Supply</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Prices</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Efficiency</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q3</span>In a mixed economy —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>All economic decisions are taken by the central authority</div>
+          <div class="mcq-opt"><span class="ol">B.</span>All economic decisions are taken by private entrepreneurs</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Economic decisions are partly taken by the state and partly by private entrepreneurs</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q4</span>___________ is also called as command economy.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Socialist</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Capitalist</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Mixed economy</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q5</span>Administered prices refer to —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Prices determined by forces of demand and supply</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Prices determined by sellers in the market</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Prices determined by an external authority, usually the government</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q6</span>Which of the following is not one of the features of a capitalist economy?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Right of private property</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Freedom of choice by the consumers</div>
+          <div class="mcq-opt"><span class="ol">C.</span>No profit, no loss motive</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Competition</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q7</span>Exploitation and inequality are minimal under —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Socialism</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Capitalism</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Mixed economy</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q8</span>Larger production of ___ goods would lead to higher production in future.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Capital goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Consumer goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Agricultural goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Public goods</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q9</span>In a free market economy, the allocation of resources is determined by —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Voting done by consumers</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Consumer preferences</div>
+          <div class="mcq-opt"><span class="ol">C.</span>A central planning authority</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The level of profits of firms</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q10</span>Capital intensive technique would get chosen in a —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Capital surplus economy where the relative price of capital is lower</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Labour surplus economy where the relative price of capital is lower</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Developed economy where technology is better (regardless of prices)</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Developing economy where technology is poor</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 2 · UNIT 1 — LAW OF DEMAND AND ELASTICITY OF DEMAND
+   ===================================================================== */
+UNIT_DATA['ch2u1'] = {
+  chapterLabel: 'Chapter 2 · Theory of Demand & Supply',
+  unitLabel: 'Unit 1 · Law of Demand & Elasticity',
+  sections: [
+
+  /* ---------------- SECTION 0: OVERVIEW ---------------- */
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">Law of Demand and Elasticity of Demand</div>
+      <div class="page-sub">Unit 1 — How buyers respond to price, income, and related-goods changes</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Explain the meaning of Demand.</li>
+          <li>Describe what determines Demand.</li>
+          <li>Explain the Law of Demand.</li>
+          <li>Explain Movement along vs Shift of the Demand Curve.</li>
+          <li>Define and measure Elasticity.</li>
+          <li>Apply the concepts of Price, Cross and Income Elasticities.</li>
+          <li>Explain the Determinants of Elasticity.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Chapter Map</div>
+        <div class="flow-row">
+          <div class="flow-step">Meaning &amp; Determinants of Demand</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Law of Demand<br><small>Schedule · Curve</small></div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Shifts vs Movements</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Elasticity<br><small>Price · Income · Cross · Advt.</small></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Why Managers Care</div>
+        <p>The chapter opens with <strong>Aroma Tea Limited</strong> deciding whether to enter the green tea business. The CEO's questions to the marketing head are exactly what this unit answers: Who are the competitors? Is it a luxury or necessity? What drives its demand? Will coffee/soft-drink consumers switch to it?</p>
+        <div class="callout imp"><div class="ct">💡 Key Idea</div>Demand and supply are the forces that make <span class="kt">market economies work</span> — together they determine <strong>price</strong> and <strong>quantity sold</strong>. Buyers = demand side; Sellers = supply side.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 1: MEANING & DETERMINANTS OF DEMAND ---------------- */
+  {
+    label: 'Meaning & Determinants',
+    html: `
+      <div class="page-title">Meaning of Demand &amp; Its Determinants</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>What Is "Demand"?</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>Demand = the quantity of a good/service that buyers are <span class="kt">willing AND able</span> to purchase at various prices during a given period of time.</div>
+        <p>Demand is <strong>more than desire</strong>. Effective demand requires all three:</p>
+        <div class="grid3">
+          <div class="mini-card"><div class="mc-title">1. Desire</div><div class="mc-val">The want to own/use the good</div></div>
+          <div class="mini-card"><div class="mc-title">2. Means to Purchase</div><div class="mc-val">Purchasing power / ability to pay</div></div>
+          <div class="mini-card"><div class="mc-title">3. Willingness to Pay</div><div class="mc-val">Readiness to actually spend that money</div></div>
+        </div>
+        <div class="callout warn"><div class="ct">⚠️ Exam Trap</div>Without all three, it isn't "demand" in the economic sense — only <strong>effective demand</strong> matters in business decisions.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Two Things to Note About Quantity Demanded</div>
+        <ul class="note-list numbered">
+          <li>Quantity demanded is always expressed <span class="kt">at a given price</span> — different prices generally give different quantities.</li>
+          <li>Quantity demanded is a <span class="kt">flow</span> — expressed per unit of time (e.g., "1,000 dozen oranges per day").</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>The Determinants of Demand</div>
+        <table class="tbl">
+          <tr><th>Determinant</th><th>Relationship / Effect</th></tr>
+          <tr><td><strong>Price of the commodity</strong></td><td>Inversely related (ceteris paribus) — via income &amp; substitution effects</td></tr>
+          <tr><td><strong>Price of related goods</strong></td><td>Complements: inverse relation. Substitutes: direct relation (see below)</td></tr>
+          <tr><td><strong>Disposable income</strong></td><td>Normal goods: direct. Inferior goods: inverse beyond a point</td></tr>
+          <tr><td><strong>Tastes &amp; preferences</strong></td><td>Fashion, demonstration/bandwagon/snob/Veblen effects</td></tr>
+          <tr><td><strong>Consumer expectations</strong></td><td>Expected price rise/income rise → buy more now</td></tr>
+          <tr><td><strong>Size &amp; age distribution of population</strong></td><td>More people / more of a certain age group → more demand for relevant goods</td></tr>
+          <tr><td><strong>National income &amp; its distribution</strong></td><td>Higher &amp; more equal income → higher propensity to consume</td></tr>
+          <tr><td><strong>Consumer credit &amp; interest rates</strong></td><td>Easy credit, low interest → more demand for durables</td></tr>
+          <tr><td><strong>Government policy</strong></td><td>Taxes ↓ demand; subsidies ↑ demand</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Complements vs Substitutes</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">🔗 Complementary Goods</div>
+            <ul>
+              <li>Bought/used together: tea &amp; sugar, car &amp; petrol, pen &amp; ink</li>
+              <li>Price of complement ↑ → demand for the good ↓ (<strong>inverse relation</strong>)</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">🔄 Substitute Goods</div>
+            <ul>
+              <li>Satisfy the same want: tea &amp; coffee, ink pen &amp; ball pen</li>
+              <li>Price of substitute ↑ → demand for the good ↑ (<strong>direct relation</strong>)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">⑤</span>Normal vs Inferior Goods</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">📈 Normal Goods</div>
+            <ul><li>Demand rises as income rises</li><li>Furniture, clothing, automobiles, durables</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">📉 Inferior Goods</div>
+            <ul><li>Demand rises only up to a point, then falls as income rises further</li><li>Coarse grains are the classic example</li></ul>
+          </div>
+        </div>
+        <div class="callout imp"><div class="ct">💡 Necessities vs Luxuries</div>Necessities (food, fuel) see less-than-proportionate demand increase as income rises. Luxury/prestige goods only emerge — and then rise faster — beyond a certain income level.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">⑥</span>Psychological/Social Effects on Demand</div>
+        <table class="tbl">
+          <tr><th>Effect</th><th>Meaning</th><th>Impact on Demand</th></tr>
+          <tr><td><strong>Demonstration Effect</strong> (Duesenberry)</td><td>Desire to emulate others' consumption</td><td>Increases</td></tr>
+          <tr><td><strong>Bandwagon Effect</strong></td><td>Buy to be fashionable / conform to a group</td><td>Increases</td></tr>
+          <tr><td><strong>Snob Effect</strong></td><td>Desire to be exclusive / different from "the herd"</td><td>Decreases</td></tr>
+          <tr><td><strong>Veblen Effect</strong></td><td>Conspicuous consumption — high price = high status (a function of <em>price</em>)</td><td>Increases with price</td></tr>
+        </table>
+        <div class="callout exam"><div class="ct">🎯 Exam Distinction</div>Snob effect is a function of <strong>others' consumption</strong> (opposite of bandwagon); Veblen effect is a function of <strong>price itself</strong>.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 2: DEMAND FUNCTION & LAW OF DEMAND ---------------- */
+  {
+    label: 'Demand Function & Law',
+    html: `
+      <div class="page-title">The Demand Function &amp; the Law of Demand</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Demand Function</div>
+        <p>A function expresses the relationship between a dependent variable and independent variables.</p>
+        <div class="eq-box">Q<sub>x</sub> = f (P<sub>x</sub>, Y, P<sub>r</sub>)</div>
+        <p style="text-align:center; font-size:13px; color:var(--ink-500); margin-top:-8px;">Q<sub>x</sub> = quantity demanded of X &nbsp;|&nbsp; P<sub>x</sub> = price of X &nbsp;|&nbsp; Y = consumer's income &nbsp;|&nbsp; P<sub>r</sub> = price of related goods</p>
+        <p>A specific numeric form, e.g. <strong>Q<sub>x</sub> = 45 + 2Y + 1P<sub>r</sub> − 2P</strong>, lets us calculate exact quantities. In this unit, we mostly study demand as a function of <span class="kt">price alone</span>, holding everything else constant.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>The Law of Demand</div>
+        <div class="callout def"><div class="ct">📌 Marshall's Statement</div>"The greater the amount to be sold, the smaller must be the price at which it is offered… the amount demanded increases with a fall in price and diminishes with a rise in price."</div>
+        <p>In short: <strong>other things being equal</strong> (ceteris paribus), price and quantity demanded are <span class="kt">inversely related</span>.</p>
+        <div class="callout warn"><div class="ct">⚠️ The "Other Things" Held Constant</div>Prices of related goods, consumer income, tastes &amp; preferences, and all other non-price demand determinants. If any of these change, the inverse relationship may not hold.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Demand Schedule (Individual Buyer Example — Ice-Cream)</div>
+        <table class="tbl">
+          <tr><th></th><th>Price per cup (₹)</th><th>Quantity demanded/week (cups)</th></tr>
+          <tr><td>A</td><td>60</td><td>0</td></tr>
+          <tr><td>B</td><td>50</td><td>2</td></tr>
+          <tr><td>C</td><td>40</td><td>4</td></tr>
+          <tr><td>D</td><td>30</td><td>6</td></tr>
+          <tr><td>E</td><td>20</td><td>8</td></tr>
+          <tr><td>F</td><td>10</td><td>10</td></tr>
+          <tr><td>G</td><td>0</td><td>12</td></tr>
+        </table>
+        <p>Plotting this gives a <span class="kt">downward-sloping demand curve</span> — price on the Y-axis, quantity on the X-axis.</p>
+        <div class="callout imp"><div class="ct">💡 Slope</div>Slope of the demand curve = −ΔP/ΔQ. The negative sign is consistent with the Law of Demand. The curve need not be a straight line — it can be curvilinear.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Market Demand = Sum of Individual Demands</div>
+        <table class="tbl">
+          <tr><th>Price of X (₹)</th><th>Qty by A</th><th>Qty by B</th><th>Total Market Demand</th></tr>
+          <tr><td>0</td><td>3</td><td>2</td><td>5</td></tr>
+          <tr><td>10</td><td>2</td><td>1</td><td>3</td></tr>
+          <tr><td>20</td><td>1</td><td>0</td><td>1</td></tr>
+          <tr><td>30</td><td>0</td><td>0</td><td>0</td></tr>
+        </table>
+        <p>The <strong>market demand curve</strong> is the <span class="kt">horizontal summation</span> of all individual demand curves — it slopes downward for the same reason individual curves do.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">⑤</span>Linear Demand Function</div>
+        <div class="eq-box">Q = a − bP &nbsp;&nbsp;⇄&nbsp;&nbsp; P = a/b − Q/b</div>
+        <div class="illus-box">
+          <div class="il-h">📝 Worked Example</div>
+          <div class="il-q">For the demand function Q = 100 − 2P, express P in terms of Q.</div>
+          <div class="il-a"><strong>Solution:</strong> a = 100, b = 2 → P = 100/2 − Q/2 = <strong>50 − Q/2</strong></div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 3: WHY DEMAND CURVES SLOPE DOWNWARD + EXCEPTIONS ---------------- */
+  {
+    label: 'Rationale & Exceptions',
+    html: `
+      <div class="page-title">Why Demand Curves Slope Downward — and When They Don't</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Four Explanations for the Law of Demand</div>
+        <table class="tbl">
+          <tr><th>Explanation</th><th>Logic</th></tr>
+          <tr><td><strong>1. Price Effect (Hicks &amp; Allen)</strong></td><td>= Substitution Effect + Income Effect (see below)</td></tr>
+          <tr><td><strong>2. Diminishing Marginal Utility (Marshall)</strong></td><td>Each extra unit gives less satisfaction, so the buyer pays less for it — buys more only when price falls</td></tr>
+          <tr><td><strong>3. Arrival of New Consumers</strong></td><td>Lower price brings in buyers who couldn't previously afford the good</td></tr>
+          <tr><td><strong>4. Different Uses</strong></td><td>Cheaper goods get extended to more uses (e.g., milk → curd, ghee, sweets when cheap)</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Substitution Effect vs Income Effect</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">🔄 Substitution Effect</div>
+            <ul>
+              <li>Price falls → good becomes relatively cheaper than substitutes</li>
+              <li>Always <strong>positive</strong> when price falls — more is demanded</li>
+              <li>Stronger when: goods are closer substitutes, lower switching cost, lower inconvenience</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">💰 Income Effect</div>
+            <ul>
+              <li>Price falls → real income/purchasing power rises</li>
+              <li>For normal goods: demand rises</li>
+              <li>For inferior goods: works <strong>opposite</strong> to substitution effect</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Exceptions to the Law of Demand</div>
+        <table class="tbl">
+          <tr><th>Exception</th><th>Why Demand Rises With Price</th></tr>
+          <tr><td><strong>Conspicuous Goods (Veblen Effect)</strong></td><td>Higher price = higher prestige value, e.g. diamonds</td></tr>
+          <tr><td><strong>Giffen Goods</strong></td><td>Inferior good, no close substitutes, large budget share — price ↑ cuts real income so much that buyers shift away from costlier alternatives toward this still-cheapest staple. <em>Sir Robert Giffen</em> observed this with bread among poor British workers.</td></tr>
+          <tr><td><strong>Conspicuous Necessities</strong></td><td>Demonstration effect makes items (TVs, fridges, ACs) necessities despite rising prices</td></tr>
+          <tr><td><strong>Future Price Expectations</strong></td><td>Buyers stock up now expecting prices to rise further (e.g., drought → food grain hoarding)</td></tr>
+          <tr><td><strong>Incomplete Information / Irrational Behaviour</strong></td><td>Buyer unaware of true market price, or makes impulsive purchases</td></tr>
+          <tr><td><strong>Necessaries</strong></td><td>Minimum quantities must be consumed regardless of price</td></tr>
+          <tr><td><strong>Speculative Goods</strong></td><td>Stocks/shares — more demanded when price is rising (expecting further rise)</td></tr>
+        </table>
+        <div class="callout exam"><div class="ct">🎯 Exam Tip</div>All Giffen goods are inferior goods, but <strong>not all inferior goods are Giffen goods</strong>. Giffen goods specifically need: inferior + no close substitutes + large budget share.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 4: EXPANSION/CONTRACTION vs INCREASE/DECREASE ---------------- */
+  {
+    label: 'Shift vs Movement',
+    html: `
+      <div class="page-title">Movement Along vs Shift of the Demand Curve</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Expansion &amp; Contraction (Movement ALONG the curve)</div>
+        <p>Caused <strong>only by a change in the commodity's own price</strong>, other factors constant.</p>
+        <div class="compare-wrap">
+          <div class="compare-col left"><div class="cc-h">⬇️ Expansion of Demand</div><ul><li>Price falls → quantity demanded rises</li><li>Downward movement on same curve</li></ul></div>
+          <div class="compare-col right"><div class="cc-h">⬆️ Contraction of Demand</div><ul><li>Price rises → quantity demanded falls</li><li>Upward movement on same curve</li></ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Increase &amp; Decrease (SHIFT of the entire curve)</div>
+        <p>Caused by changes in <strong>non-price</strong> factors — income, tastes, prices of related goods, population, etc.</p>
+        <div class="compare-wrap">
+          <div class="compare-col left"><div class="cc-h">➡️ Increase in Demand</div><ul><li>More demanded at <em>every</em> price</li><li>Curve shifts <strong>rightward</strong></li></ul></div>
+          <div class="compare-col right"><div class="cc-h">⬅️ Decrease in Demand</div><ul><li>Less demanded at <em>every</em> price</li><li>Curve shifts <strong>leftward</strong></li></ul></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>What Shifts Demand — Quick Reference</div>
+        <table class="tbl">
+          <tr><th>Factor Change</th><th>→ Rightward Shift (Increase) When…</th><th>→ Leftward Shift (Decrease) When…</th></tr>
+          <tr><td>Income (normal good)</td><td>Income rises</td><td>Income falls</td></tr>
+          <tr><td>Income (inferior good)</td><td>Income falls</td><td>Income rises</td></tr>
+          <tr><td>Price of substitute</td><td>Substitute's price rises</td><td>Substitute's price falls</td></tr>
+          <tr><td>Price of complement</td><td>Complement's price falls</td><td>Complement's price rises</td></tr>
+          <tr><td>Number of buyers</td><td>Increases</td><td>Decreases</td></tr>
+          <tr><td>Tastes</td><td>Shift in favour</td><td>Shift against</td></tr>
+          <tr><td>Future price expectation</td><td>Expect price to rise</td><td>Expect price to fall</td></tr>
+          <tr><td>Govt. policy</td><td>Subsidies</td><td>Bans / discouraging regulation</td></tr>
+        </table>
+        <div class="callout exam"><div class="ct">🎯 Exam Vocabulary</div>"<strong>Change in demand</strong>" = shift of the curve (non-price factors changed). "<strong>Change in quantity demanded</strong>" = movement on the same curve (only price changed). Examiners love testing this distinction directly.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 5: ELASTICITY BASICS + PRICE ELASTICITY ---------------- */
+  {
+    label: 'Elasticity Basics',
+    html: `
+      <div class="page-title">Elasticity of Demand — The Core Concept</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Why Elasticity Matters</div>
+        <p>The Law of Demand tells us only the <strong>direction</strong> of change. Elasticity tells us the <span class="kt">degree of responsiveness</span> — exactly how much quantity demanded changes for a given % change in price/income/etc.</p>
+        <div class="callout def"><div class="ct">📌 Definition</div>Elasticity of demand = % change in quantity demanded ÷ % change in one of the variables on which demand depends.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Four Types of Elasticity</div>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">💰 Price Elasticity (Ep)</div><div class="mc-val">Responsiveness to the good's <strong>own price</strong></div></div>
+          <div class="mini-card"><div class="mc-title">📊 Income Elasticity (Ei)</div><div class="mc-val">Responsiveness to <strong>consumer income</strong></div></div>
+          <div class="mini-card"><div class="mc-title">🔄 Cross Elasticity (Ec)</div><div class="mc-val">Responsiveness to <strong>price of a related good</strong></div></div>
+          <div class="mini-card"><div class="mc-title">📢 Advertisement Elasticity (Ea)</div><div class="mc-val">Responsiveness to <strong>advertising spend</strong></div></div>
+        </div>
+        <div class="callout imp"><div class="ct">💡 Default Meaning</div>Unless stated otherwise, "elasticity of demand" always means <strong>price elasticity of demand</strong>.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Price Elasticity — Formula</div>
+        <div class="eq-box">E<sub>p</sub> = (% change in quantity demanded) ÷ (% change in price) = (Δq/q) × (p/Δp)</div>
+        <ul class="note-list">
+          <li>Because price &amp; quantity are usually inversely related, E<sub>p</sub> is technically <strong>negative</strong> — but by convention we use the <span class="kt">absolute value</span>.</li>
+          <li>Two reasons it matters to a firm: it lets the firm <strong>predict the impact of price changes on sales</strong>, and it guides <strong>profit-maximising pricing decisions</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Worked Illustrations</div>
+        <div class="illus-box">
+          <div class="il-h">📝 Illustration 1</div>
+          <div class="il-q">Price falls from ₹6 to ₹4; quantity demanded rises from 10 to 15 units. Find Ep.</div>
+          <div class="il-a">Ep = (Δq/Δp) × (p/q) = (5/−2) × (6/10) = <strong>−1.5</strong> (magnitude 1.5, elastic)</div>
+        </div>
+        <div class="illus-box">
+          <div class="il-h">📝 Illustration 4</div>
+          <div class="il-q">Quantity demanded at ₹9/unit is 800 units. Price falls 25% and quantity rises by 160 units. Find Ep.</div>
+          <div class="il-a">% change in quantity = (160/800)×100 = 20%. % change in price = 25%.<br>Ep = 20/25 = <strong>0.8</strong> (inelastic)</div>
+        </div>
+        <div class="illus-box">
+          <div class="il-h">📝 Illustration 5</div>
+          <div class="il-q">A consumer buys 80 units at ₹4/unit. Price elasticity = −4. At what price will he buy 60 units?</div>
+          <div class="il-a">4 = (Δq/Δp)×(p/q) → 4 = (20/(x−4)) × (4/80) → 4 = 1/(x−4) → <strong>x = ₹4.25 per unit</strong></div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 6: POINT, ARC ELASTICITY & GEOMETRIC METHOD ---------------- */
+  {
+    label: 'Point & Arc Elasticity',
+    html: `
+      <div class="page-title">Point Elasticity, Arc Elasticity &amp; the Geometric Method</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Point Elasticity</div>
+        <p>Used when the price change is <span class="kt">infinitesimally small</span> — measured at a single point on the demand curve using calculus.</p>
+        <div class="eq-box">E<sub>p</sub> = (−dq/dp) × (p/q)</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Geometric Method on a Straight-Line Demand Curve</div>
+        <p>For a straight demand line tT, elasticity at point R = <span class="kt">lower segment ÷ upper segment</span> (i.e. RT/Rt).</p>
+        <table class="tbl">
+          <tr><th>Position on the line</th><th>Elasticity</th></tr>
+          <tr><td>At the top (t) — touching price axis</td><td>E<sub>p</sub> = ∞ (infinite)</td></tr>
+          <tr><td>Upper half (above midpoint)</td><td>E<sub>p</sub> &gt; 1 (elastic)</td></tr>
+          <tr><td>Exact midpoint</td><td>E<sub>p</sub> = 1 (unitary)</td></tr>
+          <tr><td>Lower half (below midpoint)</td><td>E<sub>p</sub> &lt; 1 (inelastic)</td></tr>
+          <tr><td>At the bottom (T) — touching quantity axis</td><td>E<sub>p</sub> = 0 (zero)</td></tr>
+        </table>
+        <div class="callout exam"><div class="ct">🎯 Exam Tip</div>The <strong>slope</strong> of a linear demand curve is constant throughout — but the <strong>elasticity</strong> changes at every point. Don't confuse the two!</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Arc Elasticity</div>
+        <p>Used when price/quantity changes are <span class="kt">discrete and large</span> — calculated over a range (arc) of the demand curve using the <strong>mid-point method</strong> (averages of old &amp; new values as base) to avoid direction-dependent results.</p>
+        <div class="eq-box">E<sub>p</sub> = [(Q₂−Q₁)/(Q₂+Q₁)] × [(P₂+P₁)/(P₂−P₁)]</div>
+        <div class="illus-box">
+          <div class="il-h">📝 Worked Example — Headphones</div>
+          <div class="il-q">P₁=₹500, Q₁=100; P₂=₹400, Q₂=150. Find arc elasticity.</div>
+          <div class="il-a">Ep = (50/250) × (900/100) = <strong>1.8</strong> → Elastic demand</div>
+        </div>
+        <div class="callout imp"><div class="ct">💡 Note</div>Arc elasticity always lies <strong>somewhere between</strong> the point elasticities at the lower and higher price — but not necessarily exactly in the middle.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 7: INTERPRETING ELASTICITY VALUES ---------------- */
+  {
+    label: 'Interpreting Values',
+    html: `
+      <div class="page-title">Interpreting the Numerical Value of Price Elasticity</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Five Categories</div>
+        <table class="tbl">
+          <tr><th>Value</th><th>Name</th><th>Meaning</th><th>Curve Shape</th></tr>
+          <tr><td>E<sub>p</sub> = 0</td><td>Perfectly Inelastic</td><td>Quantity demanded doesn't change at all with price</td><td>Vertical line</td></tr>
+          <tr><td>0 &lt; E<sub>p</sub> &lt; 1</td><td>Inelastic</td><td>Qty changes by a <em>smaller</em> % than price</td><td>Steep curve</td></tr>
+          <tr><td>E<sub>p</sub> = 1</td><td>Unit Elastic</td><td>Qty changes by the <em>same</em> % as price</td><td>Rectangular hyperbola</td></tr>
+          <tr><td>E<sub>p</sub> &gt; 1 (finite)</td><td>Elastic</td><td>Qty changes by a <em>larger</em> % than price</td><td>Fairly flat curve</td></tr>
+          <tr><td>E<sub>p</sub> = ∞</td><td>Perfectly Elastic</td><td>Any quantity bought at one price; zero at a slightly higher price</td><td>Horizontal line</td></tr>
+        </table>
+        <div class="callout imp"><div class="ct">💡 Real-World Examples</div>Refrigerators, TVs, laptops → <strong>elastic</strong>. Wheat, rice → <strong>inelastic</strong>. Common salt → <strong>highly/perfectly inelastic</strong>.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Total Outlay (Total Revenue) Method</div>
+        <p>An alternative way to judge elasticity <span class="kt">without precise calculation</span> — just watch what happens to Total Revenue (TR = Price × Quantity) when price changes.</p>
+        <table class="tbl">
+          <tr><th>Demand Type</th><th>Price ↑</th><th>Price ↓</th></tr>
+          <tr><td><strong>Elastic</strong> (Ep &gt; 1)</td><td>TR <span class="nt">Decreases</span></td><td>TR <span class="gt">Increases</span></td></tr>
+          <tr><td><strong>Unitary Elastic</strong> (Ep = 1)</td><td>TR <strong>Unchanged</strong></td><td>TR <strong>Unchanged</strong></td></tr>
+          <tr><td><strong>Inelastic</strong> (Ep &lt; 1)</td><td>TR <span class="gt">Increases</span></td><td>TR <span class="nt">Decreases</span></td></tr>
+        </table>
+        <div class="callout warn"><div class="ct">⚠️ Limitation</div>This method only tells you <strong>elastic vs inelastic</strong> — it cannot give the exact numeric coefficient of elasticity.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>The Price Effect vs Quantity Effect Logic</div>
+        <ul class="note-list">
+          <li><strong>Price effect:</strong> each unit sold now sells at a higher/lower price → tends to raise/lower revenue</li>
+          <li><strong>Quantity effect:</strong> fewer/more units get sold → tends to lower/raise revenue</li>
+        </ul>
+        <p>Which effect dominates depends on elasticity: in <span class="kt">elastic</span> demand the quantity effect wins; in <span class="kt">inelastic</span> demand the price effect wins; in <span class="kt">unitary</span> demand they exactly cancel out.</p>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 8: DETERMINANTS OF PRICE ELASTICITY ---------------- */
+  {
+    label: 'Determinants of Elasticity',
+    html: `
+      <div class="page-title">Determinants of Price Elasticity of Demand</div>
+
+      <div class="card">
+        <table class="tbl">
+          <tr><th>Determinant</th><th>Effect on Elasticity</th></tr>
+          <tr><td><strong>Availability of substitutes</strong></td><td>More/closer substitutes → more elastic (brand-level demand is more elastic than category-level, e.g. "Indian Oil petrol" vs "petrol" in general)</td></tr>
+          <tr><td><strong>Position in consumer's budget</strong></td><td>Larger share of income spent → more elastic (worth the effort to economise)</td></tr>
+          <tr><td><strong>Nature of need (luxury vs necessity)</strong></td><td>Luxuries → elastic; Necessities → inelastic</td></tr>
+          <tr><td><strong>Number of uses</strong></td><td>More uses → more elastic (e.g., milk; electricity)</td></tr>
+          <tr><td><strong>Time period</strong></td><td>Longer time → more elastic (more time to find substitutes/adjust habits)</td></tr>
+          <tr><td><strong>Consumer habits</strong></td><td>Strong/rigid habits → inelastic</td></tr>
+          <tr><td><strong>Tied demand</strong></td><td>Goods tied to another (printer + ink cartridge) → inelastic</td></tr>
+          <tr><td><strong>Price range</strong></td><td>Very high or very low price range → inelastic; middle range → elastic</td></tr>
+          <tr><td><strong>Minor complementary items</strong></td><td>Cheap items used with a costlier product → inelastic</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Business &amp; Policy Implications</div>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">If demand is Elastic</div><div class="mc-val">Lowering price → expands volume → <strong>raises</strong> total revenue. Be cautious about raising prices.</div></div>
+          <div class="mini-card"><div class="mc-title">If demand is Inelastic</div><div class="mc-val">Raising price is relatively safe → <strong>increases</strong> total revenue. Governments tax inelastic goods (alcohol, tobacco) more, since quantity falls less.</div></div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 9: INCOME ELASTICITY ---------------- */
+  {
+    label: 'Income Elasticity',
+    html: `
+      <div class="page-title">Income Elasticity of Demand</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Definition &amp; Formula</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>Income elasticity (E<sub>i</sub>) measures the responsiveness of quantity demanded to changes in <span class="kt">consumer income</span>.</div>
+        <div class="eq-box">E<sub>i</sub> = (% change in demand) ÷ (% change in income) = (ΔQ/ΔY) × (Y/Q)</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Interpreting the Sign &amp; Size</div>
+        <table class="tbl">
+          <tr><th>Income Elasticity</th><th>Type of Good</th><th>Behaviour</th></tr>
+          <tr><td>E<sub>i</sub> &lt; 0 (negative)</td><td>Inferior Good</td><td>Demand falls as income rises (consumers shift to superior substitutes)</td></tr>
+          <tr><td>0 &lt; E<sub>i</sub> &lt; 1</td><td>Necessity / Normal Good</td><td>Demand rises, but slower than income (proportion of income spent on it falls)</td></tr>
+          <tr><td>E<sub>i</sub> = 1</td><td>Unitary</td><td>Proportion of income spent stays the same</td></tr>
+          <tr><td>E<sub>i</sub> &gt; 1</td><td>Luxury Good</td><td>Demand rises faster than income (bulks larger in spending as one gets richer)</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Worked Illustration — New vs Used Cars</div>
+        <div class="illus-box">
+          <div class="il-h">📝 Illustration 6</div>
+          <div class="il-q">Income rose 10%. New car sales rose from 400 to 500. Used car sales fell from 4000 to 3850. Find income elasticity for each and comment.</div>
+          <div class="il-a">
+            <strong>New cars:</strong> % change in qty = (100/400)×100 = 25%. E<sub>i</sub> = 25/10 = <strong>+2.5</strong> → Income-elastic, <span class="kt">normal good</span> (luxury-like).<br><br>
+            <strong>Used cars:</strong> % change in qty = (−150/4000)×100 = −3.75%. E<sub>i</sub> = −3.75/10 = <strong>−0.375</strong> → Negative, so used cars are an <span class="kt">inferior good</span> for this segment.
+          </div>
+        </div>
+        <div class="callout imp"><div class="ct">💡 Business Use</div>Income elasticity helps firms predict the impact of a <strong>business cycle</strong> on sales: E<sub>i</sub>=1 → sales move with income; E<sub>i</sub>&gt;1 → highly cyclical sales; E<sub>i</sub>&lt;0 → countercyclical sales (sales rise in a downturn).</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 10: CROSS ELASTICITY ---------------- */
+  {
+    label: 'Cross Elasticity',
+    html: `
+      <div class="page-title">Cross-Price Elasticity of Demand</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Definition &amp; Formula</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>Cross elasticity (E<sub>c</sub>) measures how the quantity demanded of good X responds to a change in the <span class="kt">price of a related good Y</span>.</div>
+        <div class="eq-box">E<sub>c</sub> = (% change in qty demanded of X) ÷ (% change in price of Y)</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Sign Tells You the Relationship</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">➕ Positive E<sub>c</sub> → Substitutes</div>
+            <ul>
+              <li>Price of Y ↑ → demand for X ↑ (rightward shift for X)</li>
+              <li>Higher value → closer substitutes</li>
+              <li>Perfect substitutes → E<sub>c</sub> = ∞</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">➖ Negative E<sub>c</sub> → Complements</div>
+            <ul>
+              <li>Price of Y ↑ → demand for X ↓ (leftward shift for X)</li>
+              <li>More negative → stronger complementarity</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout warn"><div class="ct">⚠️ Subtle Point</div>Goods with positive cross elasticity can safely be called substitutes — but negative cross elasticity isn't <em>always</em> complementarity; it can also arise from a strong income effect.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Worked Illustrations</div>
+        <div class="illus-box">
+          <div class="il-h">📝 Illustration 9 — Tea &amp; Coffee (Substitutes)</div>
+          <div class="il-q">Tea price ₹30, qty 5kg. Coffee price rises ₹25→₹35; tea qty rises 5kg→8kg. Find cross elasticity of tea w.r.t. coffee.</div>
+          <div class="il-a">E<sub>c</sub> = (3/10) × (25/5) = <strong>+1.5</strong> → Tea and coffee are substitutes</div>
+        </div>
+        <div class="illus-box">
+          <div class="il-h">📝 Illustration 10 — Sugar &amp; Tea (Complements)</div>
+          <div class="il-q">Sugar price ₹50, qty 10kg. Tea price falls ₹30→₹25; sugar qty rises 10kg→12kg. Find cross elasticity.</div>
+          <div class="il-a">E<sub>c</sub> = (2/−5) × (30/10) = <strong>−1.2</strong> → Sugar and tea are complementary</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Business Use</div>
+        <p>If cross elasticity of demand w.r.t. a substitute's price is <strong>greater than 1</strong>, a firm could lose sales by raising its own price (customers easily switch) — and gain by cutting price. Knowing cross elasticity lets a firm plan pricing policy that accounts for competitors' and complementary products' price moves.</p>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 11: ADVERTISEMENT ELASTICITY ---------------- */
+  {
+    label: 'Advertisement Elasticity',
+    html: `
+      <div class="page-title">Advertisement Elasticity of Demand</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Definition &amp; Formula</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>Also called <span class="kt">promotional elasticity of demand</span> — measures the responsiveness of demand to changes in advertising/promotional spend.</div>
+        <div class="eq-box">E<sub>a</sub> = (% change in quantity demanded) ÷ (% change in advertising spend) = (ΔQ<sub>d</sub>/Q<sub>d</sub>) ÷ (ΔA/A)</div>
+        <p>This elasticity is typically <span class="kt">positive</span> — more ad spend usually raises demand.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Interpreting Values</div>
+        <table class="tbl">
+          <tr><th>Value</th><th>Meaning</th></tr>
+          <tr><td>E<sub>a</sub> = 0</td><td>Demand doesn't respond at all to advertising spend</td></tr>
+          <tr><td>0 &lt; E<sub>a</sub> &lt; 1</td><td>Demand rises less than proportionately to ad spend</td></tr>
+          <tr><td>E<sub>a</sub> = 1</td><td>Demand rises in the same proportion as ad spend</td></tr>
+          <tr><td>E<sub>a</sub> &gt; 1</td><td>Demand rises faster than ad spend — highly effective campaign</td></tr>
+        </table>
+        <div class="callout exam"><div class="ct">🎯 Business Use</div>This metric helps a firm judge advertising <strong>effectiveness</strong> and find the <strong>optimum advertising budget</strong> — the goal of any ad campaign is to <em>shift the demand curve rightward</em> and <em>reduce price elasticity</em> (make customers less price-sensitive once they're loyal to the brand).</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 12: SUMMARY ---------------- */
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 1 — Quick Revision Summary</div>
+      <ul class="summary-list">
+        <li>Demand = quantity buyers are <strong>willing AND able</strong> to buy at given prices over a time period.</li>
+        <li>Key determinants: own price, related-goods price, income, tastes, expectations, population, credit, govt. policy.</li>
+        <li>The <strong>Law of Demand</strong>: price and quantity demanded are inversely related, ceteris paribus.</li>
+        <li><strong>Movement along</strong> the curve = price change only (expansion/contraction). <strong>Shift of</strong> the curve = non-price factor change (increase/decrease).</li>
+        <li>Exceptions to the law: Giffen goods, Veblen/conspicuous goods, speculative goods, necessaries, future price expectations.</li>
+        <li><strong>Price elasticity</strong> = %ΔQ / %ΔP — categorised as perfectly inelastic (0), inelastic (&lt;1), unitary (1), elastic (&gt;1), perfectly elastic (∞).</li>
+        <li><strong>Point elasticity</strong> for tiny changes; <strong>arc elasticity</strong> (mid-point formula) for large discrete changes.</li>
+        <li><strong>Total revenue test</strong>: elastic demand → price and revenue move opposite; inelastic → price and revenue move together; unitary → revenue unchanged.</li>
+        <li><strong>Income elasticity</strong>: negative = inferior good; 0–1 = necessity; &gt;1 = luxury.</li>
+        <li><strong>Cross elasticity</strong>: positive = substitutes; negative = complements.</li>
+        <li><strong>Advertisement elasticity</strong>: typically positive — measures ad-spend effectiveness.</li>
+      </ul>
+    `
+  },
+
+  /* ---------------- SECTION 13: PRACTICE MCQs ---------------- */
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 1</div>
+      <div class="page-sub">Click an option to answer, or reveal the answer directly.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch2u1" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch2u1')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q1</span>Which of the following is the correct statement of the Law of Demand?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Price and quantity demanded are directly related, other things being equal</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Price and quantity demanded are inversely related, other things being equal</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Quantity demanded is unrelated to price</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Price determines supply, not demand</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q2</span>A fall in the price of tea leads to a fall in the demand for coffee. Tea and coffee are —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Complementary goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Inferior goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Substitute goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Giffen goods</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q3</span>The Veblen effect explains demand for which type of goods?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Giffen goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Conspicuous / prestige goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Inferior goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Necessities</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q4</span>All Giffen goods are inferior goods, but —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>All inferior goods are not Giffen goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>All inferior goods are Giffen goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>No inferior goods are Giffen goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Giffen goods are always normal goods</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q5</span>If a 10% rise in price causes quantity demanded to fall by 20%, demand is —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Perfectly inelastic</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Inelastic</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Elastic</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Unitary elastic</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q6</span>When demand is inelastic, a rise in price causes total revenue to —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Decrease</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Increase</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Remain unchanged</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Become zero</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q7</span>Income elasticity of demand is negative for —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Luxury goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Necessities</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Unitary-elastic goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Inferior goods</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q8</span>Cross elasticity of demand between two complementary goods is —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Negative</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Positive</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Zero</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Infinite</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q9</span>At the midpoint of a straight-line demand curve, price elasticity equals —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>0</div>
+          <div class="mcq-opt"><span class="ol">B.</span>∞</div>
+          <div class="mcq-opt"><span class="ol">C.</span>1</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Cannot be determined</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q10</span>A change in consumer income causing a shift of the entire demand curve is called —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Contraction of demand</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Increase or decrease in demand</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Expansion of demand</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Change in quantity demanded</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+</script>
+<script>
+/* ===========================================================
+   Business Economics Study Notes — App Engine
+   Handles: sidebar nav, chapter/unit switching, section pills,
+   progress rings, MCQ interactivity, search, sidebar collapse.
+   Content itself lives in data.js (UNIT_DATA object).
+   =========================================================== */
+
+let CURRENT_UNIT = 'ch1u1';
+let CURRENT_SECTION = 0;
+
+/* ---------- progress storage (in-memory only) ---------- */
+const PROGRESS = {}; // { 'ch1u1': Set of completed section indices }
+
+function getUnitMeta(unitKey){
+  return UNIT_DATA[unitKey];
+}
+
+/* ---------- render a unit's pills + panels from data.js ---------- */
+function renderUnit(unitKey){
+  const meta = getUnitMeta(unitKey);
+  if(!meta) return;
+
+  const secbar = document.getElementById('secbar' + capWrap(unitKey));
+  const panelsHost = document.getElementById('panels' + capWrap(unitKey));
+  if(!secbar || !panelsHost) return;
+
+  // avoid re-render if already built
+  if(secbar.dataset.built === '1') return;
+
+  let pillsHtml = '';
+  let panelsHtml = '';
+
+  meta.sections.forEach((sec, i) => {
+    pillsHtml += `<button class="pill${i===0?' active':''}" id="pill-${unitKey}-${i}" onclick="showSection('${unitKey}', ${i})">
+        <span>${sec.label}</span><span class="pill-n">${i+1}</span>
+      </button>`;
+    panelsHtml += `<div class="panel${i===0?' active':''}" id="panel-${unitKey}-${i}">${sec.html}</div>`;
+  });
+
+  secbar.innerHTML = pillsHtml;
+  panelsHost.innerHTML = panelsHtml;
+  secbar.dataset.built = '1';
+
+  // if this unit has MCQs, wire them up after render
+  wireMcqs(unitKey);
+}
+
+function capWrap(unitKey){
+  // 'ch1u1' -> 'Ch1U1'
+  return unitKey.replace(/(ch)(\d)(u)(\d)/, (m,a,b,c,d)=> 'Ch'+b+'U'+d);
+}
+
+/* ---------- switch chapter/unit ---------- */
+function goToUnit(unitKey, el){
+  // sidebar active states
+  document.querySelectorAll('.sb-unit-item').forEach(i=>i.classList.remove('active'));
+  if(el) el.classList.add('active');
+
+  document.querySelectorAll('.sb-chapter-hdr').forEach(h=>h.classList.remove('active'));
+  const chapterKey = unitKey.split('u')[0]; // 'ch1u1' -> 'ch1'
+  const grp = document.querySelector(`.sb-chapter[data-chapter="${chapterKey}"]`);
+  // accordion: close every other chapter group, open only this one
+  document.querySelectorAll('.sb-chapter').forEach(g=>{
+    if(g !== grp){ g.classList.remove('open'); g.querySelector('.sb-chapter-hdr').classList.remove('open'); }
+  });
+  if(grp){
+    grp.querySelector('.sb-chapter-hdr').classList.add('active');
+    grp.querySelector('.sb-chapter-hdr').classList.add('open');
+    grp.classList.add('open');
+  }
+
+  // hide all wraps, show target
+  document.querySelectorAll('.chapter-wrap').forEach(w=>w.classList.remove('active'));
+  const wrap = document.getElementById(unitKey + 'Wrap');
+  if(wrap){
+    renderUnit(unitKey);
+    wrap.classList.add('active');
+  }
+
+  CURRENT_UNIT = unitKey;
+  CURRENT_SECTION = 0;
+  updateCrumb(unitKey, 0);
+
+  const contentEl = wrap ? wrap.querySelector('.content') : null;
+  if(contentEl) contentEl.scrollTop = 0;
+
+  if(window.innerWidth <= 880){
+    document.getElementById('sidebar').classList.remove('mobile-open');
+  }
+}
+
+function showComingSoon(label){
+  document.querySelectorAll('.sb-unit-item').forEach(i=>i.classList.remove('active'));
+  document.querySelectorAll('.chapter-wrap').forEach(w=>w.classList.remove('active'));
+  document.getElementById('comingSoonWrap').classList.add('active');
+  document.getElementById('csTitle').textContent = label + ' — coming soon';
+  document.getElementById('crumbUnit').textContent = label;
+}
+
+/* ---------- section pill switching within a unit ---------- */
+function showSection(unitKey, idx){
+  const secbar = document.getElementById('secbar' + capWrap(unitKey));
+  const panelsHost = document.getElementById('panels' + capWrap(unitKey));
+  if(!secbar || !panelsHost) return;
+
+  secbar.querySelectorAll('.pill').forEach((p,i)=>p.classList.toggle('active', i===idx));
+  panelsHost.querySelectorAll('.panel').forEach((p,i)=>p.classList.toggle('active', i===idx));
+
+  // scroll active pill into view
+  const activePill = document.getElementById(`pill-${unitKey}-${idx}`);
+  if(activePill) secbar.scrollTo({left: activePill.offsetLeft - 24, behavior:'smooth'});
+
+  // scroll content to top
+  const wrap = document.getElementById(unitKey + 'Wrap');
+  const contentEl = wrap ? wrap.querySelector('.content') : null;
+  if(contentEl) contentEl.scrollTop = 0;
+
+  CURRENT_SECTION = idx;
+  updateCrumb(unitKey, idx);
+  markVisited(unitKey, idx);
+}
+
+function updateCrumb(unitKey, sectionIdx){
+  const meta = getUnitMeta(unitKey);
+  if(!meta) return;
+  document.getElementById('crumbChapter').textContent = meta.chapterLabel;
+  document.getElementById('crumbUnit').textContent = meta.unitLabel + ' · ' + (meta.sections[sectionIdx] ? meta.sections[sectionIdx].label : '');
+}
+
+/* ---------- progress ring tracking ---------- */
+function markVisited(unitKey, idx){
+  if(!PROGRESS[unitKey]) PROGRESS[unitKey] = new Set();
+  PROGRESS[unitKey].add(idx);
+  updateRing(unitKey);
+}
+
+function updateRing(unitKey){
+  const meta = getUnitMeta(unitKey);
+  if(!meta) return;
+  const chapterKey = unitKey.split('u')[0];
+  const ringId = 'ring' + chapterKey.replace('ch','Ch');
+  const ring = document.getElementById(ringId);
+  if(!ring) return;
+
+  // aggregate progress across all units of this chapter
+  const chapterUnits = Object.keys(UNIT_DATA).filter(k => k.startsWith(chapterKey + 'u'));
+  let total = 0, done = 0;
+  chapterUnits.forEach(uk=>{
+    const m = getUnitMeta(uk);
+    total += m.sections.length;
+    done += (PROGRESS[uk] ? PROGRESS[uk].size : 0);
+  });
+  const pct = total ? Math.round((done/total)*100) : 0;
+  ring.style.setProperty('--pct', pct);
+  ring.querySelector('span').textContent = pct + '%';
+  updateOverallProgress();
+}
+
+function updateOverallProgress(){
+  let total = 0, done = 0;
+  Object.keys(UNIT_DATA).forEach(uk=>{
+    const m = getUnitMeta(uk);
+    total += m.sections.length;
+    done += (PROGRESS[uk] ? PROGRESS[uk].size : 0);
+  });
+  const pct = total ? Math.round((done/total)*100) : 0;
+  const el = document.getElementById('overallProgress');
+  if(el) el.textContent = pct + '% complete';
+}
+
+/* ---------- sidebar chapter expand/collapse ---------- */
+function toggleChapter(groupId){
+  const grp = document.getElementById(groupId);
+  if(!grp) return;
+  const isOpen = grp.classList.contains('open');
+  // close all others (accordion behaviour), keep current toggle
+  document.querySelectorAll('.sb-chapter').forEach(g=>{ if(g.id !== groupId) g.classList.remove('open'); });
+  grp.classList.toggle('open', !isOpen);
+  grp.querySelector('.sb-chapter-hdr').classList.toggle('open', !isOpen);
+}
+
+/* ---------- sidebar collapse (desktop) / open (mobile) ---------- */
+function toggleSidebar(){
+  const sb = document.getElementById('sidebar');
+  if(window.innerWidth <= 880){
+    sb.classList.toggle('mobile-open');
+  } else {
+    sb.classList.toggle('collapsed');
+  }
+}
+
+/* ---------- search filter ---------- */
+function filterSidebar(query){
+  const q = query.trim().toLowerCase();
+  document.querySelectorAll('.sb-chapter').forEach(grp=>{
+    let chapterMatches = grp.querySelector('.sb-chapter-title').textContent.toLowerCase().includes(q);
+    let anyUnitVisible = false;
+    grp.querySelectorAll('.sb-unit-item').forEach(item=>{
+      const match = q === '' || item.textContent.toLowerCase().includes(q) || chapterMatches;
+      item.style.display = match ? 'flex' : 'none';
+      if(match) anyUnitVisible = true;
+    });
+    grp.style.display = (q === '' || anyUnitVisible) ? 'block' : 'none';
+    if(q !== '' && anyUnitVisible){ grp.classList.add('open'); grp.querySelector('.sb-chapter-hdr').classList.add('open'); }
+  });
+}
+
+/* ---------- MCQ interactivity ---------- */
+function wireMcqs(unitKey){
+  const host = document.getElementById('panels' + capWrap(unitKey));
+  if(!host) return;
+  host.querySelectorAll('.mcq-card').forEach(card=>{
+    if(card.dataset.wired === '1') return;
+    card.dataset.wired = '1';
+    const correctIdx = parseInt(card.dataset.correct, 10);
+    const opts = card.querySelectorAll('.mcq-opt');
+    const revealBtn = card.querySelector('.mcq-reveal-btn');
+
+    opts.forEach((opt, i)=>{
+      opt.addEventListener('click', ()=>{
+        if(card.dataset.answered === '1') return;
+        card.dataset.answered = '1';
+        opts.forEach((o,j)=>{
+          if(j === correctIdx) o.classList.add('correct');
+          else if(j === i) o.classList.add('wrong');
+        });
+        if(revealBtn) revealBtn.style.display = 'none';
+        bumpScore(unitKey, i === correctIdx);
+      });
+    });
+
+    if(revealBtn){
+      revealBtn.addEventListener('click', ()=>{
+        if(card.dataset.answered === '1') return;
+        card.dataset.answered = '1';
+        opts[correctIdx].classList.add('correct');
+        revealBtn.style.display = 'none';
+      });
+    }
+  });
+}
+
+function bumpScore(unitKey, correct){
+  const scoreEl = document.getElementById('score-' + unitKey);
+  if(!scoreEl) return;
+  let [c, t] = (scoreEl.dataset.tally || '0,0').split(',').map(Number);
+  t += 1; if(correct) c += 1;
+  scoreEl.dataset.tally = c + ',' + t;
+  scoreEl.textContent = `Score: ${c} / ${t}`;
+}
+
+function resetMcqs(unitKey){
+  const host = document.getElementById('panels' + capWrap(unitKey));
+  if(!host) return;
+  host.querySelectorAll('.mcq-card').forEach(card=>{
+    card.dataset.answered = '0';
+    card.querySelectorAll('.mcq-opt').forEach(o=>o.classList.remove('correct','wrong'));
+    const revealBtn = card.querySelector('.mcq-reveal-btn');
+    if(revealBtn) revealBtn.style.display = 'inline-block';
+  });
+  const scoreEl = document.getElementById('score-' + unitKey);
+  if(scoreEl){ scoreEl.dataset.tally = '0,0'; scoreEl.textContent = 'Score: 0 / 0'; }
+}
+
+/* ---------- init ---------- */
+document.addEventListener('DOMContentLoaded', ()=>{
+  renderUnit('ch1u1');
+  updateCrumb('ch1u1', 0);
+
+  // close sidebar on outside click (mobile)
+  document.addEventListener('click', (e)=>{
+    if(window.innerWidth <= 880){
+      const sb = document.getElementById('sidebar');
+      const toggle = document.getElementById('sidebarToggle');
+      if(sb.classList.contains('mobile-open') && !sb.contains(e.target) && !toggle.contains(e.target)){
+        sb.classList.remove('mobile-open');
+      }
+    }
+  });
+});
+
+</script>
+</body>
+</html>
