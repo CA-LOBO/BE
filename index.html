@@ -437,8 +437,8 @@ table.tbl tr:last-child td{border-bottom:none;}
         </div>
         <div class="sb-unit-list">
           <div class="sb-unit-item" id="navCh2U1" onclick="goToUnit('ch2u1', this)"><span class="sb-unit-dot"></span>Unit 1 · Law of Demand &amp; Elasticity</div>
-          <div class="sb-unit-item disabled" id="navCh2U2" onclick="showComingSoon('Unit 2 · Theory of Consumer Behaviour')"><span class="sb-unit-dot"></span>Unit 2 · Consumer Behaviour</div>
-          <div class="sb-unit-item disabled" id="navCh2U3" onclick="showComingSoon('Unit 3 · Theory of Supply')"><span class="sb-unit-dot"></span>Unit 3 · Theory of Supply</div>
+          <div class="sb-unit-item" id="navCh2U2" onclick="goToUnit('ch2u2', this)"><span class="sb-unit-dot"></span>Unit 2 · Consumer Behaviour</div>
+          <div class="sb-unit-item" id="navCh2U3" onclick="goToUnit('ch2u3', this)"><span class="sb-unit-dot"></span>Unit 3 · Theory of Supply</div>
         </div>
       </div>
 
@@ -449,7 +449,7 @@ table.tbl tr:last-child td{border-bottom:none;}
     </div>
 
     <div class="sb-footer">
-      <span>v1.0</span>
+      <span>v1.1</span>
       <span id="overallProgress">0% complete</span>
     </div>
   </aside>
@@ -495,6 +495,22 @@ table.tbl tr:last-child td{border-bottom:none;}
     <div class="chapter-wrap" id="ch2u1Wrap">
       <div class="sectionbar" id="secbarCh2U1"></div>
       <div class="content"><div class="content-inner" id="panelsCh2U1"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 2 UNIT 2 WRAP                                -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch2u2Wrap">
+      <div class="sectionbar" id="secbarCh2U2"></div>
+      <div class="content"><div class="content-inner" id="panelsCh2U2"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 2 UNIT 3 WRAP                                -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch2u3Wrap">
+      <div class="sectionbar" id="secbarCh2U3"></div>
+      <div class="content"><div class="content-inner" id="panelsCh2U3"></div></div>
     </div>
 
     <!-- COMING SOON WRAP -->
@@ -875,78 +891,342 @@ UNIT_DATA['ch1u1'] = {
       </div>
 
       <div class="mcq-card" data-correct="3">
-        <div class="mcq-q"><span class="qn">Q1</span>Business Economics is —</div>
+        <div class="mcq-q"><span class="qn">Q1</span>Economists regard decision making as important because:</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Abstract and applies the tools of Microeconomics</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Involves practical application of economic theory in business decision making</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Incorporates tools from multiple disciplines</div>
-          <div class="mcq-opt"><span class="ol">D.</span>(B) and (C) above</div>
+          <div class="mcq-opt"><span class="ol">A.</span>The resources required to satisfy our unlimited wants and needs are finite, or scarce.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>It is crucial to understand how we can best allocate our scarce resources to satisfy society's unlimited wants and needs.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Resources have alternative uses.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>All the above.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
-      <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q2</span>The managerial economics —</div>
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q2</span>Business Economics is —</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Is just a theory concept</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Trains managers how to behave in recession</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Is Applied Economics that fills the gap between economic theory and business practice</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Provides the tools which explain various concepts</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Abstract and applies the tools of Microeconomics.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Involves practical application of economic theory in business decision making.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Incorporates tools from multiple disciplines.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>(b) and (c) above.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
-      <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q3</span>Which of the following statements is correct?</div>
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q3</span>In Economics, we use the term scarcity to mean —</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Microeconomics is important for the study of a particular household and a particular firm</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Macroeconomics is important for the study of economic conditions of a country</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Both (A) and (B)</div>
-          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Absolute scarcity and lack of resources in less developed countries.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Relative scarcity i.e. scarcity in relation to the wants of the society.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Scarcity during times of business failure and natural calamities.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Scarcity caused on account of excessive consumption by the rich.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="0">
-        <div class="mcq-q"><span class="qn">Q4</span>Mr. Satish hired a business consultant who suggested changes regarding staff appointment and loan availability for his factory. Which approach is the consultant using?</div>
+        <div class="mcq-q"><span class="qn">Q4</span>What implication(s) does resource scarcity have for the satisfaction of wants?</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Microeconomics</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Macroeconomics</div>
-          <div class="mcq-opt"><span class="ol">C.</span>None of the above</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Both (A) and (B)</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Not all wants can be satisfied.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>We will never be faced with the need to make choices.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>We must develop ways to decrease our individual wants.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The discovery of new natural resources is necessary to increase our ability to satisfy wants.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="3">
-        <div class="mcq-q"><span class="qn">Q5</span>Which of the following statements is/are correct regarding business economics?</div>
+        <div class="mcq-q"><span class="qn">Q5</span>Which of the following is a normative statement?</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>It attempts to indicate how business policies are firmly rooted in economic principles</div>
-          <div class="mcq-opt"><span class="ol">B.</span>It uses microeconomic analysis of the business unit and macroeconomic analysis of the business environment</div>
-          <div class="mcq-opt"><span class="ol">C.</span>It takes a pragmatic approach towards integrating economic theory and business practice</div>
-          <div class="mcq-opt"><span class="ol">D.</span>All the above</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Planned economies allocate resources via government departments.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Most transitional economies have experienced problems of falling output and rising prices over the past decade.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>There is a greater degree of consumer sovereignty in market economies than planned economies.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Reducing inequality should be a major priority for mixed economies.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q6</span>In every economic system, scarcity imposes limitations on</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>households, business firms, governments, and the nation as a whole.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>households and business firms, but not the governments.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>local and state governments, but not the federal government.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>households and governments, but not business firms.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q7</span>Macroeconomics is also called ——— economics.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>applied</div>
+          <div class="mcq-opt"><span class="ol">B.</span>aggregate</div>
+          <div class="mcq-opt"><span class="ol">C.</span>experimental</div>
+          <div class="mcq-opt"><span class="ol">D.</span>none of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q8</span>An example of 'positive' economic analysis would be:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>an analysis of the relationship between the price of food and the quantity purchased.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>determining how much income each person should be guaranteed.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>determining the 'fair' price for food.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>deciding how to distribute the output of the economy.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q9</span>A study of how increases in the corporate income tax rate will affect the national unemployment rate is an example of —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Macro-Economics.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Descriptive Economics.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Micro-economics.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Normative economics.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q10</span>Which of the following does not suggest a macro approach for India?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Determining the GNP of India.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Finding the causes of failure of ABC Ltd.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Identifying the causes of inflation in India.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Analyse the causes of failure of industry in providing large scale employment.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q11</span>Ram: My corn harvest this year is poor. Krishan: Don't worry, price increases will compensate for the fall in quantity supplied. Vinod: Climate affects crop yields; some years are bad, others are good. Madhu: The Government ought to guarantee that our income will not fall. In this conversation, the normative statement is made by —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Ram</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Krishan</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Vinod</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Madhu</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q12</span>Consider the following and decide which, if any, economy is without scarcity:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The pre-independent Indian economy, where most people were farmers.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>A mythical economy where everybody is a billionaire.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Any economy where income is distributed equally among its people.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q13</span>Which of the following is not a subject matter of Micro-economics?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The price of mangoes.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The cost of producing a fire truck for the fire department of Delhi, India.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The quantity of mangoes produced for the mangoes market.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The national economy's annual rate of growth.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q14</span>The branch of economic theory that deals with the problem of allocation of resources is —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Micro-Economic theory.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Macro-economic theory.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Econometrics.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q15</span>Which of the following is not the subject matter of Business Economics?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Should our firm be in this business?</div>
+          <div class="mcq-opt"><span class="ol">B.</span>How much should be produced and at what price should it be kept?</div>
+          <div class="mcq-opt"><span class="ol">C.</span>How will the product be placed in the market?</div>
+          <div class="mcq-opt"><span class="ol">D.</span>How should we decrease unemployment in the economy?</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q6</span>Which of the following statements is incorrect?</div>
+        <div class="mcq-q"><span class="qn">Q16</span>Which of the following is a normative economic statement?</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Business economics is normative in nature</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Business Economics has a close connection with statistics</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Business Economist need not worry about macro variables</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Business Economics is also called Managerial Economics</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Unemployment rate decreases with industrialization.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Economics is a social science that studies human behaviour.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The minimum wage should be raised to ₹ 200/- per day.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>India spends a huge amount of money on national defence.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q17</span>Which of the following would be considered a topic of study in Macroeconomics?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The effect of increase in wages on the profitability of cotton industry.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The effect on steel prices when more steel is imported.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The effect of an increasing inflation rate on living standards of people in India.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The effect of an increase in the price of coffee on the quantity of tea consumed.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q18</span>The difference between positive and normative Economics is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Positive Economics explains the performance of the economy while normative Economics finds out the reasons for poor performance.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Positive Economics describes the facts of the economy while normative Economics involves evaluating whether some of these are good or bad for the welfare of the people.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Normative Economics describes the facts of the economy while positive Economics involves evaluating whether some of these are good or bad for the welfare of the people.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Positive Economics prescribes while normative Economics describes.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="3">
-        <div class="mcq-q"><span class="qn">Q7</span>Which of the following is not within the scope of Business Economics (at this level)?</div>
+        <div class="mcq-q"><span class="qn">Q19</span>Which of the following is not within the scope of Business Economics?</div>
         <div class="mcq-opts">
           <div class="mcq-opt"><span class="ol">A.</span>Capital Budgeting</div>
           <div class="mcq-opt"><span class="ol">B.</span>Risk Analysis</div>
           <div class="mcq-opt"><span class="ol">C.</span>Business Cycles</div>
           <div class="mcq-opt"><span class="ol">D.</span>Accounting Standards</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q20</span>Which of the following statements is incorrect?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Business economics is normative in nature.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Business Economics has a close connection with statistics.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Business Economist need not worry about macro variables.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Business Economics is also called Managerial Economics.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q21</span>Economic goods are considered scarce resources because they —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>cannot be increased in quantity.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>do not exist in adequate quantity to satisfy the requirements of the society.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>are of primary importance in satisfying social requirements.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>are limited to man made goods.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q22</span>Macro Economics is the study of ____.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>all aspects of scarcity.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>the national economy and the global economy as a whole.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>big businesses.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>the decisions of individual businesses and people.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q23</span>Scarcity definition of Economics is given by —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Alfred Marshall</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Samuelson</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Robbins</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Adam Smith</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q24</span>The definition “Science which deals with wealth of Nation” was given by:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Alfred Marshall</div>
+          <div class="mcq-opt"><span class="ol">B.</span>A C Pigou</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Adam Smith</div>
+          <div class="mcq-opt"><span class="ol">D.</span>J B Say</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q25</span>There is need of economic study, because —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The resources are limited</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The wants are unlimited</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The resources are unlimited</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Both (a) and (b)</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q26</span>The benefit of economic study is —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>It ensures that all problems will be appropriately tackled</div>
+          <div class="mcq-opt"><span class="ol">B.</span>It helps in identifying problems</div>
+          <div class="mcq-opt"><span class="ol">C.</span>It enables one to examine a problem in its right perspective</div>
+          <div class="mcq-opt"><span class="ol">D.</span>It gives exact solutions to every problem</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q27</span>The managerial economics —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Is Applied Economics that fills the gap between economic theory and business practice</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Is just a theory concept</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Trains managers how to behave in recession</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Provides the tools which explain various concepts</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q28</span>Which of the following statements is correct?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Micro economics is important for study of a particular household and a particular firm</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Macro economics is important for study of economic conditions of a country</div>
+          <div class="mcq-opt"><span class="ol">C.</span>None of the above</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Both (a) and (b)</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q29</span>Mr. Satish hired a business consultant to guide him for growth of his business. The consultant visited his factory and suggested some changes with respect to staff appointment, loan availability and so on. Which approach is that consultant using?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Micro economics</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Macro economics</div>
+          <div class="mcq-opt"><span class="ol">C.</span>None of the above</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Both (a) and (b)</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q30</span>Which of the following statements is/are correct regarding business economics?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Business economics attempts to indicate how business policies are firmly rooted in economic principles.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Business economics uses micro economic analysis of the business unit and macro economic analysis of business environment.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Business economics takes a pragmatic approach towards facilitating an integration between economic theory and business practices.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>All the above.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q31</span>Unlimited ends and limited means together present the problem of ____.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Scarcity of resources</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Choice</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Distribution</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
@@ -1288,44 +1568,132 @@ UNIT_DATA['ch1u2'] = {
         <button class="mcq-reset-btn" onclick="resetMcqs('ch1u2')">↺ Reset all</button>
       </div>
 
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q1</span>In a free market economy the allocation of resources is determined by</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>voting done by consumers.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>a central planning authority.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>consumer preferences.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>the level of profits of firms.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
       <div class="mcq-card" data-correct="3">
-        <div class="mcq-q"><span class="qn">Q1</span>The central problem in economics is that of —</div>
+        <div class="mcq-q"><span class="qn">Q2</span>A capitalist economy uses ____ as the principal means of allocating resources.</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Comparing the success of command versus market economies</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Guaranteeing that production occurs in the most efficient manner</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Guaranteeing a minimum level of income for every citizen</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Allocating scarce resources so that society's unlimited wants are satisfied in the best possible manner</div>
+          <div class="mcq-opt"><span class="ol">A.</span>demand</div>
+          <div class="mcq-opt"><span class="ol">B.</span>supply</div>
+          <div class="mcq-opt"><span class="ol">C.</span>efficiency</div>
+          <div class="mcq-opt"><span class="ol">D.</span>prices</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q3</span>Which of the following is considered as a disadvantage of allocating resources using the market system?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Income will tend to be unevenly distributed.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>People do not get goods of their choice.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Men of Initiative and enterprise are not rewarded.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Profits will tend to be low.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q4</span>Which of the following statements does not apply to a market economy?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Firms decide whom to hire and what to produce.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Firms aim at maximizing profits.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Households decide which firms to work for and what to buy with their incomes.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Government policies are the primary forces that guide the decisions of firms and households.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q2</span>A capitalist economy uses ___________ as the principal means of allocating resources.</div>
+        <div class="mcq-q"><span class="qn">Q5</span>In a mixed economy —</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Demand</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Supply</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Prices</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Efficiency</div>
+          <div class="mcq-opt"><span class="ol">A.</span>all economic decisions are taken by the central authority.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>all economic decisions are taken by private entrepreneurs.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>economic decisions are partly taken by the state and partly by the private entrepreneurs.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>none of the above.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
-      <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q3</span>In a mixed economy —</div>
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q6</span>The central problem in economics is that of</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>All economic decisions are taken by the central authority</div>
-          <div class="mcq-opt"><span class="ol">B.</span>All economic decisions are taken by private entrepreneurs</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Economic decisions are partly taken by the state and partly by private entrepreneurs</div>
+          <div class="mcq-opt"><span class="ol">A.</span>comparing the success of command versus market economies.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>guaranteeing that production occurs in the most efficient manner.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>guaranteeing a minimum level of income for every citizen.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>allocating scarce resources in such a manner that society's unlimited needs or wants are satisfied in the best possible manner.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q7</span>Capital intensive technique would get chosen in a</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>labour surplus economy where the relative price of capital is lower.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>capital surplus economy where the relative price of capital is lower.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>developed economy where technology is better.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>developing economy where technology is poor.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q8</span>Which of the following is not one of the four central questions that the study of economics is supposed to answer?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Who produces what?</div>
+          <div class="mcq-opt"><span class="ol">B.</span>When are goods produced?</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Who consumes what?</div>
+          <div class="mcq-opt"><span class="ol">D.</span>How are goods produced?</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q9</span>Larger production of ____ goods would lead to higher production in future.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>consumer goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>capital goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>agricultural goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>public goods</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q10</span>The economic system in which all the means of production are owned and controlled by private individuals for profit is —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Socialism</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Capitalism</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Mixed economy</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Communism</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q11</span>Freedom of choice is the advantage of —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Socialism</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Capitalism</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Communism</div>
           <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="0">
-        <div class="mcq-q"><span class="qn">Q4</span>___________ is also called as command economy.</div>
+        <div class="mcq-q"><span class="qn">Q12</span>Exploitation and inequality are minimal under:</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Socialist</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Capitalist</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Socialism</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Capitalism</div>
           <div class="mcq-opt"><span class="ol">C.</span>Mixed economy</div>
           <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
         </div>
@@ -1333,29 +1701,40 @@ UNIT_DATA['ch1u2'] = {
       </div>
 
       <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q5</span>Administered prices refer to —</div>
+        <div class="mcq-q"><span class="qn">Q13</span>Administered prices refer to:</div>
         <div class="mcq-opts">
           <div class="mcq-opt"><span class="ol">A.</span>Prices determined by forces of demand and supply</div>
           <div class="mcq-opt"><span class="ol">B.</span>Prices determined by sellers in the market</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Prices determined by an external authority, usually the government</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Prices determined by an external authority which is usually the government</div>
           <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q14</span>In Economics, the central economic problem means:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Output is restricted to the limited availability of resources</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Consumers do not have as much money as they would wish</div>
+          <div class="mcq-opt"><span class="ol">C.</span>There will always be certain level of unemployment</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Resources are not always allocated in an optimum way</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
       <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q6</span>Which of the following is not one of the features of a capitalist economy?</div>
+        <div class="mcq-q"><span class="qn">Q15</span>Which of the following is not one of the features of capitalist economy?</div>
         <div class="mcq-opts">
           <div class="mcq-opt"><span class="ol">A.</span>Right of private property</div>
           <div class="mcq-opt"><span class="ol">B.</span>Freedom of choice by the consumers</div>
-          <div class="mcq-opt"><span class="ol">C.</span>No profit, no loss motive</div>
+          <div class="mcq-opt"><span class="ol">C.</span>No profit, No Loss motive</div>
           <div class="mcq-opt"><span class="ol">D.</span>Competition</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
-      <div class="mcq-card" data-correct="0">
-        <div class="mcq-q"><span class="qn">Q7</span>Exploitation and inequality are minimal under —</div>
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q16</span>Profit motive is a merit of</div>
         <div class="mcq-opts">
           <div class="mcq-opt"><span class="ol">A.</span>Socialism</div>
           <div class="mcq-opt"><span class="ol">B.</span>Capitalism</div>
@@ -1366,34 +1745,12 @@ UNIT_DATA['ch1u2'] = {
       </div>
 
       <div class="mcq-card" data-correct="0">
-        <div class="mcq-q"><span class="qn">Q8</span>Larger production of ___ goods would lead to higher production in future.</div>
+        <div class="mcq-q"><span class="qn">Q17</span>____ is also called as command economy.</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Capital goods</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Consumer goods</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Agricultural goods</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Public goods</div>
-        </div>
-        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
-      </div>
-
-      <div class="mcq-card" data-correct="1">
-        <div class="mcq-q"><span class="qn">Q9</span>In a free market economy, the allocation of resources is determined by —</div>
-        <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Voting done by consumers</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Consumer preferences</div>
-          <div class="mcq-opt"><span class="ol">C.</span>A central planning authority</div>
-          <div class="mcq-opt"><span class="ol">D.</span>The level of profits of firms</div>
-        </div>
-        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
-      </div>
-
-      <div class="mcq-card" data-correct="0">
-        <div class="mcq-q"><span class="qn">Q10</span>Capital intensive technique would get chosen in a —</div>
-        <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Capital surplus economy where the relative price of capital is lower</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Labour surplus economy where the relative price of capital is lower</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Developed economy where technology is better (regardless of prices)</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Developing economy where technology is poor</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Socialist</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Capitalist</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Mixed economy</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
@@ -2021,112 +2378,2067 @@ UNIT_DATA['ch2u1'] = {
         <button class="mcq-reset-btn" onclick="resetMcqs('ch2u1')">↺ Reset all</button>
       </div>
 
-      <div class="mcq-card" data-correct="1">
-        <div class="mcq-q"><span class="qn">Q1</span>Which of the following is the correct statement of the Law of Demand?</div>
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q1</span>Demand for a commodity refers to:</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Price and quantity demanded are directly related, other things being equal</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Price and quantity demanded are inversely related, other things being equal</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Quantity demanded is unrelated to price</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Price determines supply, not demand</div>
+          <div class="mcq-opt"><span class="ol">A.</span>desire backed by ability to pay for the commodity.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>need for the commodity and willingness to pay for it.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>the quantity demanded of that commodity at a certain price.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>the quantity of the commodity demanded at a certain price during any particular period of time.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q2</span>Contraction of demand is the result of:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>decrease in the number of consumers.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>increase in the price of the good concerned.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>increase in the prices of other goods.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>decrease in the income of purchasers.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q2</span>A fall in the price of tea leads to a fall in the demand for coffee. Tea and coffee are —</div>
+        <div class="mcq-q"><span class="qn">Q3</span>All but one of the following are assumed to remain the same while drawing an individual's demand curve for a commodity. Which one is it?</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Complementary goods</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Inferior goods</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Substitute goods</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Giffen goods</div>
+          <div class="mcq-opt"><span class="ol">A.</span>The preference of the individual.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>His monetary income.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Price of the commodity.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Price of related goods.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="1">
-        <div class="mcq-q"><span class="qn">Q3</span>The Veblen effect explains demand for which type of goods?</div>
+        <div class="mcq-q"><span class="qn">Q4</span>Which of the following pairs of goods is an example of substitutes?</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Giffen goods</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Conspicuous / prestige goods</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Inferior goods</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Necessities</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Tea and sugar.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Tea and coffee.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Pen and ink.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Shirt and trousers.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
-      <div class="mcq-card" data-correct="0">
-        <div class="mcq-q"><span class="qn">Q4</span>All Giffen goods are inferior goods, but —</div>
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q5</span>In the case of a straight line demand curve meeting the two axes, the price-elasticity of demand at the mid-point of the line would be:</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>All inferior goods are not Giffen goods</div>
-          <div class="mcq-opt"><span class="ol">B.</span>All inferior goods are Giffen goods</div>
-          <div class="mcq-opt"><span class="ol">C.</span>No inferior goods are Giffen goods</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Giffen goods are always normal goods</div>
+          <div class="mcq-opt"><span class="ol">A.</span>0</div>
+          <div class="mcq-opt"><span class="ol">B.</span>1</div>
+          <div class="mcq-opt"><span class="ol">C.</span>1.5</div>
+          <div class="mcq-opt"><span class="ol">D.</span>2</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q6</span>The Law of Demand, assuming other things to remain constant, establishes the relationship between:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>income of the consumer and the quantity of a good demanded by him.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>price of a good and the quantity demanded.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>price of a good and the demand for its substitute.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>quantity demanded of a good and the relative prices of its complementary goods.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q7</span>Identify the factor which generally keeps the price-elasticity of demand for a good low:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Variety of uses for that good.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Very low price of a commodity.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Close substitutes for that good.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>High proportion of the consumer's income spent on it.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q5</span>If a 10% rise in price causes quantity demanded to fall by 20%, demand is —</div>
+        <div class="mcq-q"><span class="qn">Q8</span>Identify the coefficient of price-elasticity of demand when the percentage increase in the quantity of a good demanded is smaller than the percentage fall in its price:</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Perfectly inelastic</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Inelastic</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Elastic</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Unitary elastic</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Equal to one.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Greater than one.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Less than one.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Zero.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q9</span>In the case of an inferior good, the income elasticity of demand is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>positive.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>zero.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>negative.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>infinite.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="1">
-        <div class="mcq-q"><span class="qn">Q6</span>When demand is inelastic, a rise in price causes total revenue to —</div>
+        <div class="mcq-q"><span class="qn">Q10</span>If the demand for a good is inelastic, an increase in its price will cause the total expenditure of the consumers of the good to:</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Decrease</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Increase</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Remain unchanged</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Become zero</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Remain the same.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Increase.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Decrease.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Any of these.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q11</span>If regardless of changes in its price, the quantity demanded of a good remains unchanged, then the demand curve for the good will be:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>horizontal.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Vertical.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>positively sloped.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>negatively sloped.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q12</span>Suppose the price of Pepsi increases, we will expect the demand curve of Coca Cola to:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Shift towards left since these are substitutes</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Shift towards right since these are substitutes</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Remain at the same level</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q13</span>All of the following are determinants of demand except:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Tastes and preferences.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Quantity supplied.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Income of the consumer.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Price of related goods.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q14</span>A movement along the demand curve for soft drinks is best described as:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>An increase in demand.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>A decrease in demand.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>A change in quantity demanded.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>A change in demand.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="3">
-        <div class="mcq-q"><span class="qn">Q7</span>Income elasticity of demand is negative for —</div>
+        <div class="mcq-q"><span class="qn">Q15</span>If the price of Pepsi decreases relative to the price of Coke and 7-UP, the demand for:</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Luxury goods</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Necessities</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Unitary-elastic goods</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Inferior goods</div>
-        </div>
-        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
-      </div>
-
-      <div class="mcq-card" data-correct="0">
-        <div class="mcq-q"><span class="qn">Q8</span>Cross elasticity of demand between two complementary goods is —</div>
-        <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>Negative</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Positive</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Zero</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Infinite</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Coke will decrease.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>7-Up will decrease.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Coke and 7-UP will increase.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Coke and 7-Up will decrease.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="2">
-        <div class="mcq-q"><span class="qn">Q9</span>At the midpoint of a straight-line demand curve, price elasticity equals —</div>
+        <div class="mcq-q"><span class="qn">Q16</span>If a good is a luxury, its income elasticity of demand is:</div>
         <div class="mcq-opts">
-          <div class="mcq-opt"><span class="ol">A.</span>0</div>
-          <div class="mcq-opt"><span class="ol">B.</span>∞</div>
-          <div class="mcq-opt"><span class="ol">C.</span>1</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Cannot be determined</div>
+          <div class="mcq-opt"><span class="ol">A.</span>Positive and less than 1.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Negative but greater than -1.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Positive and greater than 1.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Zero.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q17</span>The price of hot dogs increases by 22% and the quantity of hot dogs demanded falls by 25%. This indicates that demand for hot dogs is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Elastic.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Inelastic.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Unitarily elastic.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Perfectly elastic.</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
       <div class="mcq-card" data-correct="1">
-        <div class="mcq-q"><span class="qn">Q10</span>A change in consumer income causing a shift of the entire demand curve is called —</div>
+        <div class="mcq-q"><span class="qn">Q18</span>If the quantity demanded of mutton increases by 5% when the price of chicken increases by 20%, the cross-price elasticity of demand between mutton and chicken is</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>-0.25</div>
+          <div class="mcq-opt"><span class="ol">B.</span>0.25</div>
+          <div class="mcq-opt"><span class="ol">C.</span>-4</div>
+          <div class="mcq-opt"><span class="ol">D.</span>4</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q19</span>Given the following four possibilities, which one results in an increase in total consumer expenditure?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Demand is unitary elastic and price falls.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Demand is elastic and price rises.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Demand is inelastic and price falls.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Demand is inelastic and price rises.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q20</span>Which of the following is an incorrect statement?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>When goods are substitutes, a fall in the price of one (ceteris paribus) leads to a fall in the quantity demanded of its substitutes.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>When commodities are complements, a fall in the price of one (other things being equal) will cause the demand of the other to rise.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>As the income of the consumer increases, the demand for the commodity increases always and vice versa.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>When a commodity becomes fashionable people prefer to buy it and therefore its demand increases.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q21</span>Suppose the price of movies seen at a theatre rises from ₹ 120 per person to ₹ 200 per person. The rise in price causes attendance to fall from 300 persons to 200 persons. What is the price elasticity of demand for movies? (Use Arc Elasticity Method)</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>.5</div>
+          <div class="mcq-opt"><span class="ol">B.</span>.8</div>
+          <div class="mcq-opt"><span class="ol">C.</span>1.0</div>
+          <div class="mcq-opt"><span class="ol">D.</span>1.2</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q22</span>Suppose a department store has a sale on its silverware. If the price of a plate-setting is reduced from ₹ 300 to ₹ 200 and the quantity demanded increases from 3,000 to 5,000 plate-settings, what is the price elasticity of demand for silverware? (Use Arc Elasticity Method)</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>.8</div>
+          <div class="mcq-opt"><span class="ol">B.</span>1.0</div>
+          <div class="mcq-opt"><span class="ol">C.</span>1.25</div>
+          <div class="mcq-opt"><span class="ol">D.</span>1.50</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q23</span>When the numerical value of cross elasticity between two goods is very high, it means</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The goods are perfect complements and therefore have to be used together</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The goods are perfect substitutes and can be used with ease in place of one another</div>
+          <div class="mcq-opt"><span class="ol">C.</span>There is a high degree of substitutability between the two goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The goods are neutral and therefore cannot be considered as substitutes</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q24</span>If the local pizzeria raises the price of a medium pizza from ₹ 60 to ₹ 100 and quantity demanded falls from 700 pizzas a night to 100 pizzas a night, the price elasticity of demand for pizzas is: (Use Arc Elasticity Method)</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>.67</div>
+          <div class="mcq-opt"><span class="ol">B.</span>1.5</div>
+          <div class="mcq-opt"><span class="ol">C.</span>2.0</div>
+          <div class="mcq-opt"><span class="ol">D.</span>3.0</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q25</span>If electricity demand is inelastic, and electricity charges increase, which of the following is likely to occur?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Quantity demanded will fall by a relatively large amount.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Quantity demanded will fall by a relatively small amount.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Quantity demanded will rise in the short run, but fall in the long run.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Quantity demanded will fall in the short run, but rise in the long run.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q26</span>Suppose the demand for meals at a medium-priced restaurant is elastic. If the management is considering raising prices, it can expect a relatively:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Large fall in quantity demanded.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Large fall in demand.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Small fall in quantity demanded.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Small fall in demand.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q27</span>Point elasticity is useful for which of the following situations?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The bookstore is considering doubling the price of notebooks.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>A restaurant is considering lowering the price of its most expensive dishes by 50 percent.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>An auto producer is interested in determining the response of consumers to the price of cars being lowered by ₹ 100.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q28</span>A decrease in price will result in an increase in total revenue if:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The percentage change in quantity demanded is less than the percentage change in price.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The percentage change in quantity demanded is greater than the percentage change in price.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Demand is inelastic.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The consumer is operating along a linear demand curve at a point at which the price is very low and the quantity demanded is very high.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q29</span>An increase in price will result in an increase in total revenue if:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The percentage change in quantity demanded is less than the percentage change in price.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The percentage change in quantity demanded is greater than the percentage change in price.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Demand is elastic.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The consumer is operating along a linear demand curve at a point at which the price is very high and the quantity demanded is very low.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q30</span>Demand for a good will tend to be more elastic if it exhibits which of the following characteristics?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>It represents a small part of the consumer's income.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The good has many substitutes available.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>It is a necessity (as opposed to a luxury).</div>
+          <div class="mcq-opt"><span class="ol">D.</span>There is little time for the consumer to adjust to the price change.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q31</span>Demand for a good will tend to be more inelastic if it exhibits which of the following characteristics?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The good has many substitutes.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The good is a luxury (as opposed to a necessity).</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The good is a small part of the consumer's income.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>There is a great deal of time for the consumer to adjust to the change in prices.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q32</span>Suppose a consumer's income increases from ₹ 30,000 to ₹ 36,000. As a result, the consumer increases her purchases of compact discs (CDs) from 25 CDs to 30 CDs. What is the consumer's income elasticity of demand for CDs? (Use Arc Elasticity Method)</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>0.5</div>
+          <div class="mcq-opt"><span class="ol">B.</span>1.0</div>
+          <div class="mcq-opt"><span class="ol">C.</span>1.5</div>
+          <div class="mcq-opt"><span class="ol">D.</span>2.0</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q33</span>What will happen in the rice market if buyers are expecting higher rice prices in the near future?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The demand for rice will increase and the demand curve will shift to the right</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The demand for rice will decrease and the demand curve will shift to the left</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The demand for rice will be unaffected as it is a necessity</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The demand for wheat will increase and the demand curve will shift to the right</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q34</span>In the case of a Giffen good, the demand curve will usually be:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>horizontal.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>downward-sloping to the right.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>vertical.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>upward-sloping to the right.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q35</span>For a normal good with a downward sloping demand curve:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The price elasticity of demand is negative; the income elasticity of demand is negative.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The price elasticity of demand is positive; the income elasticity of demand is negative.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The price elasticity of demand is positive; the income elasticity of demand is positive.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The price elasticity of demand is negative; the income elasticity of demand is positive.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q36</span>Conspicuous goods are also known as</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Prestige goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Snob goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Veblen goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>All of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q37</span>The quantity purchased remains constant irrespective of the change in income. This is known as</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>negative income elasticity of demand</div>
+          <div class="mcq-opt"><span class="ol">B.</span>income elasticity of demand less than one</div>
+          <div class="mcq-opt"><span class="ol">C.</span>zero income elasticity of demand</div>
+          <div class="mcq-opt"><span class="ol">D.</span>income elasticity of demand is greater than one</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q38</span>As income increases, the consumer will go in for superior goods and consequently the demand for inferior goods will fall. This means inferior goods have</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>income elasticity of demand less than one</div>
+          <div class="mcq-opt"><span class="ol">B.</span>negative income elasticity of demand</div>
+          <div class="mcq-opt"><span class="ol">C.</span>zero income elasticity of demand</div>
+          <div class="mcq-opt"><span class="ol">D.</span>unitary income elasticity of demand</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q39</span>When income increases the money spent on necessaries of life may not increase in the same proportion. This means</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>income elasticity of demand is zero</div>
+          <div class="mcq-opt"><span class="ol">B.</span>income elasticity of demand is one</div>
+          <div class="mcq-opt"><span class="ol">C.</span>income elasticity of demand is greater than one</div>
+          <div class="mcq-opt"><span class="ol">D.</span>income elasticity of demand is less than one</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q40</span>The luxury goods like jewellery and fancy articles will have</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>low income elasticity of demand</div>
+          <div class="mcq-opt"><span class="ol">B.</span>high income elasticity of demand</div>
+          <div class="mcq-opt"><span class="ol">C.</span>zero income elasticity of demand</div>
+          <div class="mcq-opt"><span class="ol">D.</span>none of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q41</span>A good which cannot be consumed more than once is known as</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Durable good</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Non-durable good</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Producer good</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q42</span>Demand is</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>the desire for a commodity given its price and those of related commodities</div>
+          <div class="mcq-opt"><span class="ol">B.</span>the entire relationship between the quantity demanded and the price of a good, other things remaining the same</div>
+          <div class="mcq-opt"><span class="ol">C.</span>willingness to pay for a good if income is large enough</div>
+          <div class="mcq-opt"><span class="ol">D.</span>ability to pay for a good</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q43</span>Suppose potatoes have (-)0.4 as income elasticity. We can say from the data given that:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Potatoes are superior goods.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Potatoes are necessities.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Potatoes are inferior goods.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>There is a need to increase the income of consumers so that they can purchase potatoes.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q44</span>The price of tomatoes increases and people buy tomato puree. You infer that tomato puree and tomatoes are</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Normal goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Complements</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Substitutes</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Inferior goods</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q45</span>Chicken and fish are substitutes. If the price of chicken increases, the demand for fish will</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Increase or decrease but the demand curve for chicken will not change</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Increase and the demand curve for fish will shift rightwards.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Not change but there will be a movement along the demand curve for fish.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Decrease and the demand curve for fish will shift leftwards.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q46</span>Potato chips and popcorn are substitutes. A rise in the price of potato chips will ____ the demand for popcorn and the quantity of popcorn sold will ____.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>increase; increase</div>
+          <div class="mcq-opt"><span class="ol">B.</span>increase; decrease</div>
+          <div class="mcq-opt"><span class="ol">C.</span>decrease; decrease</div>
+          <div class="mcq-opt"><span class="ol">D.</span>decrease; increase</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q47</span>If the price of orange juice increases, the demand for apple juice will ____.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>increase because they are substitutes</div>
+          <div class="mcq-opt"><span class="ol">B.</span>decrease because they are substitutes</div>
+          <div class="mcq-opt"><span class="ol">C.</span>remain the same because real income is increased</div>
+          <div class="mcq-opt"><span class="ol">D.</span>decrease as real income decreases</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q48</span>An increase in the demand for computers, other things remaining same, will:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Increase the number of computers bought.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Decrease the price but increase the number of computers bought.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Increase the price of computers.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Increase the price and number of computers bought.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q49</span>When total demand for a commodity whose price has fallen increases, it is due to:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Income effect.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Substitution effect</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Complementary effect</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Price effect</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q50</span>With a fall in the price of a commodity:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Consumer's real income increases</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Consumer's real income decreases</div>
+          <div class="mcq-opt"><span class="ol">C.</span>There is no change in the real income of the consumer</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q51</span>With an increase in the price of diamond, the quantity demanded also increases. This is because it is a:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Substitute good</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Complementary good</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Conspicuous good</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q52</span>An example of goods that exhibit direct price-demand relationship is</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Giffen goods</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Complementary goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Substitute goods</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q53</span>In Economics, when demand for a commodity increases with a fall in its price it is known as:</div>
         <div class="mcq-opts">
           <div class="mcq-opt"><span class="ol">A.</span>Contraction of demand</div>
-          <div class="mcq-opt"><span class="ol">B.</span>Increase or decrease in demand</div>
-          <div class="mcq-opt"><span class="ol">C.</span>Expansion of demand</div>
-          <div class="mcq-opt"><span class="ol">D.</span>Change in quantity demanded</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Expansion of demand</div>
+          <div class="mcq-opt"><span class="ol">C.</span>No change in demand</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q54</span>A decrease in the demand for cameras, other things remaining the same, will</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Increase the number of cameras bought</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Decrease the price but increase the number of cameras bought</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Decrease the price and decrease the number of cameras bought.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Decrease in quantity of camera demanded</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q55</span>Which of the following statements about inferior goods is/are false? I. Inferior goods are those that we will never buy, no matter how cheap they are. II. Inferior goods are those that we buy more of, if we become poorer. III. Inferior goods are those that we buy more of, if we become richer.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>I and III only.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>I only</div>
+          <div class="mcq-opt"><span class="ol">C.</span>III only.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>I, II, and III.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q56</span>Comforts lie between</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>inferior goods and necessaries</div>
+          <div class="mcq-opt"><span class="ol">B.</span>luxuries and inferior goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>necessaries and luxuries</div>
+          <div class="mcq-opt"><span class="ol">D.</span>none of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q57</span>The price of a commodity decreases from ₹ 6 to ₹ 4 and the quantity demanded of the good increases from 10 units to 15 units. Find the coefficient of price elasticity.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>1.5</div>
+          <div class="mcq-opt"><span class="ol">B.</span>2.5</div>
+          <div class="mcq-opt"><span class="ol">C.</span>-1.5</div>
+          <div class="mcq-opt"><span class="ol">D.</span>0.5</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q58</span>'No matter what the price of coffee is, Arjun always spends a total of exactly 100 per week on coffee.' The statement implies that:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Arjun is very fond of coffee and therefore he has an inelastic demand for coffee</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Arjun has elastic demand for coffee</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Arjun's demand for coffee is relatively less elastic</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Arjun's demand for coffee is unit elastic</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q59</span>A firm learns that the own price elasticity of a product it manufactures is 3.5. What would be the correct action for this firm to take if it wishes to raise its total revenue?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Lower the price because demand for the good is elastic.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Raise the price because demand for the product is inelastic.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Raise the price because demand is elastic.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>We need more information in order to answer this question.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q60</span>At higher prices people demand more of certain goods not for their worth but for their prestige value. This is called</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Veblen effect</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Giffen's paradox</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Speculative effect</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q61</span>If the price of an air-conditioner increases from ₹ 30,000 to ₹ 30,010 and the resultant change in demand is negligible, we use the measure of ____ to measure elasticity.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Point elasticity of demand since it is a small change</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Arc elasticity of demand since it is a small change</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Price elasticity based on average prices method</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Any of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q62</span>Given the following four possibilities, which one will result in an increase in total expenditure of the consumer?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Demand is unit elastic and price rises</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Demand is elastic and price rises</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Demand is inelastic and price falls</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Demand is inelastic and price rises</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q63</span>The cross elasticity between Rye bread and Whole Wheat bread is expected to be:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Positive</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Negative</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Zero</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Can't say</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q64</span>The cross elasticity between personal computers and software is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Positive</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Zero</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Negative</div>
+          <div class="mcq-opt"><span class="ol">D.</span>One</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q65</span>The cross elasticity between Bread and DVDs is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Positive</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Negative</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Zero</div>
+          <div class="mcq-opt"><span class="ol">D.</span>One</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q66</span>Which of the following statements is correct?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>With the help of statistical tools, the demand can be forecasted with perfect accuracy</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The more the number of substitutes of a commodity, the more elastic is the demand.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Demand for butter is perfectly elastic.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Gold jewellery will have negative income elasticity.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q67</span>Suppose the income elasticity of education in private school in India is 3.6. What does this indicate:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Private school education is highly wanted by rich</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Private school education is a necessity.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Private school education is a luxury.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>We should have more private schools.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q68</span>If the organizers of an upcoming cricket match decide to increase the ticket price in order to raise its revenues, what they have learned from past experience is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The percentage increase in ticket rates will always equal the percentage decrease in tickets sold</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The percentage increase in ticket rates will always be greater than the percentage decrease in tickets sold</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The percentage increase in ticket rates will be less than the percentage decrease in tickets sold</div>
+          <div class="mcq-opt"><span class="ol">D.</span>(a) and (c) above are true</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q69</span>The diagram shows an upward-sloping line: as the price of Good X rises, the quantity demanded of Good Y also rises. What do we infer from the diagram?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Good X and Good Y are perfect complements</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Good X and Good Y are perfect substitutes</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Good X and Good Y are remote substitutes</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Good X and Good Y are close substitutes</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q70</span>The diagram shows the demand curve shifting leftward (from D1D1 to D2D2), reducing quantity from Q to Q1 at price P. The diagram given shows —</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>A change in demand which may be caused by a rise in income and the good is a normal good</div>
+          <div class="mcq-opt"><span class="ol">B.</span>A shift of demand curve caused by a fall in the price of a complementary good</div>
+          <div class="mcq-opt"><span class="ol">C.</span>A change in demand which is caused by a rise in income and the good is an inferior good</div>
+          <div class="mcq-opt"><span class="ol">D.</span>A shift of demand curve caused by a rise in the price of a substitute and the good is a normal good.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q71</span>The demand curve of a normal good has shifted to the right. Which of the four events would have caused the shift?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>A fall in the price of a substitute with the price of the good unchanged</div>
+          <div class="mcq-opt"><span class="ol">B.</span>A fall in the nominal income of the consumer and a fall in the price of the normal good</div>
+          <div class="mcq-opt"><span class="ol">C.</span>A fall in the price of a complementary good with the price of the normal good unchanged</div>
+          <div class="mcq-opt"><span class="ol">D.</span>A fall in the price of the normal good, other things remaining the same</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q72</span>If a roller-coaster ride is a function of an amusement park visit, then if the price of amusement park entry falls</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The demand for roller-coaster rides will rise and the demand curve will shift to the right</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The demand for roller-coaster ride cannot be predicted as it depends on the tastes of consumers for the ride</div>
+          <div class="mcq-opt"><span class="ol">C.</span>There will be an expansion in the demand for roller-coaster ride as it is complementary</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q73</span>The average income of residents of two cities A and B and the corresponding change in demand for two goods is given. City A: income +12%, demand for X +6.5%, demand for Y -2.3%. City B: income +9%, demand for X +5.6%, demand for Y +1.6%. Which statement is true?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Both goods are normal goods in both cities A and B</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Good X is a normal good in both cities; good Y is an inferior good in city A</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Good X is a normal good in both cities; good Y is an inferior good in city B</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Need more information to make an accurate comment</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q74</span>During a recession, economies experience increased unemployment and a reduced level of income. How would a recession likely affect the market demand for new cars?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Demand curve will shift to the right.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Demand curve will shift to the left.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Demand will not shift, but the quantity of cars sold per month will decrease.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Demand will not shift, but the quantity of cars sold per month will increase.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 2 · UNIT 2 — THEORY OF CONSUMER BEHAVIOUR
+   ===================================================================== */
+UNIT_DATA['ch2u2'] = {
+  chapterLabel: 'Chapter 2 · Theory of Demand & Supply',
+  unitLabel: 'Unit 2 · Theory of Consumer Behaviour',
+  sections: [
+
+  /* ---------------- SECTION 0: OVERVIEW ---------------- */
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">Theory of Consumer Behaviour</div>
+      <div class="page-sub">Unit 2 — Why and how a consumer spends to maximise satisfaction</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Explain the meaning of utility.</li>
+          <li>Describe how consumers maximise satisfaction across goods.</li>
+          <li>Explain the Law of Diminishing Marginal Utility with examples.</li>
+          <li>Describe the concept of Consumer Surplus with examples.</li>
+          <li>Describe indifference curves and the price line, and how they explain consumer equilibrium.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Two Approaches</div>
+        <p>Consumer behaviour is explained by two theories of utility. Both try to answer the same question — how does a rational consumer allocate limited income to get maximum satisfaction?</p>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">📏 Cardinal (Marshall)</div>
+            <ul>
+              <li>Utility is <strong>measurable</strong> in numbers (utils)</li>
+              <li>Tools: Total Utility, Marginal Utility, Consumer Surplus</li>
+              <li>Assumes marginal utility of money is constant</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">🔢 Ordinal (Hicks & Allen)</div>
+            <ul>
+              <li>Utility is only <strong>rankable</strong>, not measurable</li>
+              <li>Tools: Indifference Curves &amp; Budget Line</li>
+              <li>Considered more realistic and scientific</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Unit Map</div>
+        <div class="flow-row">
+          <div class="flow-step">Wants &amp; Utility<br><small>TU · MU</small></div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Law of DMU</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Consumer Surplus</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Indifference Curves</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Budget Line &amp;<br>Equilibrium</div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 1: WANTS & UTILITY ---------------- */
+  {
+    label: 'Wants & Utility',
+    html: `
+      <div class="page-title">Nature of Wants &amp; The Concept of Utility</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Human Wants</div>
+        <p>A <span class="kt">want</span> is a wish, desire or motive to own or use goods and services that give satisfaction. Because resources are limited, we must choose between urgent and less urgent wants.</p>
+        <ul class="note-list">
+          <li>Wants are <strong>unlimited</strong> in number — all wants can never be fully satisfied.</li>
+          <li>Wants <strong>differ in intensity</strong> — some are urgent, others less so.</li>
+          <li>Each single want is <strong>satiable</strong> (can be fully satisfied).</li>
+          <li>Wants are <strong>competitive</strong> and also <strong>complementary</strong>; a want may be met in alternative ways.</li>
+          <li>Wants are <strong>subjective and relative</strong> — they vary with time, place and person; so does utility.</li>
+          <li>Wants become habits/customs and are affected by income, taste, fashion, advertisements and social norms.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Classification of Wants</div>
+        <div class="grid3">
+          <div class="mini-card"><div class="mc-title">Necessaries</div><div class="mc-val">Essential for living. Sub-divided into necessaries for <em>life</em>, for <em>efficiency</em>, and <em>conventional</em> necessaries.</div></div>
+          <div class="mini-card"><div class="mc-title">Comforts</div><div class="mc-val">Make life comfortable &amp; satisfying. Less urgent than necessaries (good house, tasty food).</div></div>
+          <div class="mini-card"><div class="mc-title">Luxuries</div><div class="mc-val">Superfluous &amp; expensive, not essential (vintage cars, vanity goods).</div></div>
+        </div>
+        <div class="callout imp"><div class="ct">💡 Not Rigid</div>The classification is <strong>not fixed</strong> — a luxury for one person or time can become a necessity for another person or a later time. Many past luxuries are today's necessities.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>What is Utility?</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>In the economic sense, <span class="kt">Utility</span> is the <strong>want-satisfying power</strong> of a commodity. It depends on the intensity of the want.</div>
+        <ul class="note-list">
+          <li>Utility is a <strong>psychological, subjective &amp; relative</strong> concept — it depends on the mental attitude of people.</li>
+          <li>It is <strong>different from usefulness</strong> and has no concern with moral or ethical values (e.g. a cigarette has utility to a smoker though it is harmful).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Total Utility &amp; Marginal Utility</div>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">Total Utility (TU)</div><div class="mc-val">Sum of utilities from all units consumed at a given time. It is the sum of marginal utilities.</div></div>
+          <div class="mini-card"><div class="mc-title">Marginal Utility (MU)</div><div class="mc-val">Additional utility from consuming one more unit of the commodity.</div></div>
+        </div>
+        <div class="eq-box">TU = Σ MU &nbsp;&nbsp;•&nbsp;&nbsp; MU = TU<sub>n</sub> − TU<sub>n−1</sub> &nbsp;&nbsp;•&nbsp;&nbsp; MU = ΔTU / ΔN</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">⑤</span>Relationship Between TU &amp; MU</div>
+        <table class="tbl">
+          <tr><th>Units</th><th>Total Utility (TU)</th><th>Marginal Utility (MU)</th></tr>
+          <tr><td>0</td><td>0</td><td>—</td></tr>
+          <tr><td>1</td><td>10</td><td>10</td></tr>
+          <tr><td>2</td><td>18</td><td>8</td></tr>
+          <tr><td>3</td><td>23</td><td>5</td></tr>
+          <tr><td>4</td><td>25</td><td>2</td></tr>
+          <tr><td>5</td><td>25</td><td>0</td></tr>
+          <tr><td>6</td><td>23</td><td>−2</td></tr>
+        </table>
+        <ul class="note-list numbered">
+          <li>At the first unit, <strong>TU = MU</strong>.</li>
+          <li>As long as MU is positive (but falling), TU <strong>increases at a decreasing rate</strong>.</li>
+          <li>When TU is <strong>maximum and constant, MU = 0</strong> (the saturation point).</li>
+          <li>When TU <strong>starts falling, MU becomes negative</strong>.</li>
+        </ul>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 2: LAW OF DIMINISHING MARGINAL UTILITY ---------------- */
+  {
+    label: 'Law of DMU',
+    html: `
+      <div class="page-title">Law of Diminishing Marginal Utility</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Statement of the Law</div>
+        <div class="callout def"><div class="ct">📌 The Law</div>As a consumer takes <strong>more units of a good</strong>, the extra satisfaction (marginal utility) derived from each additional unit <strong>goes on falling</strong>.</div>
+        <p>The law rests on the fact that although total wants are virtually unlimited, <span class="kt">each single want is satiable</span>. As more units are consumed, the intensity of that want falls until the consumer wants no more.</p>
+        <div class="callout warn"><div class="ct">⚠️ Watch Out</div>It is the <strong>marginal</strong> utility that declines — not the total utility. TU keeps rising (at a decreasing rate) while MU is still positive.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Illustration — Cups of Tea</div>
+        <table class="tbl">
+          <tr><th>Cups per day</th><th>Total Utility (utils)</th><th>Marginal Utility (utils)</th></tr>
+          <tr><td>1</td><td>30</td><td>30</td></tr>
+          <tr><td>2</td><td>50</td><td>20</td></tr>
+          <tr><td>3</td><td>65</td><td>15</td></tr>
+          <tr><td>4</td><td>75</td><td>10</td></tr>
+          <tr><td>5</td><td>83</td><td>8</td></tr>
+          <tr><td>6</td><td>89</td><td>6</td></tr>
+          <tr><td>7</td><td>93</td><td>4</td></tr>
+          <tr><td>8</td><td>96</td><td>3</td></tr>
+          <tr><td>9</td><td>98</td><td>2</td></tr>
+          <tr><td>10</td><td>99</td><td>1</td></tr>
+          <tr><td>11</td><td>95</td><td>−4</td></tr>
+        </table>
+        <p><strong>Utils</strong> = units of utility. The 1st cup gives 30 utils; by the 11th cup MU turns <span class="nt">negative</span> — it causes sickness rather than satisfaction.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Assumptions of the Law</div>
+        <ul class="note-list numbered">
+          <li>Units consumed are <strong>identical in all respects</strong>; habit, taste, treatment and income remain unchanged.</li>
+          <li>Units are of a <strong>standard/reasonable size</strong> (e.g. water by the glass, not by the spoonful).</li>
+          <li>There is <strong>no time gap</strong> — consumption is continuous.</li>
+          <li>The law may <strong>not apply</strong> to articles like gold or money, where a greater quantity may increase the lust for more.</li>
+          <li>The shape of the utility curve can be affected by the presence/absence of <strong>substitutes or complements</strong>.</li>
+        </ul>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 3: CONSUMER SURPLUS ---------------- */
+  {
+    label: 'Consumer Surplus',
+    html: `
+      <div class="page-title">Consumer Surplus</div>
+      <div class="page-sub">Propounded by Alfred Marshall — a measure of buyer welfare</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Concept</div>
+        <div class="callout def"><div class="ct">📌 Marshall's Definition</div>Consumer surplus is the <span class="kt">excess of the price a consumer is willing to pay</span> rather than go without a thing, over the price he <strong>actually pays</strong>.</div>
+        <div class="eq-box">Consumer Surplus = What a consumer is ready to pay − What he actually pays</div>
+        <p>It is derived from the <strong>Law of Diminishing Marginal Utility</strong>. Since price is the same for all units, but earlier units yield higher MU than the price, the consumer gains extra utility (surplus) on all units except the marginal one.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Measurement — Commodity X (Price = ₹20)</div>
+        <table class="tbl">
+          <tr><th>No. of units</th><th>Marginal Utility (worth ₹)</th><th>Price (₹)</th><th>Consumer Surplus (₹)</th></tr>
+          <tr><td>1</td><td>30</td><td>20</td><td>10</td></tr>
+          <tr><td>2</td><td>28</td><td>20</td><td>8</td></tr>
+          <tr><td>3</td><td>26</td><td>20</td><td>6</td></tr>
+          <tr><td>4</td><td>24</td><td>20</td><td>4</td></tr>
+          <tr><td>5</td><td>22</td><td>20</td><td>2</td></tr>
+          <tr><td>6</td><td>20</td><td>20</td><td>0</td></tr>
+          <tr><td>7</td><td>18</td><td>20</td><td>—</td></tr>
+        </table>
+        <p>At the <strong>6th unit</strong>, MU = Price, so the consumer is in equilibrium (no surplus on the marginal unit). Total surplus = 10 + 8 + 6 + 4 + 2 + 0 = <strong>₹30</strong>. He will not buy beyond the 6th unit because MU &lt; Price there.</p>
+        <div class="callout imp"><div class="ct">💡 Graphically</div>Consumer surplus is the <strong>triangular area below the demand curve and above the price line</strong>. A price <strong>fall</strong> increases the surplus; a price <strong>rise</strong> reduces it.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Effect of a Price Fall (P → P₁)</div>
+        <p>A fall in price raises consumer surplus in two components:</p>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">(a) Existing Buyers</div><div class="mc-val">Extra surplus to those who were already buying at the higher price P (the rectangle).</div></div>
+          <div class="mini-card"><div class="mc-title">(b) New Buyers</div><div class="mc-val">Surplus now available to new buyers who enter the market due to the lower price (the triangle).</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Applications</div>
+        <ul class="note-list numbered">
+          <li>Measures <span class="gt">welfare</span> — customers perceiving a large surplus are more likely to repeat purchases.</li>
+          <li>Helps in <strong>price discrimination</strong> — firms identify segments willing to pay more.</li>
+          <li>Used in <strong>cost-benefit analysis</strong> for large investment decisions.</li>
+          <li>Guides firms when <strong>raising prices</strong> — low-surplus customers may drop out.</li>
+          <li>Guides <strong>finance ministers on taxation</strong> — taxing high-surplus goods causes minimal welfare loss.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">⑤</span>Limitations</div>
+        <ul class="note-list">
+          <li>Cannot be measured precisely — MU of different units is hard to quantify.</li>
+          <li>For <strong>necessaries</strong>, MU of early units is infinitely large → surplus appears infinite.</li>
+          <li>Affected by availability of <strong>substitutes</strong>; no simple rule for prestige goods (e.g. diamonds).</li>
+          <li>Cannot be measured in money since the MU of money itself changes (Marshall's assumption of constant MU of money is unrealistic).</li>
+        </ul>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 4: INDIFFERENCE CURVES ---------------- */
+  {
+    label: 'Indifference Curves',
+    html: `
+      <div class="page-title">Indifference Curve Analysis</div>
+      <div class="page-sub">The ordinal approach of Hicks &amp; Allen</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Assumptions</div>
+        <ul class="note-list numbered">
+          <li>The consumer knows his own tastes/preferences and has full information about the economic environment.</li>
+          <li>The consumer is <strong>rational</strong> — prefers a more-preferred bundle to a less-preferred one.</li>
+          <li>Utility is only <strong>ordinally</strong> expressible — bundles can be ranked, but not by how much.</li>
+          <li>Choices are <strong>transitive</strong> — if A &gt; B and B &gt; C, then A &gt; C (consistency).</li>
+          <li><strong>"More is better"</strong> (non-satiation) — a bundle with more commodities is preferred.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>What is an Indifference Curve?</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>An <span class="kt">indifference curve</span> shows all combinations of two goods that give the consumer the <strong>same level of satisfaction</strong>. The consumer is indifferent among all points on it.</div>
+        <p>Also called an <strong>iso-utility</strong> or <strong>equal-utility</strong> curve.</p>
+        <table class="tbl">
+          <tr><th>Combination</th><th>Food</th><th>Clothing</th><th>MRS</th></tr>
+          <tr><td>A</td><td>1</td><td>12</td><td>—</td></tr>
+          <tr><td>B</td><td>2</td><td>6</td><td>6</td></tr>
+          <tr><td>C</td><td>3</td><td>4</td><td>2</td></tr>
+          <tr><td>D</td><td>4</td><td>3</td><td>1</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Indifference Curve Map</div>
+        <p>A set of indifference curves is an <span class="kt">indifference map</span> — each curve represents a different level of satisfaction.</p>
+        <div class="callout imp"><div class="ct">💡 Higher = Better</div>Curves <strong>farther from the origin</strong> represent higher satisfaction. Moving up-and-right = more utility; moving down-and-left = less.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Marginal Rate of Substitution (MRS)</div>
+        <div class="callout def"><div class="ct">📌 Definition</div><span class="kt">MRS</span> is the rate at which a consumer is prepared to exchange good X for good Y while staying on the same indifference curve (i.e. keeping satisfaction constant).</div>
+        <p>It equals the (absolute value of the) <strong>slope of the indifference curve</strong>. From the table above, MRS falls: 6 → 2 → 1.</p>
+        <div class="eq-box">Along the IC: −MU<sub>c</sub> × ΔQ<sub>c</sub> = MU<sub>f</sub> × ΔQ<sub>f</sub> &nbsp;⟹&nbsp; MRS<sub>xy</sub> = MU<sub>x</sub> / MU<sub>y</sub></div>
+        <div class="callout imp"><div class="ct">💡 Diminishing MRS</div>The more of good Y a person has relative to X, the less Y he will give up for another unit of X. Two reasons: (1) wants are satiable, (2) most goods are <strong>imperfect substitutes</strong>. This makes the IC convex to the origin.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 5: PROPERTIES OF INDIFFERENCE CURVES ---------------- */
+  {
+    label: 'Properties of ICs',
+    html: `
+      <div class="page-title">Properties of Indifference Curves</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Five Properties</div>
+        <ul class="note-list numbered">
+          <li><strong>Slope downward to the right</strong> — to keep satisfaction constant, more of one good must mean less of the other.</li>
+          <li><strong>Convex to the origin</strong> — because of the diminishing marginal rate of substitution.</li>
+          <li><strong>Never intersect each other</strong> — intersection would imply two different satisfaction levels are equal, which is absurd.</li>
+          <li><strong>Higher IC = higher satisfaction</strong> — a higher curve has more of one or both goods.</li>
+          <li><strong>Never touch either axis</strong> — the consumer wants some of <em>both</em> goods; touching an axis means zero of one good.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Why ICs Cannot Intersect</div>
+        <p>Suppose IC₁ and IC₂ cross at A. If A &amp; B lie on IC₁ they give equal satisfaction; if A &amp; C lie on IC₂ they too give equal satisfaction. This would imply B = C in satisfaction — but C has more of both goods than B. That contradiction proves two indifference curves can never touch or cut each other.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Two Extreme Cases</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">⟋ Perfect Substitutes</div>
+            <ul>
+              <li>Consumer indifferent about which to consume (1 unit X ↔ 1 unit Y)</li>
+              <li>IC is a <strong>straight, downward-sloping line</strong></li>
+              <li><strong>Constant MRS</strong></li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">⌐ Perfect Complements</div>
+            <ul>
+              <li>Consumed only in fixed proportions (left shoe &amp; right shoe)</li>
+              <li>IC is <strong>L-shaped</strong> (right-angled)</li>
+              <li><strong>MRS is undefined</strong> — no substitution possible</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 6: BUDGET LINE & EQUILIBRIUM ---------------- */
+  {
+    label: 'Budget Line & Equilibrium',
+    html: `
+      <div class="page-title">The Budget Line &amp; Consumer Equilibrium</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Budget Constraint</div>
+        <p>Preferences tell us what a consumer <em>wants</em>; the budget line tells us what he <em>can afford</em>. He faces two constraints: he must pay prices, and he has limited income.</p>
+        <div class="eq-box">P<sub>X</sub>Q<sub>X</sub> + P<sub>Y</sub>Q<sub>Y</sub> ≤ B &nbsp;&nbsp;(spending entire income: = B)</div>
+        <div class="callout def"><div class="ct">📌 Budget / Price Line</div>Shows all combinations of two goods a consumer can buy by spending his <strong>entire money income</strong> at given prices.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Consumption Possibilities (Income ₹100)</div>
+        <p>Ice cream at ₹20, Chocolate at ₹10:</p>
+        <table class="tbl">
+          <tr><th>Combination</th><th>Ice Cream</th><th>Chocolate</th></tr>
+          <tr><td>A</td><td>0</td><td>10</td></tr>
+          <tr><td>B</td><td>1</td><td>8</td></tr>
+          <tr><td>C</td><td>2</td><td>6</td></tr>
+          <tr><td>D</td><td>3</td><td>4</td></tr>
+          <tr><td>E</td><td>4</td><td>2</td></tr>
+          <tr><td>F</td><td>5</td><td>0</td></tr>
+        </table>
+        <ul class="note-list">
+          <li>A point <strong>outside</strong> the line (e.g. H) is <span class="nt">unaffordable</span>.</li>
+          <li>A point <strong>inside</strong> the line (e.g. K) shows <span class="nt">under-spending</span>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Slope &amp; Shifts of the Budget Line</div>
+        <p>The slope = the <span class="kt">price ratio</span> P<sub>X</sub> / P<sub>Y</sub> — the rate at which the consumer can trade one good for the other in the market.</p>
+        <p>The budget line <strong>shifts</strong> when there is:</p>
+        <ul class="note-list">
+          <li>A change in the price of one or both goods (income unchanged).</li>
+          <li>A change in nominal income (relative prices unchanged) — parallel shift.</li>
+          <li>A change in both income and relative prices.</li>
+        </ul>
+        <div class="callout exam"><div class="ct">🎯 Exam Point</div>If <strong>both</strong> prices change in the <strong>same proportion</strong>, the new budget line is <strong>parallel</strong> to the old one (same slope).</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Consumer Equilibrium</div>
+        <p>A consumer is in equilibrium when he derives maximum satisfaction and has no incentive to rearrange purchases. His optimal choice must satisfy two criteria: it lies <strong>on the budget line</strong>, and on the <strong>highest attainable indifference curve</strong>.</p>
+        <div class="callout imp"><div class="ct">💡 The Tangency Condition</div>Equilibrium is at point <strong>Q</strong>, where the budget line is <strong>tangent</strong> to the highest reachable indifference curve. At this point the slope of the IC (MRS) equals the slope of the budget line (price ratio).</div>
+        <div class="eq-box">MRS<sub>xy</sub> = MU<sub>x</sub> / MU<sub>y</sub> = P<sub>x</sub> / P<sub>y</sub> &nbsp;&nbsp;⟹&nbsp;&nbsp; MU<sub>x</sub>/P<sub>x</sub> = MU<sub>y</sub>/P<sub>y</sub></div>
+        <p>The consumer buys OM of X and ON of Y. When the rate at which he is <em>willing</em> to trade (IC slope) equals the rate at which he is <em>able</em> to trade (budget slope), satisfaction is maximised.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">⑤</span>Why IC Analysis is Superior to Utility Analysis</div>
+        <ul class="note-list numbered">
+          <li>Dispenses with the assumption that utility is <strong>measurable</strong>.</li>
+          <li>Studies <strong>more than one commodity</strong> at a time.</li>
+          <li>Does <strong>not</strong> assume constancy of the marginal utility of money.</li>
+          <li>Segregates the <strong>income effect</strong> from the <strong>substitution effect</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">⑥</span>Quick Recap</div>
+        <ul class="summary-list">
+          <li>Utility = want-satisfying power; TU = ΣMU, and MU falls as consumption rises (Law of DMU).</li>
+          <li>Consumer surplus = willingness to pay − price actually paid; graphically, area below demand and above price.</li>
+          <li>Indifference curves slope down, are convex, never cross, never touch the axes, and higher = better.</li>
+          <li>Consumer equilibrium: budget line tangent to the highest IC, where MRS<sub>xy</sub> = P<sub>x</sub>/P<sub>y</sub>.</li>
+        </ul>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 7: MCQ PRACTICE ---------------- */
+  {
+    label: 'MCQ Practice',
+    html: `
+      <div class="page-title">Test Your Knowledge — Consumer Behaviour</div>
+      <div class="page-sub">Tap an option to check it, or reveal the answer. Score updates automatically.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch2u2" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch2u2')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q1</span>Total utility is maximum when:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Marginal utility is zero.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Marginal utility is at its highest point.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Marginal utility is negative</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q2</span>Which one is not an assumption of the theory of demand based on analysis of indifference curves?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Given scale of preferences as between different combinations of two goods.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Diminishing marginal rate of substitution.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Diminishing marginal utility of money</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Consumers would always prefer more of a particular good to less of it, other things remaining the same.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q3</span>An indifference curve slopes down towards the right since more of one commodity and less of another result in:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Same level of satisfaction.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Greater satisfaction.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Maximum satisfaction.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Any of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q4</span>Which of the following statements is incorrect?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>An indifference curve must be downward-sloping to the right.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Convexity of a curve implies that the slope of the curve diminishes as one moves from left to right.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The income elasticity for inferior goods to a consumer is positive</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The total effect of a change in the price of a good on its quantity demanded is called the price effect.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q5</span>The successive units of stamps collected by a little boy give him greater and greater satisfaction. This is a clear case of</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Operation of the law of demand.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Consumer surplus enjoyed in hobbies and rare collections</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Exception to the law of diminishing utility.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q6</span>By consumer surplus, economists mean</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The area inside the budget line above the price of the commodity</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The area between the average revenue and marginal revenue curves.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The difference between the maximum amount that a person is willing to pay for a good and its market price.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The difference between the market price and the supply curve</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q7</span>Which of the following is a property of an indifference curve?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>It is convex to the origin due to diminishing marginal rate of substitution</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The marginal rate of substitution is constant as you move along an indifference curve.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Marginal utility is constant as you move along an indifference curve.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Total utility is greatest where the budget line cuts the indifference curve.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q8</span>When economists speak of the utility of a certain good, they are referring to</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The demand for the good.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The usefulness of the good in consumption.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The expected satisfaction derived from consuming the good.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The rate at which consumers are willing to exchange one good for another.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q9</span>A relative price is</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>price expressed in terms of money</div>
+          <div class="mcq-opt"><span class="ol">B.</span>what you get paid for babysitting your cousin</div>
+          <div class="mcq-opt"><span class="ol">C.</span>the ratio of one money price to another</div>
+          <div class="mcq-opt"><span class="ol">D.</span>equal to a money price</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q10</span>A point below the budget line of a consumer</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Represents a combination of goods which costs the whole of consumer's income</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Represents a combination of goods which costs less than the consumer's income</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Represents a combination of goods which is unattainable to the consumer given his/her money income</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Represents a combination of goods which costs more than the consumer's income</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q11</span>A consumer with an income of ₹ 900 has a budget line with intercepts of 90 chocolates (on the Y-axis) and 45 cups of ice cream (on the X-axis). The prices of ice cream and chocolate respectively are:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>₹ 10 and ₹ 20</div>
+          <div class="mcq-opt"><span class="ol">B.</span>₹ 20 and ₹ 10</div>
+          <div class="mcq-opt"><span class="ol">C.</span>₹ 10 and ₹ 5</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Any of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q12</span>A consumer is spending her entire income and consuming at point B, which lies on a lower indifference curve than point K on the same budget line. What advice will you give her?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>No advice needed, as she is maximizing her utility at B</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Consume more of Good X and less of Good Y</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Consume more of X and less of Y and reach point K</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Consume same quantity of Good Y and more of Good X</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q13</span>For the same consumer (consuming at B on a lower indifference curve, with K on a higher curve on the same budget line), which of the following statements is true?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The consumer is not maximizing her utility at point K</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The consumer is spending her entire income on both goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The consumer gets equal pleasure at points B and K</div>
+          <div class="mcq-opt"><span class="ol">D.</span>All the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q14</span>On a demand curve, the effect on consumer surplus of a fall in price from E to F (a lower price) is</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>A decrease in consumer surplus by EFGR</div>
+          <div class="mcq-opt"><span class="ol">B.</span>A decrease in consumer surplus by AER</div>
+          <div class="mcq-opt"><span class="ol">C.</span>A decrease in consumer surplus by EFCR</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q15</span>On the same demand diagram, when price rises from F to E, the increase in revenue earned by the seller is</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Equivalent to area EFGR</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Equivalent to area EFCR</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Equivalent to area AER</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q16</span>How would a consumer's budget line be affected if the price of both goods fell?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The budget line would not shift.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>The new budget line must be parallel to the old budget line.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The budget line must be shifting to the left</div>
+          <div class="mcq-opt"><span class="ol">D.</span>The new budget line will have the same slope as the original so long as the prices of both goods change in the same proportion.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 2 · UNIT 3 — SUPPLY
+   ===================================================================== */
+UNIT_DATA['ch2u3'] = {
+  chapterLabel: 'Chapter 2 · Theory of Demand & Supply',
+  unitLabel: 'Unit 3 · Theory of Supply',
+  sections: [
+
+  /* ---------------- SECTION 0: OVERVIEW ---------------- */
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">Theory of Supply</div>
+      <div class="page-sub">Unit 3 — How producers respond to price, and how price is determined</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Explain the meaning of supply.</li>
+          <li>List and give examples of the determinants of supply and elasticity of supply.</li>
+          <li>Describe the Law of Supply.</li>
+          <li>Distinguish movements along vs shifts of the supply curve.</li>
+          <li>Explain elasticity of supply with examples.</li>
+          <li>Illustrate how demand and supply together determine price.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>What is Supply?</div>
+        <div class="callout def"><div class="ct">📌 Definition</div><span class="kt">Supply</span> is the amount of a good or service that producers are <strong>willing and able to offer</strong> to the market at various prices during a given period of time.</div>
+        <ul class="note-list numbered">
+          <li>Supply is what a firm <strong>offers for sale</strong>, not necessarily what it succeeds in selling.</li>
+          <li>Supply requires both <strong>willingness and ability</strong>; production cost is the primary influence on ability.</li>
+          <li>Supply is a <strong>flow</strong> — measured per unit of time (per day, week, year).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Unit Map</div>
+        <div class="flow-row">
+          <div class="flow-step">Determinants of Supply</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Law of Supply</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Movements vs Shifts</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Elasticity of Supply</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Equilibrium Price</div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 1: DETERMINANTS OF SUPPLY ---------------- */
+  {
+    label: 'Determinants',
+    html: `
+      <div class="page-title">Determinants of Supply</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Main Determinants</div>
+        <table class="tbl">
+          <tr><th>Determinant</th><th>Effect on Supply</th></tr>
+          <tr><td><strong>Price of the good</strong></td><td>Higher relative price → greater quantity supplied (profits rise)</td></tr>
+          <tr><td><strong>Prices of related goods</strong></td><td>If price of Y rises, resources shift to Y → supply of X falls</td></tr>
+          <tr><td><strong>Prices of factors of production</strong></td><td>Higher input costs (wages, materials, interest) → supply falls</td></tr>
+          <tr><td><strong>State of technology</strong></td><td>New technology raises efficiency &amp; cuts cost → supply rises</td></tr>
+          <tr><td><strong>Government policy</strong></td><td>Taxes (excise, sales, import duty) reduce supply; subsidies increase it</td></tr>
+          <tr><td><strong>Nature of competition &amp; size of industry</strong></td><td>Supply is more under competition than under monopoly</td></tr>
+          <tr><td><strong>Expectations of future prices</strong></td><td>Expected price rise → less supplied now; expected fall → more supplied now</td></tr>
+          <tr><td><strong>Number of sellers</strong></td><td>More firms / new entrants → industry supply curve shifts right</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Key Examples</div>
+        <ul class="note-list">
+          <li>A rise in the price of <span class="kt">comic books</span> makes publishers shift resources away from novels.</li>
+          <li>A rise in the price of <span class="kt">wheat</span> makes farmers switch land away from corn &amp; soya beans.</li>
+          <li>A rise in the <strong>cost of land</strong> hugely affects wheat production but barely affects automobile production.</li>
+        </ul>
+        <div class="callout imp"><div class="ct">💡 Other Factors</div>Supply also depends on government's industrial &amp; foreign policies, goals of the firm, infrastructure, natural factors (weather, floods, earthquakes) and man-made factors (war, strikes, riots).</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 2: LAW OF SUPPLY ---------------- */
+  {
+    label: 'Law of Supply',
+    html: `
+      <div class="page-title">The Law of Supply</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Statement</div>
+        <div class="callout def"><div class="ct">📌 The Law</div>Other things remaining constant, the quantity of a good produced and offered for sale <strong>increases as its price rises</strong> and <strong>decreases as its price falls</strong> — a direct relationship.</div>
+        <p>Based on common sense: a higher price means greater profit and hence greater incentive to produce and sell.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Supply Schedule — Good X</div>
+        <table class="tbl">
+          <tr><th>Price (₹ per kg)</th><th>Quantity Supplied (kg)</th></tr>
+          <tr><td>1</td><td>5</td></tr>
+          <tr><td>2</td><td>35</td></tr>
+          <tr><td>3</td><td>45</td></tr>
+          <tr><td>4</td><td>55</td></tr>
+          <tr><td>5</td><td>65</td></tr>
+        </table>
+        <p>Plotted, this gives an <strong>upward-sloping (positive)</strong> supply curve. The curve shows both the highest quantity willingly supplied at each price, and the minimum price needed to induce those quantities.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Exception &amp; Time Period</div>
+        <ul class="note-list">
+          <li><strong>Exception:</strong> the supply of <span class="nt">labour at very high wages</span> may <em>fall</em> instead of rise (workers prefer leisure).</li>
+          <li><strong>Time matters:</strong> in the <strong>short run</strong> supply is hard to change; in the <strong>long run</strong> it adjusts easily to price.</li>
+        </ul>
+        <div class="callout imp"><div class="ct">💡 Market Supply</div>Market supply = the sum of supplies by all individual firms, obtained by <strong>horizontally adding</strong> individual supply curves. It also depends on the number of producers.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 3: MOVEMENTS vs SHIFTS ---------------- */
+  {
+    label: 'Movements vs Shifts',
+    html: `
+      <div class="page-title">Movements Along vs Shifts of the Supply Curve</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Crucial Distinction</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">↕ Movement Along the Curve</div>
+            <ul>
+              <li>Caused by a change in the good's <strong>own price</strong></li>
+              <li>Called change in <strong>quantity supplied</strong></li>
+              <li>Price ↑ → <strong>expansion</strong> (upward movement)</li>
+              <li>Price ↓ → <strong>contraction</strong> (downward movement)</li>
+            </ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">⇄ Shift of the Curve</div>
+            <ul>
+              <li>Caused by a change in <strong>factors other than own price</strong></li>
+              <li>Called change in <strong>supply</strong></li>
+              <li>Shift <strong>right</strong> = increase in supply (more at each price)</li>
+              <li>Shift <strong>left</strong> = decrease in supply (less at each price)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>In Short</div>
+        <div class="callout exam"><div class="ct">🎯 Remember</div>Own-price change → <strong>movement</strong> along the curve (change in quantity supplied). Any other variable → <strong>shift</strong> of the curve (change in supply). This exactly mirrors the demand-side distinction.</div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 4: ELASTICITY OF SUPPLY ---------------- */
+  {
+    label: 'Elasticity of Supply',
+    html: `
+      <div class="page-title">Elasticity of Supply</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Meaning &amp; Formula</div>
+        <div class="callout def"><div class="ct">📌 Definition</div><span class="kt">Elasticity of supply</span> is the responsiveness of the quantity supplied to a change in the good's price.</div>
+        <div class="eq-box">E<sub>s</sub> = %Δ in Quantity Supplied ÷ %Δ in Price = (Δq/q) ÷ (Δp/p) = (Δq/Δp) × (p/q)</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Worked Example</div>
+        <div class="illus-box">
+          <div class="il-h">📝 Worked Example</div>
+          <div class="il-q">Price of X rises from ₹2,000 to ₹2,100 and quantity supplied rises from 2,500 to 3,000 units. Find E<sub>s</sub>.</div>
+          <div class="il-a"><strong>Solution:</strong> Δq = 500, Δp = 100, p = 2000, q = 2500.<br>E<sub>s</sub> = (500/100) × (2000/2500) = 5 × 0.8 = <strong>4</strong>. Supply is highly elastic.</div>
+        </div>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 5: TYPES OF SUPPLY ELASTICITY ---------------- */
+  {
+    label: 'Types of Es',
+    html: `
+      <div class="page-title">Types of Supply Elasticity</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Five Types</div>
+        <table class="tbl">
+          <tr><th>Type</th><th>Coefficient</th><th>Meaning &amp; Curve</th></tr>
+          <tr><td><strong>Perfectly inelastic</strong></td><td>E<sub>s</sub> = 0</td><td>Quantity supplied unchanged whatever the price — <strong>vertical</strong> curve</td></tr>
+          <tr><td><strong>Relatively less-elastic</strong></td><td>0 &lt; E<sub>s</sub> &lt; 1</td><td>%Δ quantity &lt; %Δ price — quantity not very responsive</td></tr>
+          <tr><td><strong>Relatively greater-elastic</strong></td><td>1 &lt; E<sub>s</sub> &lt; ∞</td><td>%Δ quantity &gt; %Δ price — quantity very responsive</td></tr>
+          <tr><td><strong>Unit-elastic</strong></td><td>E<sub>s</sub> = 1</td><td>%Δ quantity = %Δ price — the dividing line</td></tr>
+          <tr><td><strong>Perfectly elastic</strong></td><td>E<sub>s</sub> = ∞</td><td>Any quantity supplied at one price — <strong>horizontal</strong> curve</td></tr>
+        </table>
+        <div class="callout imp"><div class="ct">💡 Rule of Thumb</div>As elasticity rises, the supply curve gets <strong>flatter</strong> — a flatter curve means quantity responds more strongly to price.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Elasticity Varies Along the Curve</div>
+        <p>For an industry with <span class="kt">limited capacity</span>:</p>
+        <ul class="note-list">
+          <li>At <strong>low output</strong> firms have idle capacity → a small price rise brings a big output rise (<strong>E &gt; 1</strong>).</li>
+          <li>Once at <strong>full capacity</strong>, expanding output needs new plants → price must rise a lot for a small output rise (<strong>E &lt; 1</strong>).</li>
+        </ul>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 6: MEASUREMENT & DETERMINANTS OF Es ---------------- */
+  {
+    label: 'Measuring Es & Determinants',
+    html: `
+      <div class="page-title">Measurement &amp; Determinants of Supply Elasticity</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Point Elasticity</div>
+        <p>Measured at a given point on the supply curve:</p>
+        <div class="eq-box">E<sub>s</sub> = (dq/dp) × (p/q)</div>
+        <div class="illus-box">
+          <div class="il-h">📝 Worked Example</div>
+          <div class="il-q">Supply function q = −100 + 10p. Find point elasticity when p = ₹15.</div>
+          <div class="il-a"><strong>Solution:</strong> dq/dp = 10, q = −100 + 10(15) = 50.<br>E<sub>s</sub> = 10 × (15/50) = <strong>3</strong>.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Arc Elasticity</div>
+        <p>Measured between two points on the supply curve:</p>
+        <div class="eq-box">E<sub>s</sub> = [(Q₂ − Q₁)/(Q₂ + Q₁)] × [(P₂ + P₁)/(P₂ − P₁)]</div>
+        <div class="illus-box">
+          <div class="il-h">📝 Worked Example</div>
+          <div class="il-q">P₁ = ₹12, P₂ = ₹15, Q₁ = 20, Q₂ = 50. Find arc elasticity of supply.</div>
+          <div class="il-a"><strong>Solution:</strong> = (30/70) × (27/3) = 0.4286 × 9 = <strong>+3.85</strong>.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Determinants of Elasticity of Supply</div>
+        <ul class="note-list">
+          <li><strong>Behaviour of costs</strong> — if costs rise sharply with output, supply is less elastic; constant costs → elastic. Complex/long-to-produce goods (aircraft, cruise ships) are less elastic than motorbikes.</li>
+          <li><strong>Time period</strong> — the longer the period, the more elastic (firms can build plants; new firms can enter).</li>
+          <li><strong>Number of producers &amp; competition</strong> — more producers, fewer entry barriers → more elastic.</li>
+          <li><strong>Spare capacity</strong> — idle capacity lets firms raise output without cost rise → more elastic.</li>
+          <li><strong>Availability of inputs &amp; stocks</strong> — cheap, easily available inputs and storable stocks → more elastic.</li>
+          <li><strong>Ease of factor substitution &amp; mobility</strong> — if capital &amp; labour switch easily between uses, supply is more elastic (a press switching between magazines and greeting cards). Scarce/highly-skilled labour (physicians, chartered accountants) → less elastic.</li>
+          <li><strong>Expectations</strong> — expectation of a big future price rise makes sellers respond less to a current price rise.</li>
+        </ul>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 7: EQUILIBRIUM PRICE ---------------- */
+  {
+    label: 'Equilibrium Price',
+    html: `
+      <div class="page-title">Equilibrium Price &amp; Social Efficiency</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Market Equilibrium</div>
+        <div class="callout def"><div class="ct">📌 Definition</div><span class="kt">Equilibrium price</span> is set where demand and supply <strong>intersect</strong>. At this price, the amount buyers want to buy equals the amount sellers want to sell. Also called the <strong>market-clearing price</strong>.</div>
+        <p>Determining market price is the central theme of microeconomics — which is why micro-theory is also called <strong>price theory</strong>.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Supply &amp; Demand Schedule</div>
+        <table class="tbl">
+          <tr><th>Price (₹)</th><th>Quantity Demanded</th><th>Quantity Supplied</th><th>Impact on Price</th></tr>
+          <tr><td>5</td><td>6</td><td>31</td><td>Downward</td></tr>
+          <tr><td>4</td><td>12</td><td>25</td><td>Downward</td></tr>
+          <tr><td>3</td><td>19</td><td>19</td><td>Equilibrium</td></tr>
+          <tr><td>2</td><td>25</td><td>12</td><td>Upward</td></tr>
+          <tr><td>1</td><td>31</td><td>6</td><td>Upward</td></tr>
+        </table>
+        <p>Equilibrium is at <strong>₹3</strong>, with 19 units exchanged. Above ₹3 → <span class="nt">excess supply</span> pushes price down; below ₹3 → excess demand pushes price up.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Social Efficiency</div>
+        <p><span class="kt">Social efficiency</span> = net gains to society from all exchanges in a market. It has two components:</p>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">Consumer Surplus</div><div class="mc-val">Buyers' welfare — area below the demand curve and above the price line.</div></div>
+          <div class="mini-card"><div class="mc-title">Producer Surplus</div><div class="mc-val">Benefit to producers from selling above their cost — area above the supply curve and below the price line.</div></div>
+        </div>
+        <div class="callout imp"><div class="ct">💡 At Equilibrium</div>At the equilibrium price P, social efficiency is achieved: both producers and consumers enjoy the <strong>maximum possible surplus</strong>.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">④</span>Quick Recap</div>
+        <ul class="summary-list">
+          <li>Supply = quantity offered for sale at a price; it is a flow and relates directly to price (Law of Supply).</li>
+          <li>Own-price change = movement along the curve; other factors = shift of the curve.</li>
+          <li>Elasticity of supply = %Δ quantity supplied ÷ %Δ price; five types from zero to infinity.</li>
+          <li>Equilibrium price is where demand meets supply — the market-clearing price with maximum social surplus.</li>
+        </ul>
+      </div>
+    `
+  },
+
+  /* ---------------- SECTION 8: MCQ PRACTICE ---------------- */
+  {
+    label: 'MCQ Practice',
+    html: `
+      <div class="page-title">Test Your Knowledge — Supply</div>
+      <div class="page-sub">Tap an option to check it, or reveal the answer. Score updates automatically.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch2u3" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch2u3')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q1</span>Which of the following statements about price elasticity of supply is correct?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Price elasticity of supply is a measure of how much the quantity supplied of a good responds to a change in the price of that good</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Price elasticity of supply is computed as the percentage change in quantity supplied divided by the percentage change in price</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Price elasticity of supply in the long run would be different from that of the short run</div>
+          <div class="mcq-opt"><span class="ol">D.</span>All the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q2</span>Suppose that workers in a steel plant managed to force a significant increase in their wage package. How would the new wage contract be likely to affect the market supply of steel, other things remaining the same?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Supply curve will shift to the left.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Supply curve will shift to the right.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Supply will not shift, but the quantity produced per month will decrease.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Supply will not shift, but the quantity produced per month will increase.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q3</span>A vertical supply curve parallel to the Y axis implies that the elasticity of supply is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Zero</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Infinity</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Equal to one</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Greater than zero but less than infinity.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q4</span>An increase in the supply of a good is caused by:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Improvements in its production technology</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Fall in the prices of other goods which can be produced using the same inputs.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Fall in the prices of factors of production used in its production.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>All of the above.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q5</span>Elasticity of supply refers to the degree of responsiveness of supply of a good to changes in its:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Demand.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Price.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Cost of production.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>State of technology.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q6</span>A horizontal supply curve parallel to the quantity axis implies that the elasticity of supply is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Zero.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Infinite.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Equal to one.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Greater than zero but less than one.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q7</span>Contraction of supply is the result of:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Decrease in the number of producers.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Decrease in the price of the good concerned.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Increase in the prices of other goods.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Decrease in the outlay of sellers.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q8</span>The quantity supplied of a good or service is the amount that</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>is actually bought during a given time period at a given price</div>
+          <div class="mcq-opt"><span class="ol">B.</span>producers wish they could sell at a higher price</div>
+          <div class="mcq-opt"><span class="ol">C.</span>producers plan to sell during a given time period at a given price</div>
+          <div class="mcq-opt"><span class="ol">D.</span>people are willing to buy during a given time period at a given price</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q9</span>Supply is</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>the limited resources that are available with the seller</div>
+          <div class="mcq-opt"><span class="ol">B.</span>the cost of producing a good</div>
+          <div class="mcq-opt"><span class="ol">C.</span>the entire relationship between the quantity supplied and the price of a good.</div>
+          <div class="mcq-opt"><span class="ol">D.</span>the willingness to produce a good if the technology to produce it becomes available</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q10</span>In the book market, the supply of books will decrease if any of the following occurs except</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>a decrease in the number of book publishers</div>
+          <div class="mcq-opt"><span class="ol">B.</span>a decrease in the price of the book</div>
+          <div class="mcq-opt"><span class="ol">C.</span>an increase in the future expected price of the book</div>
+          <div class="mcq-opt"><span class="ol">D.</span>an increase in the price of paper used.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q11</span>If price of computers increases by 10% and supply increases by 25%, the elasticity of supply is:</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>2.5</div>
+          <div class="mcq-opt"><span class="ol">B.</span>0.4</div>
+          <div class="mcq-opt"><span class="ol">C.</span>(-) 2.5</div>
+          <div class="mcq-opt"><span class="ol">D.</span>(-) 0.4</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q12</span>An increase in the number of sellers of bikes will increase the</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>The price of a bike</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Demand for bikes</div>
+          <div class="mcq-opt"><span class="ol">C.</span>The supply of bikes</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Demand for helmets</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q13</span>If the supply of bottled water decreases, other things remaining the same, the equilibrium price ____ and the equilibrium quantity ____.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>increases; decreases</div>
+          <div class="mcq-opt"><span class="ol">B.</span>decreases; increases</div>
+          <div class="mcq-opt"><span class="ol">C.</span>decreases; decreases</div>
+          <div class="mcq-opt"><span class="ol">D.</span>increases; increases</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q14</span>In a very short period, the supply</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>can be changed</div>
+          <div class="mcq-opt"><span class="ol">B.</span>cannot be changed</div>
+          <div class="mcq-opt"><span class="ol">C.</span>can be increased</div>
+          <div class="mcq-opt"><span class="ol">D.</span>none of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q15</span>When the supply curve moves to the left, it means</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>lesser quantity is supplied at a given price</div>
+          <div class="mcq-opt"><span class="ol">B.</span>larger quantity is supplied at a given price</div>
+          <div class="mcq-opt"><span class="ol">C.</span>prices have fallen and quantity is supplied at a lower price</div>
+          <div class="mcq-opt"><span class="ol">D.</span>none of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q16</span>When the supply curve moves to the right, it means</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>supply increases and more quantity is supplied at a given price</div>
+          <div class="mcq-opt"><span class="ol">B.</span>supply decreases and less quantity is supplied at a given price</div>
+          <div class="mcq-opt"><span class="ol">C.</span>supply remains constant at a given price</div>
+          <div class="mcq-opt"><span class="ol">D.</span>none of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q17</span>The elasticity of supply is defined as the</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>responsiveness of the quantity supplied of a good to a change in its price</div>
+          <div class="mcq-opt"><span class="ol">B.</span>responsiveness of the quantity supplied of a good without change in its price</div>
+          <div class="mcq-opt"><span class="ol">C.</span>responsiveness of the quantity demanded of a good to a change in its price</div>
+          <div class="mcq-opt"><span class="ol">D.</span>responsiveness of the quantity demanded of a good without change in its price</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q18</span>Elasticity of supply is measured by dividing the percentage change in quantity supplied of a good by ____.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Percentage change in income</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Percentage change in quantity demanded of goods</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Percentage change in price</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Percentage change in taste and preference</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q19</span>Elasticity of supply is zero means</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>perfectly inelastic supply</div>
+          <div class="mcq-opt"><span class="ol">B.</span>perfectly elastic supply</div>
+          <div class="mcq-opt"><span class="ol">C.</span>imperfectly elastic supply</div>
+          <div class="mcq-opt"><span class="ol">D.</span>none of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q20</span>Elasticity of supply is greater than one when</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Proportionate change in quantity supplied is more than the proportionate change in price.</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Proportionate change in price is greater than the proportionate change in quantity supplied.</div>
+          <div class="mcq-opt"><span class="ol">C.</span>change in price and quantity supplied are equal</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q21</span>If the quantity supplied is exactly equal to the relative change in price, then the elasticity of supply is</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Less than one</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Greater than one</div>
+          <div class="mcq-opt"><span class="ol">C.</span>One</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q22</span>The supply function is given as Q = -100 + 10P. Find the elasticity using the point method, when price is ₹ 15.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>4</div>
+          <div class="mcq-opt"><span class="ol">B.</span>-3</div>
+          <div class="mcq-opt"><span class="ol">C.</span>-5</div>
+          <div class="mcq-opt"><span class="ol">D.</span>3</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q23</span>The supply curve shifts to the right because of ____.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>improved technology</div>
+          <div class="mcq-opt"><span class="ol">B.</span>increased price of factors of production</div>
+          <div class="mcq-opt"><span class="ol">C.</span>increased excise duty</div>
+          <div class="mcq-opt"><span class="ol">D.</span>all of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q24</span>Which of the following statements is correct?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>When the price falls the quantity demanded falls</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Seasonal changes do not affect the supply of a commodity</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Taxes and subsidies do not influence the supply of the commodity</div>
+          <div class="mcq-opt"><span class="ol">D.</span>With lower cost, it is profitable to supply more of the commodity.</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q25</span>If the demand is more than supply, then the pressure on price will be</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Upward</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Downward</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Constant</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q26</span>The supply curve for highly perishable commodities during a very short period is generally</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Elastic</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Inelastic</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Perfectly elastic</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Perfectly inelastic</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q27</span>Supply is a ____ concept.</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Stock</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Flow and stock</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Flow</div>
+          <div class="mcq-opt"><span class="ol">D.</span>None of the above</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q28</span>Data on production of vegetables for the past two years showed that, despite stable prices, there is a substantial decline in output of cabbage leading to lower supply into the market. Which of the following can possibly be the reason?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>An increase in the price of cauliflower which is equally preferred by consumers</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Announcement of a subsidy by government on vegetable production</div>
+          <div class="mcq-opt"><span class="ol">C.</span>More farmers producing cabbage and the increasing competition among them</div>
+          <div class="mcq-opt"><span class="ol">D.</span>A substantial decrease in the price of capsicum</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q29</span>A diagram shows the supply curve shifting leftward (from S to S1), reducing quantity from Q to Q1 at price P. Which of the following would cause this event?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>A fall in wage costs of the firm along with a fall in consumer incomes</div>
+          <div class="mcq-opt"><span class="ol">B.</span>A shortage of raw materials and consequent increase in raw material price</div>
+          <div class="mcq-opt"><span class="ol">C.</span>An increase in subsidy by the government and a reduction in taxes</div>
+          <div class="mcq-opt"><span class="ol">D.</span>Decrease in the market price of the commodity in question</div>
+        </div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q30</span>If a short-run supply curve is plotted for a table in which the quantity of fighter aircrafts stays constant at 28 across all prices (from $124 million to $175 million), what will be its shape?</div>
+        <div class="mcq-opts">
+          <div class="mcq-opt"><span class="ol">A.</span>Horizontal straight line parallel to the quantity axis</div>
+          <div class="mcq-opt"><span class="ol">B.</span>Steeply rising with elasticity less than one</div>
+          <div class="mcq-opt"><span class="ol">C.</span>Vertical straight line parallel to the Y axis</div>
+          <div class="mcq-opt"><span class="ol">D.</span>A perfectly elastic supply curve</div>
         </div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
