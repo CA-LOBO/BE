@@ -323,6 +323,9 @@ table.tbl tr:last-child td{border-bottom:none;}
 .fig .cost{stroke:#7C5CFC; stroke-width:2.2; fill:none;}
 .fig .cost2{stroke:#1C8A53; stroke-width:2.2; fill:none;}
 .fig .dash{stroke:#6B7785; stroke-width:1.2; stroke-dasharray:4 3; fill:none;}
+.fig .ref{stroke:#8A97A3; stroke-width:1.5; fill:none;}
+.fig .ad{stroke:#136577; stroke-width:2.4; fill:none;}
+.fig .flow{stroke:#2563AA; stroke-width:2; fill:none; marker-end:url(#ah);}
 .fig .lbl{font-family:var(--font-body); font-size:11px; fill:var(--ink-700); font-weight:600;}
 .fig .lbl-sm{font-family:var(--font-body); font-size:9.5px; fill:var(--ink-500);}
 .fig .pt{fill:#2563AA;}
@@ -499,10 +502,38 @@ table.tbl tr:last-child td{border-bottom:none;}
           <div class="sb-unit-item" id="navCh5U1" onclick="goToUnit('ch5u1', this)"><span class="sb-unit-dot"></span>Business Cycles</div>
         </div>
       </div>
+
+      <!-- CHAPTER 6 -->
+      <div class="sb-chapter" data-chapter="ch6" id="ch6Group">
+        <div class="sb-chapter-hdr" onclick="toggleChapter('ch6Group')">
+          <div class="sb-ring" id="ringCh6" style="--pct:0"><span>0%</span></div>
+          <div class="sb-chapter-title">Ch 6 · Determination of<small>National Income</small></div>
+          <svg class="sb-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+        <div class="sb-unit-list">
+          <div class="sb-unit-item" id="navCh6U1" onclick="goToUnit('ch6u1', this)"><span class="sb-unit-dot"></span>Unit 1 · National Income Accounting</div>
+          <div class="sb-unit-item" id="navCh6U2" onclick="goToUnit('ch6u2', this)"><span class="sb-unit-dot"></span>Unit 2 · Keynesian Theory of Income</div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 7 -->
+      <div class="sb-chapter" data-chapter="ch7" id="ch7Group">
+        <div class="sb-chapter-hdr" onclick="toggleChapter('ch7Group')">
+          <div class="sb-ring" id="ringCh7" style="--pct:0"><span>0%</span></div>
+          <div class="sb-chapter-title">Ch 7 · Public<small>Finance</small></div>
+          <svg class="sb-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+        <div class="sb-unit-list">
+          <div class="sb-unit-item" id="navCh7U1" onclick="goToUnit('ch7u1', this)"><span class="sb-unit-dot"></span>Unit 1 · Fiscal Functions &amp; Centre-State</div>
+          <div class="sb-unit-item" id="navCh7U2" onclick="goToUnit('ch7u2', this)"><span class="sb-unit-dot"></span>Unit 2 · Market Failure</div>
+          <div class="sb-unit-item" id="navCh7U3" onclick="goToUnit('ch7u3', this)"><span class="sb-unit-dot"></span>Unit 3 · Budget · Revenue · Public Debt</div>
+          <div class="sb-unit-item" id="navCh7U4" onclick="goToUnit('ch7u4', this)"><span class="sb-unit-dot"></span>Unit 4 · Fiscal Policy</div>
+        </div>
+      </div>
     </div>
 
     <div class="sb-footer">
-      <span>v1.3</span>
+      <span>v1.4</span>
       <span id="overallProgress">0% complete</span>
     </div>
   </aside>
@@ -612,6 +643,54 @@ table.tbl tr:last-child td{border-bottom:none;}
     <div class="chapter-wrap" id="ch5u1Wrap">
       <div class="sectionbar" id="secbarCh5U1"></div>
       <div class="content"><div class="content-inner" id="panelsCh5U1"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 6 UNIT 1 WRAP                               -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch6u1Wrap">
+      <div class="sectionbar" id="secbarCh6U1"></div>
+      <div class="content"><div class="content-inner" id="panelsCh6U1"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 6 UNIT 2 WRAP                               -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch6u2Wrap">
+      <div class="sectionbar" id="secbarCh6U2"></div>
+      <div class="content"><div class="content-inner" id="panelsCh6U2"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 7 UNIT 1 WRAP                               -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch7u1Wrap">
+      <div class="sectionbar" id="secbarCh7U1"></div>
+      <div class="content"><div class="content-inner" id="panelsCh7U1"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 7 UNIT 2 WRAP                               -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch7u2Wrap">
+      <div class="sectionbar" id="secbarCh7U2"></div>
+      <div class="content"><div class="content-inner" id="panelsCh7U2"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 7 UNIT 3 WRAP                               -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch7u3Wrap">
+      <div class="sectionbar" id="secbarCh7U3"></div>
+      <div class="content"><div class="content-inner" id="panelsCh7U3"></div></div>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- CHAPTER 7 UNIT 4 WRAP                               -->
+    <!-- =================================================== -->
+    <div class="chapter-wrap" id="ch7u4Wrap">
+      <div class="sectionbar" id="secbarCh7U4"></div>
+      <div class="content"><div class="content-inner" id="panelsCh7U4"></div></div>
     </div>
 
     <!-- COMING SOON WRAP -->
@@ -8522,6 +8601,1995 @@ UNIT_DATA['ch5u1'] = {
       <div class="mcq-card" data-correct="3">
         <div class="mcq-q"><span class="qn">Q30</span>The cobweb theory was propounded by ______.</div>
         <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Hawtrey</div><div class="mcq-opt"><span class="ol">B.</span>Adam Smith</div><div class="mcq-opt"><span class="ol">C.</span>J M Keynes</div><div class="mcq-opt"><span class="ol">D.</span>Nicholas Kaldor</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+
+/* =====================================================================
+   CHAPTER 6 · UNIT 1 — NATIONAL INCOME ACCOUNTING
+   ===================================================================== */
+UNIT_DATA['ch6u1'] = {
+  chapterLabel: 'Chapter 6 · Determination of National Income',
+  unitLabel: 'Unit 1 · National Income Accounting',
+  sections: [
+
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">National Income Accounting</div>
+      <div class="page-sub">Unit 1 · The system of macro-economic accounts from production to final disposal</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Define national income and explain the usefulness of its estimates.</li>
+          <li>Differentiate among the various concepts of national income.</li>
+          <li>Describe the different methods of calculating national income.</li>
+          <li>Outline measurement in India and the challenges in computation.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>What Is National Income Accounting?</div>
+        <p>Pioneered by Nobel laureates <span class="kt">Simon Kuznets</span> and <span class="kt">Richard Stone</span>, it is the system of macro-economic accounts from the stage of production of goods and services to their final disposal. Like any accounting system, it first defines concepts and then constructs measures for them.</p>
+        <div class="callout imp"><div class="ct">💡 Who Compiles It in India?</div>The <span class="kt">Central Statistical Organisation (CSO)</span> under the Ministry of Statistics &amp; Programme Implementation (MoSP&amp;I) compiles national accounts. At the state level, the <span class="kt">State Directorates of Economics &amp; Statistics (DESs)</span> compile State Domestic Product.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Why It Is Useful</div>
+        <ul class="note-list">
+          <li>Shows the composition and structure of income across sectors and over time.</li>
+          <li>Guides sector-specific development policies to raise growth rates.</li>
+          <li>Provides a basis for macroeconomic modelling and policy evaluation.</li>
+          <li>Throws light on income distribution and inequality.</li>
+          <li>Enables international comparisons of income and living standards.</li>
+          <li>With financial data, guides policies for growth and inflation.</li>
+        </ul>
+      </div>
+    `
+  },
+
+  {
+    label: 'GDP · Nominal, Real & Deflator',
+    html: `
+      <div class="page-title">GDP: Nominal, Real &amp; the Deflator</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Gross Domestic Product (GDP<sub>MP</sub>)</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>The value of all <span class="kt">final</span> goods and services produced within the country in a given period, each valued at its market price and summed → <strong>GDP<sub>MP</sub></strong>.</div>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">Nominal GDP</div><div class="mc-val">GDP at current prices. Rises over time from both higher output AND higher prices.</div></div>
+          <div class="mini-card"><div class="mc-title">Real GDP</div><div class="mc-val">GDP at constant (base-year) prices — quantities × constant prices. Strips out price changes.</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>GDP Deflator</div>
+        <div class="eq-box">GDP Deflator = (Nominal GDP ÷ Real GDP) × 100</div>
+        <p>A price index used to convert nominal GDP to real GDP. In the base year, nominal = real, so the deflator is always <strong>100</strong>. A deflator &gt; 100 means prices are higher than the base year.</p>
+        <div class="eq-box">Inflation rate (yr 2) = [(Deflator₂ − Deflator₁) ÷ Deflator₁] × 100</div>
+      </div>
+
+      <div class="illus-box">
+        <div class="il-h">🧮 Illustration 2</div>
+        <div class="il-q">Nominal GDP = ₹3000 Cr, Real GDP = ₹4700 Cr. Find the deflator and comment.</div>
+        <div class="il-a">Deflator = (3000 ÷ 4700) × 100 = <strong>63.83</strong>. Since it is below 100, the price level has <strong>fallen</strong> relative to the base year.</div>
+      </div>
+      <div class="illus-box">
+        <div class="il-h">🧮 Illustration 3 &amp; 4</div>
+        <div class="il-q">Nominal GDP when Real GDP = 450, price index = 120? &nbsp;·&nbsp; Real GDP when Nominal = ₹1200 Cr, index = 110?</div>
+        <div class="il-a">Nominal = 450 × (120 ÷ 100) = <strong>540</strong>. &nbsp; Real = 1200 × (100 ÷ 110) = <strong>₹1090.9 Cr</strong>.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Concepts & Aggregates',
+    html: `
+      <div class="page-title">National Income Aggregates</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Two Distinctions</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">Gross vs Net</div>
+            <ul><li>Basis = <span class="kt">Depreciation</span> (consumption of fixed capital)</li><li>Gross = Net + Depreciation</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">Market Price vs Factor Cost</div>
+            <ul><li>Basis = <span class="kt">Net Indirect Taxes</span> (Indirect Taxes − Subsidies)</li><li>FC = MP − Indirect Taxes + Subsidies</li></ul>
+          </div>
+        </div>
+        <div class="callout imp"><div class="ct">💡 National vs Domestic</div>Basis = <span class="kt">Net Factor Income from Abroad (NFIA)</span>. National = Domestic + NFIA.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Key Relationships</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Aggregate</th><th>Formula</th></tr>
+          <tr><td>GNP<sub>MP</sub></td><td>GDP<sub>MP</sub> + NFIA</td></tr>
+          <tr><td>NDP<sub>MP</sub></td><td>GDP<sub>MP</sub> − Depreciation</td></tr>
+          <tr><td>NNP<sub>MP</sub></td><td>GNP<sub>MP</sub> − Depreciation = GDP<sub>MP</sub> + NFIA − Depreciation</td></tr>
+          <tr><td>GDP<sub>FC</sub></td><td>GDP<sub>MP</sub> − Indirect Taxes + Subsidies</td></tr>
+          <tr><td><strong>NNP<sub>FC</sub> = National Income</strong></td><td>FID (domestic factor income) + NFIA</td></tr>
+        </table></div>
+        <div class="callout exam"><div class="ct">🎯 Basic Price</div>Basic Price = Factor Cost + Production taxes − Production subsidies. Market Price = Basic Price + Product tax − Product subsidy.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>From National Income to Disposable Income</div>
+        <div class="eq-box">PI = NI − Undistributed profits − Net interest paid by households − Corporate tax + Transfer payments</div>
+        <div class="eq-box">DI = PI − Personal Income Taxes − Non-tax payments</div>
+        <div class="callout warn"><div class="ct">⚠️ Remember</div>Personal Income includes transfer payments (e.g. pensions) which are <span class="nt">excluded</span> from national income. So NI ≠ sum of personal incomes.</div>
+      </div>
+
+      <div class="illus-box">
+        <div class="il-h">🧮 Illustration 5</div>
+        <div class="il-q">Comp. of employees 1000, Mixed income 1100, Operating surplus 2000, Net indirect tax 450, Depreciation 400, NFIA −50. Find NNP<sub>FC</sub>.</div>
+        <div class="il-a">GDP<sub>MP</sub> = 1000+1100+2000+400+450 = 4950. GNP<sub>MP</sub> = 4950 + (−50) = 4900. NNP<sub>MP</sub> = 4900 − 400 = 4500. <strong>NNP<sub>FC</sub> = 4500 − 450 = ₹4050 Cr</strong>.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Methods of Measurement',
+    html: `
+      <div class="page-title">Measuring National Income</div>
+      <div class="page-sub">Three phases of the circular flow → three methods</div>
+
+      <div class="fig">
+        <div class="fig-title">Fig. 1 — Circular Flow of Income (three phases)</div>
+        <svg viewBox="0 0 380 210" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#2563AA"/></marker></defs>
+          <circle cx="190" cy="105" r="78" fill="none" class="dash"/>
+          <rect x="135" y="18" width="110" height="34" rx="8" fill="#EAF8EF" stroke="#1C8A53"/>
+          <text class="lbl" x="150" y="33">Production</text><text class="lbl-sm" x="150" y="46">goods &amp; services</text>
+          <rect x="262" y="140" width="108" height="34" rx="8" fill="#FFEEE0" stroke="#F26A1B"/>
+          <text class="lbl" x="278" y="155">Distribution</text><text class="lbl-sm" x="272" y="168">rent·wage·int·profit</text>
+          <rect x="10" y="140" width="108" height="34" rx="8" fill="#EBF3FC" stroke="#2563AA"/>
+          <text class="lbl" x="26" y="155">Disposition</text><text class="lbl-sm" x="22" y="168">consume / invest</text>
+          <path class="flow" d="M232 55 A70 70 0 0 1 300 138"/>
+          <path class="flow" d="M262 172 A70 70 0 0 1 118 172"/>
+          <path class="flow" d="M78 138 A70 70 0 0 1 150 55"/>
+        </svg>
+        <div class="fig-cap">Production → income distribution as factor payments → expenditure (disposition), which sustains further production. Each phase yields one measurement method.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Value Added (Product) Method</div>
+        <p>Sum of <span class="kt">net value added at factor cost</span> across all producing units. Also called Industrial Origin / Net Output Method.</p>
+        <div class="eq-box">GVA<sub>MP</sub> = Value of output − Intermediate consumption<br><small>Value of output = Sales + change in stock</small></div>
+        <p>∑GVA<sub>MP</sub> − Depreciation = NVA<sub>MP</sub>; − Net Indirect Taxes → NDP<sub>FC</sub>; + NFIA → <strong>National Income</strong>. Includes own-account production, imputed rent of owner-occupied houses, and self-consumption.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Income (Factor Payment) Method</div>
+        <div class="eq-box">NNP<sub>FC</sub> = Compensation of employees + Operating surplus (rent + interest + profit) + Mixed income of self-employed + NFIA</div>
+        <div class="callout warn"><div class="ct">⚠️ Excluded</div>Transfer incomes, pensions, capital gains, windfall profits, sale of second-hand goods &amp; financial assets, interest on public debt / consumption loans. <span class="kt">Mixed income</span> covers incomes where labour and capital cannot be separated.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Expenditure (Income Disposal) Method</div>
+        <div class="eq-box">GDP<sub>MP</sub> = C + Gross Domestic Capital Formation + Net Exports</div>
+        <p>Components: Private + Government Final Consumption Expenditure, Gross Domestic Capital Formation (gross investment + change in stock), and Net Exports (X − M). Then GNP<sub>MP</sub> = GDP<sub>MP</sub> + NFIA; GNP<sub>FC</sub> = GNP<sub>MP</sub> − NIT; NNP<sub>FC</sub> = GNP<sub>FC</sub> − Depreciation.</p>
+        <div class="callout imp"><div class="ct">💡 In India</div>All three methods should ideally give the same figure. India uses a mix: agriculture → production method; small-scale → income method; construction → expenditure method.</div>
+      </div>
+
+      <div class="illus-box">
+        <div class="il-h">🧮 Illustration 13</div>
+        <div class="il-q">PFCE 2000, GFCE 1100, Net dom. capital formation 770, Depreciation 130, Net export 30, NFIA 20, NIT 120. Find NI.</div>
+        <div class="il-a">GDP<sub>MP</sub> = 2000+1100+(770+130)+30 = 4030. NI = 4030 − 130 + 20 − 120 = <strong>₹3800 Cr</strong>.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'India · Welfare · Challenges',
+    html: `
+      <div class="page-title">Regional Accounts, GDP &amp; Welfare, Challenges</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>System of Regional Accounts</div>
+        <p><span class="kt">Net State Domestic Product (NSDP)</span> = state income; Per Capita State Income = NSDP ÷ mid-year population. Prepared by State DESs with CSO advice. Activities cutting across state boundaries (railways, communications, banking, insurance, central administration) are <span class="kt">Supra-regional sectors</span>, compiled for the whole economy and allocated to states by indicators.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>GDP Is Not a Perfect Welfare Measure</div>
+        <p>GDP excludes many things critical to wellbeing:</p>
+        <ul class="note-list">
+          <li>Income distribution (per-capita GDP hides inequality).</li>
+          <li>Quality improvements from innovation.</li>
+          <li>Hidden / illegal production and the non-monetised sector.</li>
+          <li>Loss of leisure; economic 'bads' (crime, pollution, congestion).</li>
+          <li>Volunteer work; positive &amp; negative externalities.</li>
+          <li>Defence/police spending that only prevents us becoming worse off.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Challenges in Computation</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">Conceptual difficulties</div>
+            <ul><li>No agreed definition of national income</li><li>Final vs intermediate goods distinction</li><li>Transfer payments; services of durable goods</li><li>Valuing new goods &amp; government services</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">Practical challenges</div>
+            <ul><li>Inadequate &amp; unreliable data</li><li>Non-monetised sector; self-consumption</li><li>Illiteracy → unrecorded incomes</li><li>Poor occupational classification; depreciation estimation</li></ul>
+          </div>
+        </div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 1 — Summary</div>
+      <ul class="summary-list">
+        <li>National income accounting (Kuznets, Stone) records the economy from production to final disposal; compiled in India by the CSO.</li>
+        <li>GDP<sub>MP</sub> = market value of all final goods &amp; services produced within the domestic territory. Real GDP uses constant base-year prices.</li>
+        <li>GDP Deflator = (Nominal ÷ Real) × 100; equals 100 in the base year.</li>
+        <li>Gross − Net = Depreciation; MP − FC = Net Indirect Taxes; National − Domestic = NFIA.</li>
+        <li>NNP<sub>FC</sub> = National Income = domestic factor income + NFIA.</li>
+        <li>Three methods — Value Added, Income, Expenditure — correspond to the three phases of the circular flow.</li>
+        <li>GDP is an imperfect welfare measure; computation faces conceptual and practical challenges.</li>
+      </ul>
+    `
+  },
+
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 1</div>
+      <div class="page-sub">Official ICAI questions on national income accounting.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch6u1" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch6u1')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q1</span>The concept of 'resident unit' in the definition of GDP denotes:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>A business belonging to a citizen of India with production units solely in India</div><div class="mcq-opt"><span class="ol">B.</span>The unit having predominant economic interest in the economic territory for one year or more, irrespective of nationality or legal status</div><div class="mcq-opt"><span class="ol">C.</span>A citizen household living in India whose economic interests are solely in India</div><div class="mcq-opt"><span class="ol">D.</span>Households and enterprises composed of Indian citizens alone living in India</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q2</span>Consider: (I) Intermediate consumption is the value of goods &amp; services consumed as inputs in production; (II) Intermediate consumption excludes fixed assets whose consumption is recorded as consumption of fixed capital.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Only I is true</div><div class="mcq-opt"><span class="ol">B.</span>Both I and II are true</div><div class="mcq-opt"><span class="ol">C.</span>Only II is true</div><div class="mcq-opt"><span class="ol">D.</span>Neither I nor II is true</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q3</span>Gross Domestic Product (GDP) of any nation:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Excludes capital consumption and intermediate consumption</div><div class="mcq-opt"><span class="ol">B.</span>Is inclusive of capital consumption or depreciation</div><div class="mcq-opt"><span class="ol">C.</span>Is inclusive of indirect taxes but excludes subsidies</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q4</span>Consider: (I) 'Value added' = value of output − purchase of intermediate goods; (II) 'Value added' represents the contribution of labour and capital.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Statements I and II are incorrect</div><div class="mcq-opt"><span class="ol">B.</span>Statements I and II are correct</div><div class="mcq-opt"><span class="ol">C.</span>I correct, II incorrect</div><div class="mcq-opt"><span class="ol">D.</span>II correct, I incorrect</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q5</span>Non-economic activities are:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Those excluded to avoid double counting</div><div class="mcq-opt"><span class="ol">B.</span>Those which produce goods &amp; services but, not being exchanged in a market transaction, command no market value</div><div class="mcq-opt"><span class="ol">C.</span>Those that do not involve production, meant for hobbies and leisure</div><div class="mcq-opt"><span class="ol">D.</span>Those producing for self-consumption, hence excluded</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q6</span>Which of the following does NOT enter into the calculation of national income?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Exchange of previously produced goods</div><div class="mcq-opt"><span class="ol">B.</span>Exchange of second-hand goods</div><div class="mcq-opt"><span class="ol">C.</span>Exchange of stocks and bonds</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q7</span>Which of the following enters into the calculation of national income?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The value of services that accompany the sale</div><div class="mcq-opt"><span class="ol">B.</span>Additions to inventory stocks of final goods and materials</div><div class="mcq-opt"><span class="ol">C.</span>Stocks and bonds sold during the current year</div><div class="mcq-opt"><span class="ol">D.</span>(a) and (b) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q8</span>Gross National Product at market prices (GNP<sub>MP</sub>) is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>GDP<sub>MP</sub> + Net Factor Income from Abroad</div><div class="mcq-opt"><span class="ol">B.</span>GDP<sub>MP</sub> − Net Factor Income from Abroad</div><div class="mcq-opt"><span class="ol">C.</span>GDP<sub>MP</sub> − Depreciation</div><div class="mcq-opt"><span class="ol">D.</span>GDP<sub>MP</sub> + Net Indirect Taxes</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q9</span>Choose the correct statement:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>GNP includes earnings of Indian corporations and residents overseas; GDP does not</div><div class="mcq-opt"><span class="ol">B.</span>NNP<sub>FC</sub> = National Income = FID − NFIA</div><div class="mcq-opt"><span class="ol">C.</span>Capital goods and inventory investment are excluded from GDP</div><div class="mcq-opt"><span class="ol">D.</span>NDP<sub>MP</sub> = GDP<sub>MP</sub> + Depreciation</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q10</span>The basis of distinction between market price and factor cost is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Net factor income from abroad</div><div class="mcq-opt"><span class="ol">B.</span>Net indirect taxes (Indirect taxes − Subsidies)</div><div class="mcq-opt"><span class="ol">C.</span>Net indirect taxes (Indirect taxes + Subsidies)</div><div class="mcq-opt"><span class="ol">D.</span>Depreciation</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q11</span>If net factor income from abroad is positive, then:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>National income will be greater than domestic factor incomes</div><div class="mcq-opt"><span class="ol">B.</span>National income will be less than domestic factor incomes</div><div class="mcq-opt"><span class="ol">C.</span>Net exports will be negative</div><div class="mcq-opt"><span class="ol">D.</span>Domestic factor incomes will be greater than national income</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q12</span>The GDP per capita is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>A measure of a country's economic output per person</div><div class="mcq-opt"><span class="ol">B.</span>Actual current income receipts of persons</div><div class="mcq-opt"><span class="ol">C.</span>National income divided by population</div><div class="mcq-opt"><span class="ol">D.</span>(a) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q13</span>Which of the following is an example of transfer payment?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Old age pensions and family pensions</div><div class="mcq-opt"><span class="ol">B.</span>Scholarships given to deserving students</div><div class="mcq-opt"><span class="ol">C.</span>Compensation for loss of property due to floods</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q14</span>Mixed income of the self-employed means:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Net profits received by self-employed people</div><div class="mcq-opt"><span class="ol">B.</span>Outside wages received by self-employed people</div><div class="mcq-opt"><span class="ol">C.</span>Combined factor payments which are not distinguishable</div><div class="mcq-opt"><span class="ol">D.</span>Wages due to non-economic activities</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q15</span>Which of the following is ADDED to national income while calculating personal income?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Transfer payments to individuals</div><div class="mcq-opt"><span class="ol">B.</span>Undistributed profits of corporates</div><div class="mcq-opt"><span class="ol">C.</span>Transfer payments made to foreigners</div><div class="mcq-opt"><span class="ol">D.</span>Mixed income of self-employed</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 6 · UNIT 2 — THE KEYNESIAN THEORY OF DETERMINATION OF NATIONAL INCOME
+   ===================================================================== */
+UNIT_DATA['ch6u2'] = {
+  chapterLabel: 'Chapter 6 · Determination of National Income',
+  unitLabel: 'Unit 2 · Keynesian Theory of National Income',
+  sections: [
+
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">The Keynesian Theory of Income Determination</div>
+      <div class="page-sub">Unit 2 · What determines the equilibrium level of national income</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Define Keynes' concept of equilibrium aggregate income.</li>
+          <li>Describe aggregate expenditure in two, three and four-sector models.</li>
+          <li>Explain income determination in each model and the multiplier.</li>
+          <li>Outline changes in equilibrium income from changes in its determinants.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Keynes &amp; The General Theory (1936)</div>
+        <p>Modern macroeconomics was revolutionised by <span class="kt">J. M. Keynes'</span> <em>General Theory of Employment, Interest and Money</em> (1936), written amid the Great Depression. Three building blocks:</p>
+        <ul class="note-list numbered">
+          <li>The relation of consumption to income, and the <span class="kt">multiplier</span>.</li>
+          <li><span class="kt">Liquidity preference</span> — the demand for money.</li>
+          <li>The role of <span class="kt">expectations</span> in consumption and investment.</li>
+        </ul>
+        <div class="callout imp"><div class="ct">💡 Three Models</div>(i) Two-sector (households + firms); (ii) Three-sector (+ government); (iii) Four-sector (+ foreign sector).</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Equilibrium</div>
+        <p>Output is at equilibrium when the <span class="kt">production plans of firms match the expenditure plans of households</span> — i.e. quantity produced = quantity demanded. In the two-sector model: Factor Payments = Household Income = Household Expenditure = Total Receipts of Firms = Value of Output.</p>
+      </div>
+    `
+  },
+
+  {
+    label: 'Consumption & Saving',
+    html: `
+      <div class="page-title">Consumption &amp; Saving Functions</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Consumption Function</div>
+        <div class="eq-box">C = a + bY<br><small>a = autonomous consumption (at Y = 0) · b = MPC = ΔC/ΔY</small></div>
+        <p>Keynes' fundamental assumption: as disposable income rises, consumption rises <span class="kt">but by less than the increase in income</span>, so 0 &lt; b &lt; 1. At low income, households <span class="nt">dissave</span>.</p>
+      </div>
+
+      <div class="fig">
+        <div class="fig-title">Fig. 2 — The Keynesian Consumption Function</div>
+        <svg viewBox="0 0 380 210" xmlns="http://www.w3.org/2000/svg">
+          <line class="axis" x1="45" y1="15" x2="45" y2="175"/>
+          <line class="axis" x1="45" y1="175" x2="360" y2="175"/>
+          <text class="lbl" x="8" y="95">C</text><text class="lbl" x="300" y="192">Income (Y)</text>
+          <line class="ref" x1="45" y1="175" x2="185" y2="35"/>
+          <text class="lbl-sm" x="150" y="45">45°</text>
+          <line class="ad" x1="45" y1="120" x2="345" y2="55"/>
+          <text class="lbl" x="300" y="52" fill="#136577">C = a + bY</text>
+          <line class="dash" x1="45" y1="120" x2="55" y2="120"/>
+          <text class="lbl-sm" x="30" y="124">a</text>
+          <circle class="pt" cx="110" cy="102" r="3.5"/>
+          <text class="lbl-sm" x="88" y="98">break-even</text>
+        </svg>
+        <div class="fig-cap">Consumption is positive (= a) even at zero income; the line is flatter than 45° because MPC &lt; 1. Where it crosses 45°, C = Y (break-even; saving = 0).</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Propensities</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Ratio</th><th>Formula</th><th>Note</th></tr>
+          <tr><td>MPC (b)</td><td>ΔC / ΔY</td><td>0 &lt; b &lt; 1</td></tr>
+          <tr><td>APC</td><td>C / Y</td><td>Falls as income rises</td></tr>
+          <tr><td>MPS (s)</td><td>ΔS / ΔY = 1 − b</td><td>Saving rises with income</td></tr>
+          <tr><td>APS</td><td>S / Y</td><td>—</td></tr>
+        </table></div>
+        <div class="eq-box">MPC + MPS = 1 &nbsp;·&nbsp; Since Y = C + S → S = Y − C</div>
+      </div>
+
+      <div class="illus-box">
+        <div class="il-h">🧮 Illustration 1</div>
+        <div class="il-q">APS when C = 200 at Y = 1000; and when S = 450 at Y = 1200.</div>
+        <div class="il-a">S = 1000 − 200 = 800 → APS = 800/1000 = <strong>0.8</strong>. &nbsp; APS = 450/1200 = <strong>0.375</strong>.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Two-Sector Equilibrium',
+    html: `
+      <div class="page-title">Two-Sector Model: Equilibrium Income</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Equilibrium Condition</div>
+        <p>Equilibrium income is where aggregate demand (C + I) equals aggregate supply (C + S) — i.e. <strong>Investment = Saving</strong>.</p>
+        <div class="eq-box">C + I = C + S &nbsp;⟹&nbsp; I = S</div>
+        <p>Keynes stressed that AD need not equal AS at full employment: consumers' plans and producers' plans need not coincide. If <span class="kt">leakages &gt; injections</span>, income falls; if injections &gt; leakages, income rises.</p>
+      </div>
+
+      <div class="fig">
+        <div class="fig-title">Fig. 4 — Determination of Equilibrium Income (2-sector)</div>
+        <svg viewBox="0 0 380 210" xmlns="http://www.w3.org/2000/svg">
+          <line class="axis" x1="45" y1="15" x2="45" y2="175"/>
+          <line class="axis" x1="45" y1="175" x2="360" y2="175"/>
+          <text class="lbl" x="8" y="90">AD</text><text class="lbl" x="300" y="192">Income (Y)</text>
+          <line class="ref" x1="45" y1="175" x2="180" y2="30"/><text class="lbl-sm" x="150" y="40">45°</text>
+          <line class="ad" x1="45" y1="130" x2="345" y2="55"/>
+          <text class="lbl" x="300" y="52" fill="#136577">C + I</text>
+          <circle class="pt" cx="150" cy="97" r="4"/><text class="lbl" x="156" y="92">E</text>
+          <line class="dash" x1="150" y1="97" x2="150" y2="175"/>
+          <text class="lbl-sm" x="143" y="190">Y₀</text>
+        </svg>
+        <div class="fig-cap">Equilibrium E is where the (C+I) line cuts the 45° line — planned expenditure equals output. Above Y₀ saving exceeds planned investment; below Y₀ investment exceeds saving.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Equilibrium with Unemployment or Inflation</div>
+        <p>Keynesian equilibrium need <span class="nt">not</span> occur at full employment.</p>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">Deflationary (Recessionary) Gap</div><div class="mc-val">AD &lt; full-employment output → deficient demand → unsold inventories → cuts in output &amp; employment.</div></div>
+          <div class="mini-card"><div class="mc-title">Inflationary Gap</div><div class="mc-val">AD &gt; full-employment output → excess demand → demand-pull inflation; real output fixed, nominal output rises.</div></div>
+        </div>
+      </div>
+
+      <div class="fig">
+        <div class="fig-title">Fig. 5 &amp; 6 — Deflationary Gap (FG) and Inflationary Gap (FG)</div>
+        <svg viewBox="0 0 380 175" xmlns="http://www.w3.org/2000/svg">
+          <line class="axis" x1="30" y1="12" x2="30" y2="150"/><line class="axis" x1="30" y1="150" x2="185" y2="150"/>
+          <line class="ref" x1="30" y1="150" x2="170" y2="20"/>
+          <line class="ad" x1="30" y1="95" x2="175" y2="45"/><text class="lbl-sm" x="150" y="42" fill="#136577">AD</text>
+          <line class="dash" x1="120" y1="150" x2="120" y2="30"/><text class="lbl-sm" x="112" y="164">Q*</text>
+          <circle class="pt" cx="120" cy="38" r="3"/><text class="lbl-sm" x="124" y="36">F</text>
+          <circle cx="120" cy="62" r="3" fill="#C8442A"/><text class="lbl-sm" x="124" y="66" fill="#C8442A">G</text>
+          <text class="lbl-sm" x="60" y="20">Deflationary: FG gap</text>
+          <line class="axis" x1="210" y1="12" x2="210" y2="150"/><line class="axis" x1="210" y1="150" x2="365" y2="150"/>
+          <line class="ref" x1="210" y1="150" x2="350" y2="20"/>
+          <line class="ad" x1="210" y1="70" x2="355" y2="25"/><text class="lbl-sm" x="330" y="24" fill="#136577">AD</text>
+          <line class="dash" x1="300" y1="150" x2="300" y2="30"/><text class="lbl-sm" x="292" y="164">Q*</text>
+          <circle cx="300" cy="52" r="3" fill="#C8442A"/><text class="lbl-sm" x="304" y="50" fill="#C8442A">G</text>
+          <circle class="pt" cx="300" cy="72" r="3"/><text class="lbl-sm" x="304" y="76">F</text>
+          <text class="lbl-sm" x="238" y="20">Inflationary: FG gap</text>
+        </svg>
+        <div class="fig-cap">At full-employment output Q*, if AD falls short (G below F) there is a deflationary gap; if AD exceeds it (G above F) there is an inflationary gap.</div>
+      </div>
+
+      <div class="illus-box">
+        <div class="il-h">🧮 Illustration 8</div>
+        <div class="il-q">C = 100 + 0.75Y, I = 1000. Find equilibrium income and consumption.</div>
+        <div class="il-a">Y = (1 ÷ (1−0.75)) × (100+1000) = 4 × 1100 = <strong>4400</strong>. C = 4400 − 1000 = <strong>3400</strong>.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'The Multiplier',
+    html: `
+      <div class="page-title">The Investment Multiplier</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Concept</div>
+        <p>An increase in autonomous investment raises equilibrium income by a <span class="kt">multiple</span> amount, because the initial spending becomes income, which is partly re-spent (the "ripple effect").</p>
+        <div class="eq-box">k = ΔY / ΔI = 1 / (1 − MPC) = 1 / MPS</div>
+        <p>The multiplier is the <span class="kt">reciprocal of MPS</span>. Higher MPC → higher multiplier. Maximum value is infinity when MPC = 1.</p>
+      </div>
+
+      <div class="fig">
+        <div class="fig-title">Fig. 7 — Effect of a Rise in Autonomous Investment</div>
+        <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg">
+          <line class="axis" x1="45" y1="15" x2="45" y2="165"/><line class="axis" x1="45" y1="165" x2="360" y2="165"/>
+          <text class="lbl" x="8" y="90">AD</text><text class="lbl" x="300" y="182">Income (Y)</text>
+          <line class="ref" x1="45" y1="165" x2="175" y2="25"/>
+          <line class="ad" x1="45" y1="120" x2="330" y2="55"/><text class="lbl-sm" x="300" y="52" fill="#136577">C+I</text>
+          <line class="ad" x1="45" y1="100" x2="330" y2="35" stroke-dasharray="5 3"/><text class="lbl-sm" x="300" y="32" fill="#136577">C+I+ΔI</text>
+          <circle class="pt" cx="128" cy="92" r="3.5"/><text class="lbl-sm" x="112" y="88">E</text>
+          <circle class="pt" cx="158" cy="76" r="3.5"/><text class="lbl-sm" x="162" y="74">E₁</text>
+          <line class="dash" x1="128" y1="92" x2="128" y2="165"/><text class="lbl-sm" x="120" y="178">Y₀</text>
+          <line class="dash" x1="158" y1="76" x2="158" y2="165"/><text class="lbl-sm" x="152" y="178">Y₁</text>
+        </svg>
+        <div class="fig-cap">A rise of ΔI shifts the aggregate demand line up; equilibrium moves E → E₁ and income rises <em>more than proportionately</em> from Y₀ to Y₁.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Leakages Reduce the Multiplier</div>
+        <p>Leakages (income not spent on domestic consumption) shrink the multiplier: progressive taxes, high liquidity preference / idle savings, demand met from stocks or imports, buying existing wealth/securities, undistributed profits, debt repayment, and (at full employment) inflation. In underdeveloped countries MPC is high but the multiplier is low due to structural rigidities.</p>
+      </div>
+
+      <div class="illus-box">
+        <div class="il-h">🧮 Illustration 9</div>
+        <div class="il-q">ΔI = ₹400 Cr, MPC = 0.8. Find the rise in income and saving.</div>
+        <div class="il-a">k = 1 ÷ (1−0.8) = 5. ΔY = 5 × 400 = <strong>₹2000 Cr</strong>. ΔS = ΔY × MPS = 2000 × 0.2 = <strong>₹400 Cr</strong>.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Three & Four Sector',
+    html: `
+      <div class="page-title">Three &amp; Four-Sector Models</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Three-Sector Model (+ Government)</div>
+        <div class="eq-box">AD = C + I + G &nbsp;·&nbsp; AS = C + S + T &nbsp;⟹&nbsp; at equilibrium I + G = S + T</div>
+        <p>Government adds taxes and transfers. New <span class="kt">leakages</span> = saving + taxes; new <span class="kt">injections</span> = investment + government purchases.</p>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Case</th><th>Equilibrium income</th></tr>
+          <tr><td>Lump-sum tax</td><td>Y = 1/(1−b) × (a − bT + I + G)</td></tr>
+          <tr><td>Lump-sum tax + transfers</td><td>Y = 1/(1−b) × (a − bT + bTR + I + G)</td></tr>
+          <tr><td>Proportional tax T = T̄ + tY</td><td>Y = 1/[1 − b(1−t)] × (a − bT̄ + I + G)</td></tr>
+        </table></div>
+      </div>
+
+      <div class="illus-box">
+        <div class="il-h">🧮 Illustration 13</div>
+        <div class="il-q">C = 10 + 0.75Yd, I = 50, G = T = 20. Find equilibrium income and the multiplier.</div>
+        <div class="il-a">Y = 10 + 0.75(Y−20) + 50 + 20 → 0.25Y = 65 → <strong>Y = 260</strong>. Multiplier = 1/(1−0.75) = <strong>4</strong>.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Four-Sector Model (+ Foreign Sector)</div>
+        <div class="eq-box">Y = C + I + G + (X − M) &nbsp;·&nbsp; M = M̄ + mY</div>
+        <p>Exports are <span class="gt">injections</span>; imports are <span class="nt">leakages</span>. At equilibrium, leakages (S + T + M) = injections (I + G + X).</p>
+        <div class="eq-box">Foreign-trade multiplier = 1 / (1 − b + m)<br><small>m = marginal propensity to import</small></div>
+        <div class="callout imp"><div class="ct">💡 Openness</div>The greater the value of m, the <span class="nt">lower</span> the multiplier — a more open economy responds less to demand shocks. A rise in export demand is expansionary; an autonomous rise in imports is contractionary.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 2 — Summary</div>
+      <ul class="summary-list">
+        <li>Keynes (1936) introduced income determination via aggregate demand, the consumption function, and the multiplier.</li>
+        <li>C = a + bY; MPC = ΔC/ΔY (0 &lt; b &lt; 1); APC = C/Y (falls as income rises); MPC + MPS = 1.</li>
+        <li>Equilibrium income is where AD = AS, i.e. C + I = C + S, i.e. I = S.</li>
+        <li>Equilibrium need not be at full employment: a deflationary gap (deficient demand) or inflationary gap (excess demand) may exist.</li>
+        <li>Investment multiplier k = 1/(1−MPC) = 1/MPS; higher MPC → higher multiplier; leakages reduce it.</li>
+        <li>Three-sector: I + G = S + T. Four-sector: Y = C + I + G + (X − M); foreign-trade multiplier = 1/(1−b+m).</li>
+      </ul>
+    `
+  },
+
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 2</div>
+      <div class="page-sub">Official ICAI questions on the Keynesian theory.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch6u2" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch6u2')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q1</span>In the Keynesian model, equilibrium aggregate output is determined by:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Aggregate demand</div><div class="mcq-opt"><span class="ol">B.</span>Consumption function</div><div class="mcq-opt"><span class="ol">C.</span>The national demand for labour</div><div class="mcq-opt"><span class="ol">D.</span>The price level</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q2</span>Keynes believed that an economy may attain equilibrium level of output:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Only at the full-employment level of output</div><div class="mcq-opt"><span class="ol">B.</span>Below the full-employment level of output</div><div class="mcq-opt"><span class="ol">C.</span>Only if prices were inflexible</div><div class="mcq-opt"><span class="ol">D.</span>(a) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q3</span>According to Keynes, consumption expenditure is determined by:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The level of interest rates</div><div class="mcq-opt"><span class="ol">B.</span>Extent of government taxes and subsidies</div><div class="mcq-opt"><span class="ol">C.</span>Disposable income</div><div class="mcq-opt"><span class="ol">D.</span>Autonomous investment expenditure</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q4</span>The marginal propensity to consume (MPC) can be defined as:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>A change in spending due to a change in income</div><div class="mcq-opt"><span class="ol">B.</span>A change in income that is saved after consumption</div><div class="mcq-opt"><span class="ol">C.</span>Part of income that is spent on consumption</div><div class="mcq-opt"><span class="ol">D.</span>Part of income that is not saved</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q5</span>If the consumption function is C = a + bY, then b represents:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Autonomous consumer expenditure when income is zero</div><div class="mcq-opt"><span class="ol">B.</span>The marginal propensity to consume</div><div class="mcq-opt"><span class="ol">C.</span>The expenditure multiplier</div><div class="mcq-opt"><span class="ol">D.</span>Part of disposable income</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q6</span>If the consumption function is C = a + bY, then a represents:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Autonomous consumer expenditure</div><div class="mcq-opt"><span class="ol">B.</span>The marginal propensity to consume</div><div class="mcq-opt"><span class="ol">C.</span>The consumption-income relationship</div><div class="mcq-opt"><span class="ol">D.</span>Non-linear consumption function</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q7</span>If C = 20 + 0.5Yd, an increase in disposable income by ₹100 raises consumer expenditure by ₹:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>25</div><div class="mcq-opt"><span class="ol">B.</span>70</div><div class="mcq-opt"><span class="ol">C.</span>50</div><div class="mcq-opt"><span class="ol">D.</span>100</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q8</span>Autonomous consumption = ₹2000, MPC = 0.8, disposable income = ₹10,000. Total consumption = ₹:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>8,000</div><div class="mcq-opt"><span class="ol">B.</span>6,000</div><div class="mcq-opt"><span class="ol">C.</span>10,000</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q9</span>In the Keynesian cross, the point where aggregate demand crosses the 45° line indicates the:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Level of full employment income</div><div class="mcq-opt"><span class="ol">B.</span>Less than full-employment level of income</div><div class="mcq-opt"><span class="ol">C.</span>Equilibrium level of income, which may or may not be full-employment income</div><div class="mcq-opt"><span class="ol">D.</span>Autonomous level of income which may not be full-employment income</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q10</span>In a closed economy, aggregate demand is the sum of:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Consumer expenditure, demand for exports and government spending</div><div class="mcq-opt"><span class="ol">B.</span>Consumer expenditure, planned investment spending and government spending</div><div class="mcq-opt"><span class="ol">C.</span>Consumer expenditure, actual investment, government spending and net exports</div><div class="mcq-opt"><span class="ol">D.</span>Consumer expenditure, planned investment, government spending and net exports</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q11</span>Under C = a + bY with b = 0.8, the value of the two-sector expenditure multiplier is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>4</div><div class="mcq-opt"><span class="ol">B.</span>2</div><div class="mcq-opt"><span class="ol">C.</span>5</div><div class="mcq-opt"><span class="ol">D.</span>1</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 7 · UNIT 1 — FISCAL FUNCTIONS: AN OVERVIEW, CENTRE AND STATE FINANCE
+   ===================================================================== */
+UNIT_DATA['ch7u1'] = {
+  chapterLabel: 'Chapter 7 · Public Finance',
+  unitLabel: 'Unit 1 · Fiscal Functions · Centre & State Finance',
+  sections: [
+
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">Fiscal Functions: An Overview</div>
+      <div class="page-sub">Unit 1 · The economic role of government &amp; the finances of centre and states</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Explain the three-branch taxonomy of the role of government.</li>
+          <li>Classify governmental economic actions by function.</li>
+          <li>Elucidate the finances and responsibilities of centre and state.</li>
+          <li>Describe the division of resources between the union and the states.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Three Economic Systems &amp; Adam Smith</div>
+        <p>Modern society offers three systems for allocating resources: the <span class="kt">market</span> (capitalism), the <span class="kt">government</span> (socialism), and a <span class="kt">mixed economy</span>. <span class="kt">Adam Smith</span> favoured minimal but well-defined government, seeing a role in: national defence, a system of justice (law &amp; order, protecting property), and beneficial public works (roads, bridges, canals, harbours, postal system).</p>
+        <div class="callout imp"><div class="ct">💡 Three Macroeconomic Goals</div>Economic growth · high employment · stable price levels.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Musgrave's Three-Branch Taxonomy (1959)</div>
+        <p>In <em>The Theory of Public Finance</em> (1959), <span class="kt">Richard Musgrave</span> separated government's fiscal functions into three:</p>
+        <div class="flow-row">
+          <div class="flow-step">Allocation<br><small>efficiency</small></div>
+          <div class="flow-arr">·</div>
+          <div class="flow-step">Redistribution<br><small>fairness</small></div>
+          <div class="flow-arr">·</div>
+          <div class="flow-step">Stabilization<br><small>price stability</small></div>
+        </div>
+        <div class="callout exam"><div class="ct">🎯 High-Yield</div>Allocation &amp; distribution are <span class="kt">microeconomic</span> functions; stabilization is a <span class="kt">macroeconomic</span> function.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Allocation Function',
+    html: `
+      <div class="page-title">The Allocation Function</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Market Failure Is the Rationale</div>
+        <p><span class="kt">Allocative efficiency</span> maximises value to society from existing resources — assumed only under perfect competition. In reality markets fail, so the government intervenes as a <span class="kt">complement</span>, not a substitute, to the market. Causes of market failure:</p>
+        <ul class="note-list">
+          <li>Imperfect competition / monopoly power → under-production, higher prices.</li>
+          <li>Under-provision of public goods (e.g. defence) and merit goods (education, healthcare).</li>
+          <li>Common property resources over-used; externalities (e.g. pollution).</li>
+          <li>Factor immobility; imperfect information; income &amp; wealth inequality.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>What the Allocation Function Decides</div>
+        <ul class="note-list">
+          <li>Who and what will be taxed; how much and on what revenue is spent.</li>
+          <li>How total resources are divided among uses; the optimum mix of social goods.</li>
+          <li>The level of public-sector involvement; reallocation from private to public use.</li>
+        </ul>
+        <div class="callout imp"><div class="ct">💡 Allocation Instruments</div>Direct production (electricity, transport); the price mechanism (taxes &amp; subsidies — e.g. higher taxes on cigarettes/alcohol); legislation (single-use plastic ban); competition &amp; merger policy (Competition Act); regulation (licensing, minimum wages).</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Redistribution & Stabilization',
+    html: `
+      <div class="page-title">Redistribution &amp; Stabilization</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Redistribution Function ("for whom")</div>
+        <p>Left to the market, income &amp; wealth distribution is skewed. Government redistributes via:</p>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">Expenditure side</div>
+            <ul><li>Free/subsidised education, healthcare, housing, food</li><li>Transfer payments, unemployment benefits, pensions</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">Revenue side</div>
+            <ul><li>Progressive taxation of the rich</li><li>Subsidies to the poor (e.g. food grains to BPL households)</li></ul>
+          </div>
+        </div>
+        <div class="callout warn"><div class="ct">⚠️ Efficiency–Equity Trade-off</div>Redistribution has efficiency costs (deadweight losses): high taxes can discourage work, saving &amp; risk-taking. An optimal policy balances equity and efficiency.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>The Stabilization Function</div>
+        <p>Rationale is <span class="kt">Keynesian</span>: a market economy does not automatically generate full employment and price stability. Government &amp; central bank pursue stability through fiscal and monetary policy, countering recessions, inflation, stagflation and the 'contagion effect'.</p>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Condition</th><th>Policy response</th></tr>
+          <tr><td>High inflation</td><td>Contractionary: ↓ spending, ↑ taxes, ↓ money supply</td></tr>
+          <tr><td>High unemployment / recession</td><td>Expansionary: ↑ spending, ↓ taxes, ↑ money supply</td></tr>
+        </table></div>
+        <div class="callout imp"><div class="ct">💡 Budget Nature</div>Deficit budgets stimulate activity; surplus budgets slow it down.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Centre & State Finance',
+    html: `
+      <div class="page-title">Centre &amp; State Finance</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Fiscal Federalism</div>
+        <p><span class="kt">Fiscal federalism</span> (term by Musgrave) deals with the division of functions and financial relations among levels of government. Musgrave argued the <span class="kt">centre</span> should handle stabilization &amp; redistribution, while <span class="kt">states/local</span> governments handle allocation. India = a federation of <strong>28 states and 8 union territories</strong>.</p>
+        <div class="callout imp"><div class="ct">💡 Article 246 — Three Lists</div><span class="kt">Union List</span> (parliament alone), <span class="kt">State List</span> (state assemblies alone), <span class="kt">Concurrent List</span> (both; centre prevails on conflict).</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Who Levies Which Taxes</div>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">Union (greater powers)</div>
+            <ul><li>Income tax (except agricultural), corporation tax</li><li>Customs &amp; export duties, union excise, central GST</li><li>Security transaction tax; tax on capital value of assets (excl. agri land)</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">States</div>
+            <ul><li>Agricultural income, land &amp; buildings, mineral rights</li><li>Electricity, vehicles, tolls, professions</li><li>Land revenue; excise on certain items</li></ul>
+          </div>
+        </div>
+        <p>Union property is exempt from state taxation; state property/income is not taxed by the centre.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Distribution of Revenue (Articles 268–281)</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Article</th><th>Provision</th></tr>
+          <tr><td>268</td><td>Duties levied by union, collected &amp; appropriated by states</td></tr>
+          <tr><td>269</td><td>Taxes levied &amp; collected by union but assigned to states</td></tr>
+          <tr><td>270</td><td>Taxes levied &amp; collected by union, distributed between union &amp; states</td></tr>
+          <tr><td>271</td><td>Surcharge on certain duties for purposes of the union</td></tr>
+          <tr><td>275</td><td>Statutory grants-in-aid from union to certain states</td></tr>
+          <tr><td>280</td><td>Institutional mechanism: the Finance Commission</td></tr>
+          <tr><td>282 / 293</td><td>Grants / Loans for any public purpose</td></tr>
+        </table></div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Finance Commission & GST',
+    html: `
+      <div class="page-title">Finance Commission &amp; GST</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Finance Commission (Article 280)</div>
+        <p>A constitutionally mandated body at the centre of fiscal federalism. It considers <span class="kt">vertical equity</span> (all states' share of central revenue) and <span class="kt">horizontal equity</span> (allocation among states). Cesses, surcharges &amp; non-tax revenue are netted out of gross tax revenue to get the <span class="kt">Net Divisible Pool (NDP)</span>.</p>
+        <div class="callout imp"><div class="ct">💡 15th Finance Commission (constituted 27 Nov 2017)</div>Recommended states' share in central taxes (vertical devolution) for 2021-26 at <strong>41%</strong> (vs 42% by the 14th FC; the 1% adjustment provides for the new UTs of J&amp;K and Ladakh).</div>
+        <p>Criteria for horizontal distribution (2021-26): Income distance, Area, Population (2011), Demographic performance, Forest &amp; ecology, and Tax &amp; fiscal efforts.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>GST &amp; Expenditure Decentralization</div>
+        <p>GST (rolled out <strong>1 July 2017</strong>) subsumed most indirect taxes, making India's indirect tax regime unitary. States levy <span class="kt">SGST</span>, union levies <span class="kt">CGST</span> (equal rates); <span class="kt">IGST</span> applies to inter-state trade &amp; imports/exports. Per the <strong>May 2022 Supreme Court verdict</strong>, union and state legislatures have "equal, simultaneous and unique powers" over GST, and GST Council recommendations are not binding.</p>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Level</th><th>Expenditure responsibility</th></tr>
+          <tr><td>Centre</td><td>Defence, foreign affairs &amp; trade, money &amp; banking, cross-state transport</td></tr>
+          <tr><td>States</td><td>Agriculture, industry, health &amp; education, police, state roads</td></tr>
+          <tr><td>Local bodies</td><td>Water supply, sanitation, local roads, electricity</td></tr>
+        </table></div>
+        <div class="callout exam"><div class="ct">🎯 Borrowing</div>Articles 292 (centre) &amp; 293 (states) govern borrowing. A state must obtain the centre's consent to borrow if indebted to the centre from a previous loan.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 1 — Summary</div>
+      <ul class="summary-list">
+        <li>Musgrave (1959) split government's role into allocation (efficiency), redistribution (fairness) and stabilization (price stability).</li>
+        <li>Allocation &amp; distribution are microeconomic; stabilization is macroeconomic. Market failures justify the allocative function.</li>
+        <li>Redistribution works through progressive taxation and targeted spending, balancing equity against efficiency costs.</li>
+        <li>Stabilization (Keynesian rationale) uses fiscal &amp; monetary policy — expansionary in recession, contractionary in inflation.</li>
+        <li>Fiscal federalism: centre handles stabilization &amp; redistribution; states/local handle allocation. Article 246 defines the three lists.</li>
+        <li>Articles 268–281 govern revenue distribution; Article 280 creates the Finance Commission (15th FC: 41% for 2021-26).</li>
+        <li>GST (1 July 2017) unified indirect taxes: SGST + CGST, with IGST on inter-state trade.</li>
+      </ul>
+    `
+  },
+
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 1</div>
+      <div class="page-sub">Official ICAI questions on fiscal functions and centre-state finance.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch7u1" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch7u1')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q1</span>Redistribution policies are likely to have efficiency costs because:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>They will reduce the efficiency of governments</div><div class="mcq-opt"><span class="ol">B.</span>They may create disincentives to work and save</div><div class="mcq-opt"><span class="ol">C.</span>Governments have to forego taxes</div><div class="mcq-opt"><span class="ol">D.</span>They make the poor dependent on the rich</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q2</span>Macroeconomic stabilization may be achieved through:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Free market economy</div><div class="mcq-opt"><span class="ol">B.</span>Fiscal policy</div><div class="mcq-opt"><span class="ol">C.</span>Monetary policy</div><div class="mcq-opt"><span class="ol">D.</span>(b) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q3</span>Which policy fulfils the redistribution function?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Parking the army on the northern borders</div><div class="mcq-opt"><span class="ol">B.</span>Supply of food grains at subsidized prices to the poor</div><div class="mcq-opt"><span class="ol">C.</span>Controlling the supply of money through monetary policy</div><div class="mcq-opt"><span class="ol">D.</span>All of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q4</span>Choose the correct statement:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Fiscal policy = taxation &amp; spending; monetary policy = price &amp; profit controls</div><div class="mcq-opt"><span class="ol">B.</span>Fiscal policy = price &amp; profit controls; monetary policy = taxation &amp; spending</div><div class="mcq-opt"><span class="ol">C.</span>Fiscal policy = changes in taxation &amp; spending; monetary policy = changes in money supply &amp; interest rates</div><div class="mcq-opt"><span class="ol">D.</span>Fiscal policy = money supply &amp; interest rates; monetary policy = taxation &amp; spending</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q5</span>The justification for government intervention is best described by:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The need to prevent recession and inflation</div><div class="mcq-opt"><span class="ol">B.</span>The need to modify the outcomes of private market actions</div><div class="mcq-opt"><span class="ol">C.</span>The need to bring justice in distribution of income and wealth</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q6</span>(1) Market-generated allocation is usually imperfect. (2) Market failures can at all times be corrected through government intervention. (3) Public goods will not be produced sufficiently in a market economy.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>1, 2 and 3 are correct</div><div class="mcq-opt"><span class="ol">B.</span>1 and 3 are correct</div><div class="mcq-opt"><span class="ol">C.</span>2 and 3 are correct</div><div class="mcq-opt"><span class="ol">D.</span>3 alone is correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q7</span>When a government offers unemployment benefits and resorts to progressive taxation, which function does it fulfil?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Establishing stability in an economy</div><div class="mcq-opt"><span class="ol">B.</span>Redistributing income and wealth</div><div class="mcq-opt"><span class="ol">C.</span>Allocating resources to their most efficient use</div><div class="mcq-opt"><span class="ol">D.</span>Creating a source of market failure</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q8</span>Government of Emeline Land decides to provide most modern road infrastructure throughout the nation. This is classified as:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Distribution function</div><div class="mcq-opt"><span class="ol">B.</span>Allocation function</div><div class="mcq-opt"><span class="ol">C.</span>Stabilization function</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q9</span>Which function does the government perform when it provides transfer payments to the underprivileged?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Allocation</div><div class="mcq-opt"><span class="ol">B.</span>Efficiency</div><div class="mcq-opt"><span class="ol">C.</span>Distribution</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q10</span>Which is true in respect of centre and state government finances?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The centre can tax agricultural income and mineral rights</div><div class="mcq-opt"><span class="ol">B.</span>The Finance Commission recommends distribution of taxes between centre and states</div><div class="mcq-opt"><span class="ol">C.</span>GST subsumes majority of direct taxes and a few indirect taxes</div><div class="mcq-opt"><span class="ol">D.</span>IGST is collected by the state governments</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q11</span>GST compensation is given:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>To industries which made losses due to GST</div><div class="mcq-opt"><span class="ol">B.</span>To compensate for lower GST rates on essential items</div><div class="mcq-opt"><span class="ol">C.</span>To states to compensate for loss of revenue due to introduction of GST</div><div class="mcq-opt"><span class="ol">D.</span>To compensate for loss of input tax credit in manufacturing</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q12</span>Which is true regarding the role of Finance Commissions in India? (I) Distribution of net proceeds of taxes between union and states; (II) Allocation among states of their shares; (III) Recommendations on IGST on inter-state movement; (IV) Recommend expenditure decentralization.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>I and II are correct</div><div class="mcq-opt"><span class="ol">B.</span>II and III are correct</div><div class="mcq-opt"><span class="ol">C.</span>I, II and III are correct</div><div class="mcq-opt"><span class="ol">D.</span>All the above are correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q13</span>In a federal set-up, the stabilization function can be effectively performed by:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Respective state governments</div><div class="mcq-opt"><span class="ol">B.</span>Ministry of taxes</div><div class="mcq-opt"><span class="ol">C.</span>The government at the centre</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q14</span>Which is concerned with division of economic responsibilities between centre and state?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>NITI Aayog</div><div class="mcq-opt"><span class="ol">B.</span>Central bank</div><div class="mcq-opt"><span class="ol">C.</span>Finance Commission</div><div class="mcq-opt"><span class="ol">D.</span>Parliament</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q15</span>Fiscal Federalism refers to:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Organizing and implementing development plans</div><div class="mcq-opt"><span class="ol">B.</span>Sharing of political power between centre and states</div><div class="mcq-opt"><span class="ol">C.</span>The management of fiscal policy by a nation</div><div class="mcq-opt"><span class="ol">D.</span>Division of economic functions and resources among different layers of government</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q16</span>Which of the following taxes is levied by the state government only?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Corporation tax</div><div class="mcq-opt"><span class="ol">B.</span>Wealth tax</div><div class="mcq-opt"><span class="ol">C.</span>Income tax</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q17</span>The share of states in central taxes for 2021-26 recommended by the 15th Finance Commission is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>38 percent</div><div class="mcq-opt"><span class="ol">B.</span>41 percent</div><div class="mcq-opt"><span class="ol">C.</span>42 percent</div><div class="mcq-opt"><span class="ol">D.</span>The commission has not submitted its report</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q18</span>Which is NOT a criterion for distributing central taxes among states for 2021-26?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Demographic performance</div><div class="mcq-opt"><span class="ol">B.</span>Forest and ecology</div><div class="mcq-opt"><span class="ol">C.</span>Infrastructure performance</div><div class="mcq-opt"><span class="ol">D.</span>Tax and fiscal efforts</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q19</span>As per the Supreme Court verdict in May 2022:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The union has greater powers than the states for enacting GST laws</div><div class="mcq-opt"><span class="ol">B.</span>The union and state legislatures have "equal, simultaneous powers" to make laws on GST</div><div class="mcq-opt"><span class="ol">C.</span>The union legislature's enactments prevail in case of conflict</div><div class="mcq-opt"><span class="ol">D.</span>State legislatures can make rules only with central permission</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q20</span>Providing social sector services such as health and education is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The responsibility of the central government</div><div class="mcq-opt"><span class="ol">B.</span>The responsibility of the respective state governments</div><div class="mcq-opt"><span class="ol">C.</span>The responsibility of local administrative bodies</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 7 · UNIT 2 — MARKET FAILURE / GOVERNMENT INTERVENTION
+   ===================================================================== */
+UNIT_DATA['ch7u2'] = {
+  chapterLabel: 'Chapter 7 · Public Finance',
+  unitLabel: 'Unit 2 · Market Failure & Government Intervention',
+  sections: [
+
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">Market Failure &amp; Government Intervention</div>
+      <div class="page-sub">Unit 2 · Why markets fail and how governments correct them</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Define the concept of market failure.</li>
+          <li>Describe the different sources of market failure.</li>
+          <li>Explain government interventions for correcting market failure.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>What Is Market Failure?</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>A situation in which the free market leads to a <span class="kt">misallocation</span> of society's scarce resources — over-production or under-production of goods — giving a less than optimal outcome. It does <span class="nt">not</span> mean the market is not working at all.</div>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">Complete Market Failure</div><div class="mc-val">"Missing markets" — the market supplies nothing though products are wanted. e.g. pure public goods.</div></div>
+          <div class="mini-card"><div class="mc-title">Partial Market Failure</div><div class="mc-val">The market functions but produces the wrong quantity or at the wrong price.</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Four Major Reasons Markets Fail</div>
+        <div class="flow-row">
+          <div class="flow-step">Market Power</div>
+          <div class="flow-arr">·</div>
+          <div class="flow-step">Externalities</div>
+          <div class="flow-arr">·</div>
+          <div class="flow-step">Public Goods</div>
+          <div class="flow-arr">·</div>
+          <div class="flow-step">Incomplete Information</div>
+        </div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Market Power & Externalities',
+    html: `
+      <div class="page-title">Market Power &amp; Externalities</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Market Power</div>
+        <p><span class="kt">Market (monopoly) power</span> is the ability of a firm to profitably raise price above marginal cost. Firms with it are price makers; they restrict output and charge more than under competition. Profits come from dominance, not efficiency.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Externalities</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>Costs (negative) or benefits (positive) not reflected in market prices — also called spillover / neighbourhood / third-party / side-effects. They are uninternalized.</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Type</th><th>Example</th></tr>
+          <tr><td>Negative production</td><td>Factory dumps waste into a river (harms drinking water; reduces fish catch)</td></tr>
+          <tr><td>Positive production</td><td>Firm trains employees → benefits other firms who later hire them</td></tr>
+          <tr><td>Negative consumption</td><td>Smoking in public (passive smoking); loud radio at a concert</td></tr>
+          <tr><td>Positive consumption</td><td>Immunisation confers a social benefit by preventing infection of others</td></tr>
+        </table></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Private vs Social Cost</div>
+        <div class="eq-box">Social Cost = Private Cost + External Cost</div>
+        <p>The firm's supply curve reflects only <span class="kt">private</span> marginal costs. Since external costs are ignored, prices send incorrect signals causing over- or under-production. With externalities, a competitive market produces a level of output that is <span class="nt">not socially optimal</span> → market failure.</p>
+      </div>
+    `
+  },
+
+  {
+    label: 'Public Goods & Information',
+    html: `
+      <div class="page-title">Public Goods &amp; Incomplete Information</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Public Goods (Samuelson, 1954)</div>
+        <p>A <span class="kt">public good</span> (collective consumption / social good) is enjoyed in common — one person's consumption does not subtract from another's.</p>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">Private Goods</div>
+            <ul><li>Excludable &amp; rivalrous</li><li>e.g. food, clothing, cars</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">Public Goods</div>
+            <ul><li>Non-rival, non-excludable, indivisible</li><li>e.g. defence, street lights, lighthouses</li></ul>
+          </div>
+        </div>
+        <div class="callout warn"><div class="ct">⚠️ Free-Rider Problem</div>Because public goods are non-excludable, people can consume without paying → no incentive to pay → profit-maximizing firms won't produce them → market failure.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Incomplete &amp; Asymmetric Information</div>
+        <p>Perfect information is rarely satisfied (complex products, costly info, deliberate misinformation). <span class="kt">Asymmetric information</span> — one party knows a material fact the other does not (used-car sellers, borrowers, insurance buyers).</p>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">Adverse Selection</div><div class="mc-val"><em>Before</em> the transaction. The "lemons problem" (Akerlof): quality uncertainty drives good cars out; only "lemons" remain.</div></div>
+          <div class="mini-card"><div class="mc-title">Moral Hazard</div><div class="mc-val"><em>After</em> the transaction. A person protected from consequences acts recklessly (e.g. a driver with comprehensive insurance).</div></div>
+        </div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Correcting Power & Externalities',
+    html: `
+      <div class="page-title">Intervention: Market Power &amp; Externalities</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Minimizing Market Power</div>
+        <p>Governments promote competition — e.g. India's <span class="kt">Competition Act, 2002</span> (amended 2007), the US Antitrust laws, UK's Competition Act 1998. Measures: market liberalisation, controls on mergers &amp; acquisitions, price capping, rate-of-return regulation, investigations into cartels/predatory pricing, and nationalisation. <span class="kt">Natural monopolies</span> (electricity, gas, water) are permitted but price-regulated; patents/copyrights protect innovation.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Correcting Externalities</div>
+        <p>The key is to <span class="kt">internalise</span> the externality — make those who create it include it in their decisions.</p>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">Direct controls (command)</div>
+            <ul><li>Emission standards, licensing, quotas</li><li>Environment (Protection) Act, 1986</li><li>Pollution Control Boards</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">Market-based policies</div>
+            <ul><li><span class="kt">Pigouvian taxes</span> — "making the polluter pay"</li><li><span class="kt">Cap-and-trade</span> — tradable emission permits (carbon credits)</li></ul>
+          </div>
+        </div>
+        <div class="callout warn"><div class="ct">⚠️ Problems with Pollution Taxes</div>Hard to determine &amp; administer; ineffective if demand is inelastic (tax passed on as higher price); risk of capital flight to low-tax countries.</div>
+        <div class="callout imp"><div class="ct">💡 Positive Externalities &amp; Merit Goods</div>Corrected via subsidies (to producers or consumers) and direct provision (education, healthcare, R&amp;D). Merit goods are under-produced by the market; the Right to Education Act, 2009 compels consumption.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Other Interventions',
+    html: `
+      <div class="page-title">Public Goods, Demerit Goods &amp; Prices</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Demerit Goods</div>
+        <p>Socially undesirable goods (cigarettes, alcohol, drugs) impose significant negative externalities. (Note: not all goods with negative externalities are demerit goods — steel causes pollution but isn't demerit.) Interventions: complete ban, negative advertising, advertising bans, spatial/time restrictions, and <span class="kt">high taxes</span>. Demand is often highly inelastic, so taxes reduce demand less than proportionately.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Public Goods &amp; Price Intervention</div>
+        <ul class="note-list">
+          <li>Non-excludable pure public goods → direct provision from tax revenue.</li>
+          <li>Excludable public goods (parks, museums) → provision financed by entry fees / licensed private firms.</li>
+          <li><span class="kt">Price controls</span>: a <span class="kt">price floor</span> (minimum, e.g. MSP, minimum wages) or a <span class="kt">price ceiling</span> (maximum, e.g. food grains in scarcity, rent control).</li>
+          <li><span class="kt">Buffer stocks</span> stabilise grain prices; correcting information failure via mandatory labelling &amp; SEBI disclosures.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Government Failure</div>
+        <div class="callout warn"><div class="ct">⚠️ Government Failure</div>Occurs when intervention is <span class="nt">ineffective</span> (wasting resources) or <span class="nt">produces fresh, more serious problems</span> — creating inefficiency and misallocation. Policymakers must weigh all costs and benefits.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 2 — Summary</div>
+      <ul class="summary-list">
+        <li>Market failure = free-market misallocation (over- or under-production). Types: complete ("missing markets") and partial.</li>
+        <li>Four causes: market power, externalities, public goods, incomplete information.</li>
+        <li>Social Cost = Private Cost + External Cost; with externalities, output is not socially optimal.</li>
+        <li>Public goods are non-rival, non-excludable, indivisible → free-rider problem.</li>
+        <li>Asymmetric information → adverse selection (before, "lemons") and moral hazard (after).</li>
+        <li>Corrections: competition law, Pigouvian taxes, cap-and-trade, subsidies for merit goods, taxes/bans for demerit goods, price floors/ceilings, buffer stocks.</li>
+        <li>Government failure arises when intervention is ineffective or creates worse problems.</li>
+      </ul>
+    `
+  },
+
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 2</div>
+      <div class="page-sub">Official ICAI questions on market failure and intervention.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch7u2" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch7u2')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q1</span>'Market failure' is a situation which occurs when:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Private goods are not sufficiently provided by the market</div><div class="mcq-opt"><span class="ol">B.</span>Public goods are not sufficiently provided by public sector</div><div class="mcq-opt"><span class="ol">C.</span>The market fails to form or fails to allocate resources efficiently</div><div class="mcq-opt"><span class="ol">D.</span>(b) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q2</span>Which of the following is an example of market failure?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Prices of goods rise because of shortages</div><div class="mcq-opt"><span class="ol">B.</span>Merit goods are not sufficiently produced and supplied</div><div class="mcq-opt"><span class="ol">C.</span>Prices fall leading to fall in profits and closure of firms</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q3</span>Which of the following is an outcome of market power?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Makes price equal to marginal cost and produces positive external benefit</div><div class="mcq-opt"><span class="ol">B.</span>Can cause markets to be efficient due to reduction in costs</div><div class="mcq-opt"><span class="ol">C.</span>Makes firms price makers and restricts output, making allocation inefficient</div><div class="mcq-opt"><span class="ol">D.</span>(b) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q4</span>Markets do not exist:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>For goods which have positive externalities</div><div class="mcq-opt"><span class="ol">B.</span>For pure public goods</div><div class="mcq-opt"><span class="ol">C.</span>For goods which have negative externalities</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q5</span>Which is the right argument for provision of a public good by government?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Governments have huge resources at their disposal</div><div class="mcq-opt"><span class="ol">B.</span>Public goods will never cause any type of externality</div><div class="mcq-opt"><span class="ol">C.</span>Markets are unlikely to produce sufficient quantity of public goods</div><div class="mcq-opt"><span class="ol">D.</span>Provision of public goods is very profitable for any government</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q6</span>Adequate amount of a pure public good will not be provided by the private market because of:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The possibility of free riding</div><div class="mcq-opt"><span class="ol">B.</span>The existence of very low prices and low profits</div><div class="mcq-opt"><span class="ol">C.</span>Governments would produce them anyway, so overproduction</div><div class="mcq-opt"><span class="ol">D.</span>Restrictions and taxes on production of public goods</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q7</span>The free rider problem arises because of:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Ability of participants to produce goods at zero marginal cost</div><div class="mcq-opt"><span class="ol">B.</span>Marginal benefit cannot be calculated due to externalities</div><div class="mcq-opt"><span class="ol">C.</span>The good or service is non-excludable</div><div class="mcq-opt"><span class="ol">D.</span>General poverty and unemployment</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q8</span>A chemical factory has full information regarding the risks of a product but continues to sell it. This is possible because of:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Asymmetric information</div><div class="mcq-opt"><span class="ol">B.</span>Moral hazard</div><div class="mcq-opt"><span class="ol">C.</span>Free riding</div><div class="mcq-opt"><span class="ol">D.</span>(a) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q9</span>If an individual drives dangerously fast because he has comprehensive insurance, it is a case of:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Free riding</div><div class="mcq-opt"><span class="ol">B.</span>Moral hazard</div><div class="mcq-opt"><span class="ol">C.</span>Poor upbringing</div><div class="mcq-opt"><span class="ol">D.</span>Inefficiency</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q10</span>Smoking in public is a case of:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Negative consumption externality</div><div class="mcq-opt"><span class="ol">B.</span>Negative production externality</div><div class="mcq-opt"><span class="ol">C.</span>Internalising externality</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q11</span>(I) Market-based approaches to control externalities operate through the price mechanism. (II) When externalities are present, welfare loss is eliminated. (III) The key is to internalize an externality by ensuring those who create it include it in decisions.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>II and III are correct</div><div class="mcq-opt"><span class="ol">B.</span>I only is correct</div><div class="mcq-opt"><span class="ol">C.</span>II only is correct</div><div class="mcq-opt"><span class="ol">D.</span>I and III are correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q12</span>Which of the following statements is FALSE?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Tradable permits provide incentive to innovate and reduce negative externalities</div><div class="mcq-opt"><span class="ol">B.</span>A subsidy on a good with positive externalities reduces its cost and price</div><div class="mcq-opt"><span class="ol">C.</span>Substantial negative externalities are involved in the consumption of merit goods</div><div class="mcq-opt"><span class="ol">D.</span>Merit goods are likely to be under-produced and under-consumed by the market</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q13</span>Which of the following would you suggest for reducing negative externality?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Production subsidies</div><div class="mcq-opt"><span class="ol">B.</span>Excise duty</div><div class="mcq-opt"><span class="ol">C.</span>Pigouvian taxes</div><div class="mcq-opt"><span class="ol">D.</span>All of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q14</span>A Pigouvian subsidy:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Cannot be present when externalities are present</div><div class="mcq-opt"><span class="ol">B.</span>Is a good solution for negative externality as prices will increase</div><div class="mcq-opt"><span class="ol">C.</span>Is not measurable in money and therefore not practical</div><div class="mcq-opt"><span class="ol">D.</span>May help production to be socially optimal when positive externalities are present</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q15</span>If governments make it compulsory to avail insurance protection, it is because:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Insurance companies need to run profitably</div><div class="mcq-opt"><span class="ol">B.</span>Insurance will generate moral hazard and adverse selection</div><div class="mcq-opt"><span class="ol">C.</span>Insurance is a merit good and government wants people to consume it</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q16</span>The Competition Act, 2002 aims to:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Protect monopoly positions of firms with unique innovations</div><div class="mcq-opt"><span class="ol">B.</span>Promote and sustain competition in markets</div><div class="mcq-opt"><span class="ol">C.</span>Determine pricing under natural monopoly</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q17</span>Rules regarding product labelling:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Seek to correct market failure due to externalities</div><div class="mcq-opt"><span class="ol">B.</span>Are a method of solving the problem of public good</div><div class="mcq-opt"><span class="ol">C.</span>May help solve market failure due to information failure</div><div class="mcq-opt"><span class="ol">D.</span>Reduce the problem of monopolies</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q18</span>Identify the INCORRECT statement:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>MSP for agricultural goods is a market intervention to guarantee assured incomes to farmers</div><div class="mcq-opt"><span class="ol">B.</span>An externality is internalised if those who generate it incorporate it into their private cost-benefit analysis</div><div class="mcq-opt"><span class="ol">C.</span>The production and consumption of demerit goods are likely to be less than optimal under free markets</div><div class="mcq-opt"><span class="ol">D.</span>Cap-and-trade is administratively cheap and minimises pollution cost-effectively</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q19</span>The incentive to let other people pay for a good whose benefits an individual enjoys:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Is a case of negative externality</div><div class="mcq-opt"><span class="ol">B.</span>Is a case of market efficiency</div><div class="mcq-opt"><span class="ol">C.</span>Is a case of free riding</div><div class="mcq-opt"><span class="ol">D.</span>Is inappropriate and warrants action</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q20</span>A government subsidy:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Is a market-based policy</div><div class="mcq-opt"><span class="ol">B.</span>Involves government paying part of the cost to firms to promote goods with positive externalities</div><div class="mcq-opt"><span class="ol">C.</span>Is generally provided for merit goods</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q21</span>The production and consumption of demerit goods are:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Likely to be more than optimal under free markets</div><div class="mcq-opt"><span class="ol">B.</span>Likely to be less than optimal under free markets</div><div class="mcq-opt"><span class="ol">C.</span>Likely to be subjected to price intervention by government</div><div class="mcq-opt"><span class="ol">D.</span>(a) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q22</span>The argument for education subsidy is based on:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Education is costly</div><div class="mcq-opt"><span class="ol">B.</span>The ground that education is a merit good</div><div class="mcq-opt"><span class="ol">C.</span>Education creates positive externalities</div><div class="mcq-opt"><span class="ol">D.</span>(b) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q23</span>(I) Social costs are total costs incurred by society when a good is consumed/produced. (II) External costs are not included in firms' income statements. (III) Each firm's cost for determining output is only private cost. (IV) Production decisions are efficient only when private costs are considered.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Statements I and III are correct</div><div class="mcq-opt"><span class="ol">B.</span>Statements I, II and III are correct</div><div class="mcq-opt"><span class="ol">C.</span>Statement I only is correct</div><div class="mcq-opt"><span class="ol">D.</span>All the above are correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q24</span>Government failure occurs when:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Government fails to implement its election promises</div><div class="mcq-opt"><span class="ol">B.</span>A government is unable to get re-elected</div><div class="mcq-opt"><span class="ol">C.</span>Government intervention is ineffective and produces fresh, more serious problems</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 7 · UNIT 3 — BUDGET MAKING: REVENUE, EXPENDITURE & PUBLIC DEBT
+   ===================================================================== */
+UNIT_DATA['ch7u3'] = {
+  chapterLabel: 'Chapter 7 · Public Finance',
+  unitLabel: 'Unit 3 · Budget · Revenue · Expenditure · Public Debt',
+  sections: [
+
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">The Process of Budget Making</div>
+      <div class="page-sub">Unit 3 · Sources of revenue, expenditure management &amp; public debt</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Define the government budget and explain its need and objectives.</li>
+          <li>Describe budget concepts and terminologies; illustrate budget making.</li>
+          <li>Detail sources of government revenue and expenditure.</li>
+          <li>Elucidate the process of management of public debt.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>What Is a Budget?</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>A statement of 'where the money comes from' and 'where the money goes to' — a schedule of the entire revenues and expenditures the government expects to receive and plans to spend in the following year. The most comprehensive report of government finances.</div>
+        <p>Objectives: efficient resource allocation, reallocation per priorities, redistribution, reduction of fluctuations (stability), sustainable GDP growth, and reduction of regional disparities.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Budget in the Constitution (Article 112)</div>
+        <p>The term 'budget' is not in the Constitution; Article 112 requires the President to lay before parliament the <span class="kt">Annual Financial Statement (AFS)</span> of estimated receipts &amp; expenditure. Prepared by the Ministry of Finance with NITI Aayog. Three procedures: <span class="kt">preparation → presentation &amp; enactment → execution</span>. Preparation begins Aug-Sept of the previous year; presented on <strong>1 February</strong> (since 2017-18, when the railway budget was also merged with the general budget).</p>
+      </div>
+    `
+  },
+
+  {
+    label: 'Budget Process & Documents',
+    html: `
+      <div class="page-title">Process, Speech &amp; Documents</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Two Processes &amp; the Speech</div>
+        <p>The budget has an <span class="kt">administrative process</span> (preparation with stakeholders) and a <span class="kt">legislative process</span> (passed by parliament). The Budget Division issues the <span class="kt">budget circular</span>. Documents cover three years: Budget Estimates (BE), Revised Estimates (RE), and Actuals of the preceding year.</p>
+        <div class="grid2">
+          <div class="mini-card"><div class="mc-title">Budget Speech — Part A</div><div class="mc-val">Macro-economic situation, estimates, priorities, funds raised and allocations.</div></div>
+          <div class="mini-card"><div class="mc-title">Budget Speech — Part B</div><div class="mc-val">Progress on measures, future policies, and tax proposals.</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Budget Documents &amp; Enactment</div>
+        <p>Key documents: AFS, Demands for Grants (DG), Finance Bill, and FRBM-mandated statements (Macro-Economic Framework Statement; Medium-Term Fiscal Policy cum Fiscal Policy Strategy Statement).</p>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Term</th><th>Meaning</th></tr>
+          <tr><td>Appropriation Bill</td><td>Authorises spending from the Consolidated Fund of India</td></tr>
+          <tr><td>Finance Bill</td><td>Gives effect to taxation proposals; must pass within 75 days</td></tr>
+          <tr><td>Cut Motions</td><td>Seek to reduce sums demanded by government</td></tr>
+          <tr><td>Guillotine</td><td>Speaker puts all outstanding demands to vote when time is up</td></tr>
+          <tr><td>Vote on Account</td><td>Interim provision; in an election year the budget may be presented twice</td></tr>
+        </table></div>
+        <div class="callout imp"><div class="ct">💡 Rajya Sabha</div>The RS does not vote on Demands for Grants (only general discussion). Being a money bill, it must return the Finance Bill within 14 days.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Revenue & Expenditure',
+    html: `
+      <div class="page-title">Sources of Revenue &amp; Expenditure</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Government Receipts</div>
+        <p>The Department of Revenue works through two boards: <span class="kt">CBDT</span> (direct taxes) and <span class="kt">CBIC</span> (GST, customs, excise). Receipts fall into two categories:</p>
+        <div class="compare-wrap">
+          <div class="compare-col left">
+            <div class="cc-h">Revenue Receipts</div>
+            <ul><li>Neither create liability nor reduce assets</li><li><strong>Tax:</strong> corporation, income, customs, union excise, GST</li><li><strong>Non-tax:</strong> interest receipts, dividends/profits from PSEs, RBI surplus</li></ul>
+          </div>
+          <div class="compare-col right">
+            <div class="cc-h">Capital Receipts</div>
+            <ul><li>Reduce assets or increase liabilities</li><li><strong>Non-debt:</strong> recovery of loans, disinvestment</li><li><strong>Debt:</strong> market loans, treasury bills, small savings, net external debt</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Public Expenditure &amp; Budget Concepts</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Concept</th><th>Meaning</th></tr>
+          <tr><td>Revenue Expenditure</td><td>Does not create physical/financial assets (normal functioning, interest, grants)</td></tr>
+          <tr><td>Capital Expenditure</td><td>Creates assets or reduces liabilities (land, buildings, machinery, loans)</td></tr>
+          <tr><td>Balanced Budget</td><td>Revenue = Expenditure</td></tr>
+          <tr><td>Surplus Budget</td><td>Receipts &gt; Expenditure (R &gt; E)</td></tr>
+          <tr><td>Deficit Budget</td><td>Receipts &lt; Expenditure — most modern economies follow this</td></tr>
+        </table></div>
+        <div class="callout exam"><div class="ct">🎯 Outcome Budget</div>Links budgetary allocations to annual performance targets measured through output &amp; outcome indicators — a "progress card" on schemes.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Three Government Accounts (AFS)</div>
+        <div class="grid3">
+          <div class="mini-card"><div class="mc-title">Consolidated Fund</div><div class="mc-val">All revenues, loans &amp; loan repayments. Spending needs parliament's appropriation.</div></div>
+          <div class="mini-card"><div class="mc-title">Contingency Fund</div><div class="mc-val">At the President's disposal for urgent unforeseen expenditure; no prior approval.</div></div>
+          <div class="mini-card"><div class="mc-title">Public Account</div><div class="mc-val">Article 266(1) — government acts as banker (Provident Funds, Small Savings). No parliament approval needed.</div></div>
+        </div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Deficits',
+    html: `
+      <div class="page-title">Measures of Government Deficit</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Deficit Formulas</div>
+        <div class="eq-box">Budgetary Deficit = Total Expenditure − Total Revenue (revenue + capital)</div>
+        <div class="eq-box">Revenue Deficit = Revenue Expenditure − Revenue Receipts</div>
+        <div class="eq-box">Fiscal Deficit = Total Expenditure − Total Receipts excluding borrowing<br><small>= Revenue Deficit + (Capital Expenditure − Non-debt Capital Receipts)</small></div>
+        <div class="eq-box">Primary Deficit = Fiscal Deficit − Net Interest liabilities</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>What Each Deficit Tells Us</div>
+        <ul class="note-list">
+          <li><span class="kt">Fiscal deficit</span> = total borrowing requirement from all sources; financed by borrowing.</li>
+          <li>A large <span class="kt">revenue deficit</span> within the fiscal deficit signals borrowing used for consumption, not investment.</li>
+          <li><span class="kt">Primary deficit</span> = borrowing exclusive of interest payments; focuses on present fiscal imbalances.</li>
+        </ul>
+      </div>
+
+      <div class="illus-box">
+        <div class="il-h">🧮 Worked Example (Country A)</div>
+        <div class="il-q">Revenue receipts 20000, Recovery of loans 1500, Other receipts 5000; Revenue expenditure 24500, Capital expenditure 26000; Interest payments 2000 (₹Cr).</div>
+        <div class="il-a">Revenue deficit = 24500 − 20000 = <strong>4500</strong>. Fiscal deficit = (24500+26000) − (20000+1500+5000) = 50500 − 26500 = <strong>24000</strong>. Primary deficit = 24000 − 2000 = <strong>22000</strong>.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Public Debt',
+    html: `
+      <div class="page-title">Public Debt Management</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>What Is Public Debt?</div>
+        <p>Government debt from internal &amp; external sources contracted in the Consolidated Fund. Not a one-time exercise — <span class="kt">debt servicing</span> is continuous; the government <span class="kt">refinances</span> (rolls over) maturing bonds rather than cutting spending. Strategy rests on three pillars: <strong>low cost of borrowing, risk mitigation, market development</strong>.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Who Manages It</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Debt type</th><th>Manager</th></tr>
+          <tr><td>Domestic marketable debt (dated securities, T-bills)</td><td>Reserve Bank of India (IDMD)</td></tr>
+          <tr><td>External debt (bilateral, multilateral)</td><td>Ministry of Finance (Dept. of Economic Affairs)</td></tr>
+          <tr><td>Other liabilities (small savings, deposits)</td><td>MoF Budget Division &amp; RBI</td></tr>
+        </table></div>
+        <p>External debt is mostly from multilateral agencies (IBRD, ADB); no sovereign borrowing from international capital markets. Its main risk is <span class="kt">currency depreciation</span> raising servicing cost. <span class="kt">Ways and Means Advances (WMA)</span> give states short-term RBI credit (up to 3 months) for cash-flow mismatches.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Legal &amp; Institutional Framework</div>
+        <ul class="note-list">
+          <li><span class="kt">FRBM Act, 2003</span> — legislative framework for deficit &amp; debt reduction: inter-generational equity, macroeconomic stability, fiscal-monetary coordination, transparency.</li>
+          <li><span class="kt">Public Debt Management Cell (PDMC)</span> — created 2016 under DEA; MTDS 2021-24 sets the debt portfolio composition.</li>
+          <li><span class="kt">RBI Retail Direct</span> (announced 5 Feb 2021) — online retail access to G-sec markets.</li>
+        </ul>
+      </div>
+    `
+  },
+
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 3 — Summary</div>
+      <ul class="summary-list">
+        <li>The budget (Article 112 — Annual Financial Statement) is the government's schedule of revenues and expenditures, presented on 1 February.</li>
+        <li>Enactment involves the Appropriation Bill and Finance Bill (75-day limit); Guillotine, Cut Motions and Vote on Account are key devices.</li>
+        <li>Receipts = revenue (tax + non-tax) and capital (debt + non-debt). Three accounts: Consolidated Fund, Contingency Fund, Public Account.</li>
+        <li>Revenue Deficit = Rev Exp − Rev Receipts; Fiscal Deficit = Total Exp − Receipts excl. borrowing; Primary Deficit = Fiscal Deficit − Interest.</li>
+        <li>Public debt is refinanced continuously; managed by RBI (domestic) and MoF (external) on three pillars.</li>
+        <li>The FRBM Act, 2003 and PDMC frame debt sustainability; RBI Retail Direct broadens G-sec access.</li>
+      </ul>
+    `
+  },
+
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 3</div>
+      <div class="page-sub">Official ICAI questions on budget, revenue, expenditure and debt. Calculation questions include the relevant figures inline.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch7u3" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch7u3')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q1</span>The difference between the budget deficit of a government and its debt service payments is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Fiscal deficit</div><div class="mcq-opt"><span class="ol">B.</span>Budget deficit</div><div class="mcq-opt"><span class="ol">C.</span>Primary deficit</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q2</span>For Country A (₹Cr): Revenue receipts 20,000; Recovery of loans 1,500; Borrowing 15,000; Other receipts 5,000; Revenue expenditure 24,500; Capital expenditure 26,000; Interest payments 2,000. The <strong>revenue deficit</strong> is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>5,000</div><div class="mcq-opt"><span class="ol">B.</span>24,000</div><div class="mcq-opt"><span class="ol">C.</span>4,500</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q3</span>Using the same Country A data, the <strong>fiscal deficit</strong> is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>14,000</div><div class="mcq-opt"><span class="ol">B.</span>24,000</div><div class="mcq-opt"><span class="ol">C.</span>23,500</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q4</span>Using the same Country A data, the <strong>primary deficit</strong> is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>26,000</div><div class="mcq-opt"><span class="ol">B.</span>26,500</div><div class="mcq-opt"><span class="ol">C.</span>22,000</div><div class="mcq-opt"><span class="ol">D.</span>24,500</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q5</span>In NITI Aayog, NITI stands for:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>National Initiative for Transforming India</div><div class="mcq-opt"><span class="ol">B.</span>National Institution for Transforming India</div><div class="mcq-opt"><span class="ol">C.</span>National Institute for Technology and Innovation</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q6</span>The Appropriation Bill is intended to:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Reduce unnecessary expenditure on the part of the government</div><div class="mcq-opt"><span class="ol">B.</span>Give authority to government to incur expenditure from and out of the Consolidated Fund of India</div><div class="mcq-opt"><span class="ol">C.</span>Give authority to incur expenditure from the revenue receipts only</div><div class="mcq-opt"><span class="ol">D.</span>Be passed before the budget is taken for discussion</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q7</span>Public debt management aims at:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>An efficient budgetary policy to avail domestic debt facilities</div><div class="mcq-opt"><span class="ol">B.</span>Raising loans from international agencies at lower rates</div><div class="mcq-opt"><span class="ol">C.</span>Raising the required amount of funding at the desired risk and cost levels</div><div class="mcq-opt"><span class="ol">D.</span>Management of public expenditure to reduce public debt</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q8</span>The railway budget is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Part of the general budget, but presented by the railway minister</div><div class="mcq-opt"><span class="ol">B.</span>Part of the general budget from the budget for FY 2017-18</div><div class="mcq-opt"><span class="ol">C.</span>Part of the general budget from the budget for FY 2021-22</div><div class="mcq-opt"><span class="ol">D.</span>Part of the general budget but presented on the next day</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q9</span>Outcome budgeting:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Shares information about money allocated for various purposes</div><div class="mcq-opt"><span class="ol">B.</span>Establishes a direct link between budgetary allocations and performance targets measured through output and outcome indicators</div><div class="mcq-opt"><span class="ol">C.</span>Establishes a link between performance targets and public account disbursals</div><div class="mcq-opt"><span class="ol">D.</span>Shares information about public policies and programmes</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q10</span>Corporate tax:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Is collected by the union and can be a capital or revenue receipt</div><div class="mcq-opt"><span class="ol">B.</span>May be collected by the respective states and falls under revenue receipts</div><div class="mcq-opt"><span class="ol">C.</span>May be collected by centre or states and falls under revenue receipts</div><div class="mcq-opt"><span class="ol">D.</span>Is collected by the union government and is a revenue receipt</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q11</span>Government borrowings from foreign governments and institutions:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Capital receipt</div><div class="mcq-opt"><span class="ol">B.</span>Revenue receipt</div><div class="mcq-opt"><span class="ol">C.</span>Accounts for fiscal deficit</div><div class="mcq-opt"><span class="ol">D.</span>Any of the above depending on the purpose of borrowing</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q12</span>For an economy (₹lakh Cr): Recovery of loans 5.1; Salaries 41.1; Capital expenditure 45.0; Interest payments 1.3; Subsidies 3.2; Other receipts (disinvestment) 11.6; Tax revenue (net) 26.3; Non-tax revenue 12.3; Borrowings 6.8; States' share 11.9. The <strong>capital receipts</strong> are:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>23.5</div><div class="mcq-opt"><span class="ol">B.</span>19.7</div><div class="mcq-opt"><span class="ol">C.</span>11.3</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q13</span>Using the same economy data, the <strong>revenue deficit</strong> is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>23.6</div><div class="mcq-opt"><span class="ol">B.</span>13.0</div><div class="mcq-opt"><span class="ol">C.</span>7.0</div><div class="mcq-opt"><span class="ol">D.</span>2.6</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q14</span>Using the same economy data, the <strong>non-debt capital receipts</strong> are:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>45.1</div><div class="mcq-opt"><span class="ol">B.</span>16.7</div><div class="mcq-opt"><span class="ol">C.</span>15.8</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q15</span>A budget is said to be unbalanced when:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Government's revenue exceeds government's expenditure</div><div class="mcq-opt"><span class="ol">B.</span>Government's expenditure exceeds government's revenue</div><div class="mcq-opt"><span class="ol">C.</span>Either budget surplus or budget deficit occurs</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q16</span>Fiscal deficit refers to:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The excess of revenue expenditure over revenue receipts</div><div class="mcq-opt"><span class="ol">B.</span>The excess of total expenditure over total receipts excluding borrowings</div><div class="mcq-opt"><span class="ol">C.</span>Primary deficit − interest payments</div><div class="mcq-opt"><span class="ol">D.</span>None of these</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q17</span>The budget of the government generally impacts:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The resource allocation in the economy</div><div class="mcq-opt"><span class="ol">B.</span>Redistribution of income and enhance equity</div><div class="mcq-opt"><span class="ol">C.</span>Stability in the economy by controlling price fluctuations</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q18</span>Which is a statement submitted along with the budget as a requirement of the FRBM Act?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Annual Financial Statement</div><div class="mcq-opt"><span class="ol">B.</span>Macro-Economic Framework Statement</div><div class="mcq-opt"><span class="ol">C.</span>Medium-Term Fiscal Policy cum Fiscal Policy Strategy Statement</div><div class="mcq-opt"><span class="ol">D.</span>(b) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q19</span>Government borrowing is treated as a capital receipt because:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>It is mainly used for creating assets by government</div><div class="mcq-opt"><span class="ol">B.</span>It creates a liability for the government</div><div class="mcq-opt"><span class="ol">C.</span>Both (a) and (b) are correct</div><div class="mcq-opt"><span class="ol">D.</span>None of the above is correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q20</span>'Retail Direct' scheme is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Initiated by the Reserve Bank of India</div><div class="mcq-opt"><span class="ol">B.</span>To facilitate investment in government securities by individual investors</div><div class="mcq-opt"><span class="ol">C.</span>Direct sale of goods and services by government departments</div><div class="mcq-opt"><span class="ol">D.</span>Both (a) and (b) are correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q21</span>Non-debt capital receipts:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Do not add to the assets of the government and are not treated as capital receipts</div><div class="mcq-opt"><span class="ol">B.</span>Are those that do not create any future repayment burden for the government</div><div class="mcq-opt"><span class="ol">C.</span>Are those that create future liabilities for the government</div><div class="mcq-opt"><span class="ol">D.</span>Facilitate capital investments at low cost</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q22</span>Which of the following is a capital receipt?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Licence fee received</div><div class="mcq-opt"><span class="ol">B.</span>Sale proceeds from disinvestment</div><div class="mcq-opt"><span class="ol">C.</span>Assistance from Japan for covid vaccine</div><div class="mcq-opt"><span class="ol">D.</span>Dividend from a public sector enterprise</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q23</span>Grants given by the central government to state governments is:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>A revenue expenditure as it meets the current expenditure of the states</div><div class="mcq-opt"><span class="ol">B.</span>A revenue expenditure as it neither creates any asset nor reduces any liability of the government</div><div class="mcq-opt"><span class="ol">C.</span>A capital expenditure because it increases the capital base of the states</div><div class="mcq-opt"><span class="ol">D.</span>A grant and so does not come under revenue or capital expenditure</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q24</span>Short-term credit from the Reserve Bank to state governments to bridge temporary mismatches in cash flows is known as:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>RBI credit to states</div><div class="mcq-opt"><span class="ol">B.</span>Commercial credit of RBI</div><div class="mcq-opt"><span class="ol">C.</span>Ways and Means Advances (WMA)</div><div class="mcq-opt"><span class="ol">D.</span>Short term facility</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+    `
+  }
+  ]
+};
+
+/* =====================================================================
+   CHAPTER 7 · UNIT 4 — FISCAL POLICY
+   ===================================================================== */
+UNIT_DATA['ch7u4'] = {
+  chapterLabel: 'Chapter 7 · Public Finance',
+  unitLabel: 'Unit 4 · Fiscal Policy',
+  sections: [
+
+  {
+    label: 'Overview',
+    html: `
+      <div class="page-title">Fiscal Policy</div>
+      <div class="page-sub">Unit 4 · Using taxation, expenditure &amp; borrowing to manage the economy</div>
+
+      <div class="lo-box">
+        <div class="lo-label">LEARNING OUTCOMES</div>
+        <ul>
+          <li>Define fiscal policy and list its objectives.</li>
+          <li>Explain the various instruments of fiscal policy.</li>
+          <li>Describe expansionary and contractionary fiscal policies.</li>
+          <li>Elucidate the limitations of fiscal policy.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>What Is Fiscal Policy?</div>
+        <div class="callout def"><div class="ct">📌 Definition</div>The deliberate policy of government using <span class="kt">taxation, public expenditure and public borrowing</span> to influence the pattern of economic activity and the level of aggregate demand, output and employment. It is a <span class="kt">demand-side</span> policy.</div>
+        <p>Significance was unrecognised before 1930 (laissez-faire). In 1936, <span class="kt">Keynes</span> (<em>General Theory</em>) advocated increased government spending to combat recession and unemployment. An economy at full employment does not require fiscal policy.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Objectives &amp; the GDP Equation</div>
+        <p>Common objectives: full employment, price stability, acceleration of economic development, and equitable distribution of income &amp; wealth (priorities vary by country).</p>
+        <div class="eq-box">GDP = C + I + G + NX</div>
+        <p>Government directly controls <span class="kt">G</span> and indirectly influences <span class="kt">C, I, NX</span> through taxes, transfer payments and expenditure.</p>
+      </div>
+    `
+  },
+
+  {
+    label: 'Types of Fiscal Policy',
+    html: `
+      <div class="page-title">Expansionary &amp; Contractionary Policy</div>
+      <div class="page-sub">Contra-cyclical fiscal policy corrects business-cycle instability</div>
+
+      <div class="compare-wrap">
+        <div class="compare-col left">
+          <div class="cc-h">Expansionary (closes a recessionary gap)</div>
+          <ul>
+            <li>Used in recession / anticipated contraction</li>
+            <li>Cut all types of taxes → higher disposable income</li>
+            <li>Increase government expenditure → ↑ aggregate demand</li>
+            <li>May run into a <span class="kt">budget deficit</span></li>
+          </ul>
+        </div>
+        <div class="compare-col right">
+          <div class="cc-h">Contractionary (closes an inflationary gap)</div>
+          <ul>
+            <li>Used in inflation / anticipated overheating</li>
+            <li>Decrease government spending</li>
+            <li>Increase personal &amp; business taxes → ↓ demand</li>
+            <li>Leads to a smaller deficit or larger <span class="kt">surplus</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>To Sum Up</div>
+        <div class="tbl-wrap"><table class="tbl">
+          <tr><th>Situation</th><th>Aim</th><th>Action</th></tr>
+          <tr><td>Inflation / over-utilization</td><td>Control excessive aggregate spending</td><td>↓ spending, ↑ taxes, ↓ money supply</td></tr>
+          <tr><td>Deflation / sluggish activity</td><td>Compensate deficient demand</td><td>↑ spending, ↓ taxes, ↑ money supply</td></tr>
+        </table></div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Instruments',
+    html: `
+      <div class="page-title">The Instruments of Fiscal Policy</div>
+      <div class="page-sub">Taxes · Government expenditure · Public debt · Budget</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>Government Expenditure</div>
+        <p>Three types: current expenditure (day-to-day running), capital expenditure (investment in infrastructure), and transfer payments (do not contribute to GDP). Public expenditure is income-generating; through the <span class="kt">multiplier</span>, primary employment induces secondary &amp; tertiary employment. The extent of the effect depends on the <span class="kt">MPC</span>. Reducing spending helps curb inflation.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Taxes, Public Debt &amp; Budget</div>
+        <ul class="note-list">
+          <li><span class="kt">Taxes</span> — determine disposable income → aggregate demand. In recession: cut income &amp; corporate taxes. In inflation: levy new / raise existing taxes (but excessive taxation stifles investment).</li>
+          <li><span class="kt">Public debt</span> — market loans (T-bills, securities) and small savings (National Savings Certificates). Borrowing curtails aggregate demand; repayment increases it.</li>
+          <li><span class="kt">Budget</span> — balanced (no net effect), surplus (negative net effect; leakages &gt; injections), deficit (positive net effect; injections &gt; leakages).</li>
+        </ul>
+        <div class="callout imp"><div class="ct">💡 Financing a Deficit</div>Through <span class="kt">borrowing</span> (risks crowding out private spending) or <span class="kt">monetization</span> (creating new money).</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Fiscal Policy &amp; Long-Run Growth / Equality</div>
+        <p>Demand-side policies alone cannot produce long-run growth; supply-side effects matter too. Infrastructure spending and public goods (education, healthcare, R&amp;D) build human &amp; physical capital. For equality: a <span class="kt">progressive direct tax</span> system, differential indirect taxes (luxuries taxed heavily, necessities lightly), and targeted public expenditure (poverty alleviation, subsidised services, social security).</p>
+      </div>
+    `
+  },
+
+  {
+    label: 'Limitations & Crowding Out',
+    html: `
+      <div class="page-title">Limitations &amp; Crowding Out</div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">①</span>The Four Lags</div>
+        <div class="flow-row">
+          <div class="flow-step">Recognition<br><small>spot the need</small></div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Decision<br><small>choose policy</small></div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Implementation<br><small>legislate &amp; enact</small></div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Impact<br><small>outcomes appear</small></div>
+        </div>
+        <p>Lags can cause <span class="nt">bad timing</span> — an expansionary policy may start when the economy is already recovering.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">②</span>Other Limitations</div>
+        <ul class="note-list">
+          <li>Hard to instantly change spending &amp; tax policies; difficult to cut defence, social security, or midway capital projects.</li>
+          <li>Public works have long gestation and cannot track the trade cycle.</li>
+          <li>Supply-side disincentives (profit tax ↓ investment; generous benefits ↓ work &amp; saving).</li>
+          <li>Deficit financing can cause runaway prices; borrowing burdens future generations.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="num">③</span>Crowding Out</div>
+        <div class="callout warn"><div class="ct">⚠️ Crowding Out</div>When expansionary policy is financed by government borrowing, it reduces loanable funds and pushes <span class="kt">interest rates up</span>, reducing interest-sensitive private investment &amp; consumption. When government spending <span class="nt">replaces</span> private spending, the latter is "crowded out" and fiscal policy becomes less effective.</div>
+        <div class="callout imp"><div class="ct">💡 Exception</div>During <span class="kt">deep recessions</span>, crowding out is less likely — private investment is already minimal, and government can borrow without raising interest rates.</div>
+      </div>
+    `
+  },
+
+  {
+    label: 'Summary',
+    html: `
+      <div class="page-title">Unit 4 — Summary</div>
+      <ul class="summary-list">
+        <li>Fiscal policy uses taxation, expenditure &amp; borrowing to influence aggregate demand, output and employment (demand-side).</li>
+        <li>Significance was recognised only after 1930 (Keynes, 1936); its objectives are full employment, price stability, growth and equity.</li>
+        <li>GDP = C + I + G + NX; government controls G directly and C, I, NX indirectly.</li>
+        <li>Expansionary policy (↑ spending / ↓ taxes) closes a recessionary gap; contractionary policy (↓ spending / ↑ taxes) closes an inflationary gap.</li>
+        <li>Instruments: government expenditure, taxes, public debt and the budget.</li>
+        <li>Limitations: recognition, decision, implementation &amp; impact lags; timing; disincentives; and crowding out (less likely in deep recessions).</li>
+      </ul>
+    `
+  },
+
+  {
+    label: 'Practice MCQs',
+    html: `
+      <div class="page-title">Practice MCQs — Unit 4</div>
+      <div class="page-sub">Official ICAI questions on fiscal policy.</div>
+
+      <div class="mcq-toolbar">
+        <span class="mcq-score" id="score-ch7u4" data-tally="0,0">Score: 0 / 0</span>
+        <button class="mcq-reset-btn" onclick="resetMcqs('ch7u4')">↺ Reset all</button>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q1</span>Fiscal policy refers to the:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Use of government spending, taxation and borrowing to influence the level of economic activity</div><div class="mcq-opt"><span class="ol">B.</span>Government activities related to use of spending for supply of essential goods</div><div class="mcq-opt"><span class="ol">C.</span>Use of government spending, taxation and borrowing for reducing fiscal deficits</div><div class="mcq-opt"><span class="ol">D.</span>(a) and (b) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q2</span>If real GDP is continuously declining and unemployment is increasing, the appropriate policy should be to:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Increase taxes and decrease government spending</div><div class="mcq-opt"><span class="ol">B.</span>Decrease both taxes and government spending</div><div class="mcq-opt"><span class="ol">C.</span>Decrease taxes and increase government spending</div><div class="mcq-opt"><span class="ol">D.</span>Either (a) or (c)</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q3</span>Which are likely to occur in an expansionary phase of a business cycle? (A) Rising unemployment (B) Falling unemployment (C) Rising inflation (D) Deflation (E) Falling wages (F) Increasing tax revenue (G) Falling tax revenue.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>A, B and F are most likely</div><div class="mcq-opt"><span class="ol">B.</span>B, C and F are most likely</div><div class="mcq-opt"><span class="ol">C.</span>D, E and F are most likely</div><div class="mcq-opt"><span class="ol">D.</span>A, E and G are most likely</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q4</span>During recession the fiscal policy should be directed towards:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Increasing taxes and reducing aggregate demand</div><div class="mcq-opt"><span class="ol">B.</span>Decreasing taxes to ensure higher disposable income</div><div class="mcq-opt"><span class="ol">C.</span>Increasing government expenditure and increasing taxes</div><div class="mcq-opt"><span class="ol">D.</span>None of the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q5</span>According to Keynesian economics, when we have inflation an effective fiscal policy should NOT include:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Increase corporate taxes</div><div class="mcq-opt"><span class="ol">B.</span>Decrease aggregate demand</div><div class="mcq-opt"><span class="ol">C.</span>Increase government purchases</div><div class="mcq-opt"><span class="ol">D.</span>None of the above is correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q6</span>Keynesian economists believe that:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Fiscal policy can have very powerful effects on aggregate demand, employment and output</div><div class="mcq-opt"><span class="ol">B.</span>When the economy operates at less than full employment and needs a stimulus, fiscal policy is of great use</div><div class="mcq-opt"><span class="ol">C.</span>Wages are flexible so fluctuations adjust automatically</div><div class="mcq-opt"><span class="ol">D.</span>(a) and (b) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q7</span>Which may ensure a decrease in aggregate demand during inflation?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Decrease in all types of government spending and/or an increase in taxes</div><div class="mcq-opt"><span class="ol">B.</span>Increase in government spending and/or a decrease in taxes</div><div class="mcq-opt"><span class="ol">C.</span>Decrease in government spending and/or a decrease in taxes</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q8</span>A recession is characterized by:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Declining prices and rising employment</div><div class="mcq-opt"><span class="ol">B.</span>Declining unemployment and rising prices</div><div class="mcq-opt"><span class="ol">C.</span>Declining real income and rising unemployment</div><div class="mcq-opt"><span class="ol">D.</span>Rising real income and rising prices</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q9</span>Which one of the following is an example of fiscal policy?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>A tax cut aimed at increasing disposable income and spending</div><div class="mcq-opt"><span class="ol">B.</span>A reduction in government expenditure to contain inflation</div><div class="mcq-opt"><span class="ol">C.</span>An increase in taxes and decrease in government expenditure to control inflation</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q10</span>Which of the following would illustrate a recognition lag?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The time required to identify the appropriate policy</div><div class="mcq-opt"><span class="ol">B.</span>The time required to pass a legislation</div><div class="mcq-opt"><span class="ol">C.</span>The time required to identify the need for a policy change</div><div class="mcq-opt"><span class="ol">D.</span>The time required to establish the outcomes of fiscal policy</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q11</span>An expansionary fiscal policy, everything else constant, would in the short-run have the effect of:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>A relatively large increase in GDP and a smaller increase in price</div><div class="mcq-opt"><span class="ol">B.</span>A relatively large increase in price, a smaller increase in GDP</div><div class="mcq-opt"><span class="ol">C.</span>Both GDP and price increasing in the same proportion</div><div class="mcq-opt"><span class="ol">D.</span>Both GDP and price increasing in a smaller proportion</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="2">
+        <div class="mcq-q"><span class="qn">Q12</span>Which statement(s) are correct about crowding out? (I) A decline in private spending may be partly offset by demand from higher government expenditure. (II) It is the negative effect when money is 'crowded out' from private to public sector. (III) When government spending increases, government spending is crowded out. (IV) Interest-sensitive private investment falls if interest rates rise due to increased government spending.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>I and III only</div><div class="mcq-opt"><span class="ol">B.</span>I, II and III</div><div class="mcq-opt"><span class="ol">C.</span>I, II and IV</div><div class="mcq-opt"><span class="ol">D.</span>III only</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q13</span>Which policy is likely to shift an economy's aggregate demand curve to the right?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Increase in government spending</div><div class="mcq-opt"><span class="ol">B.</span>Decrease in taxes</div><div class="mcq-opt"><span class="ol">C.</span>A tax cut along with increase in public expenditure</div><div class="mcq-opt"><span class="ol">D.</span>All the above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="0">
+        <div class="mcq-q"><span class="qn">Q14</span>Identify the INCORRECT statement:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>A progressive direct tax system ensures economic growth with stability because it distributes the burden of taxes unequally</div><div class="mcq-opt"><span class="ol">B.</span>A carefully planned policy of public expenditure helps redistribute income from the rich to the poor</div><div class="mcq-opt"><span class="ol">C.</span>There are possible conflicts between different objectives of fiscal policy</div><div class="mcq-opt"><span class="ol">D.</span>An increase in government spending during recessions may 'crowd out' private spending</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q15</span>(I) Fiscal policy is contractionary when revenue &gt; spending (budget surplus). (II) A fiscal expansion will raise interest rates and "crowd out" private investment. (III) During inflation new taxes can be levied and existing rates raised to reduce disposable income. (IV) Classical economists advocated contractionary fiscal policy for inflation.</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>I and II are correct</div><div class="mcq-opt"><span class="ol">B.</span>I, II and III are correct</div><div class="mcq-opt"><span class="ol">C.</span>Only III is correct</div><div class="mcq-opt"><span class="ol">D.</span>All are correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q16</span>While resorting to expansionary fiscal policy:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The government may have a budget surplus as increased expenditure brings more output and tax revenue</div><div class="mcq-opt"><span class="ol">B.</span>The government may run into budget deficits because tax cuts reduce income and expenditure exceeds revenue</div><div class="mcq-opt"><span class="ol">C.</span>It is important to have a balanced budget to avoid inflation</div><div class="mcq-opt"><span class="ol">D.</span>None of the above will happen</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q17</span>Contractionary fiscal policy:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Is resorted to when government expenditure is greater than tax revenues</div><div class="mcq-opt"><span class="ol">B.</span>Increases aggregate demand to sustain the economy</div><div class="mcq-opt"><span class="ol">C.</span>Increases disposable income through tax cuts to enable greater demand</div><div class="mcq-opt"><span class="ol">D.</span>Is designed to restrain economic activity during an inflationary phase</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q18</span>When government spending is deliberately reduced to bring in stability:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The government is resorting to contractionary fiscal policy</div><div class="mcq-opt"><span class="ol">B.</span>The government is resorting to expansionary fiscal policy</div><div class="mcq-opt"><span class="ol">C.</span>Trying to limit aggregate demand to sustainable levels</div><div class="mcq-opt"><span class="ol">D.</span>(a) and (c) above</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q19</span>An increase in personal income taxes:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Reduces disposable incomes leading to fall in consumption and aggregate demand</div><div class="mcq-opt"><span class="ol">B.</span>Is desirable during inflation or when aggregate demand is excessive</div><div class="mcq-opt"><span class="ol">C.</span>Is to compensate deficiency in effective demand by boosting spending</div><div class="mcq-opt"><span class="ol">D.</span>Both (a) and (b) are correct</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q20</span>While resorting to deliberate fiscal policy, the government may NOT attempt to manipulate:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Government expenditures on public works</div><div class="mcq-opt"><span class="ol">B.</span>The rates of personal income taxes and corporate taxes</div><div class="mcq-opt"><span class="ol">C.</span>Government expenditures on goods and services purchased by government</div><div class="mcq-opt"><span class="ol">D.</span>The rate of interest prevailing in the economy</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="1">
+        <div class="mcq-q"><span class="qn">Q21</span>Which fiscal remedy would you advise when an economy is facing recession?</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>The government may cut interest rates to encourage consumption and investment</div><div class="mcq-opt"><span class="ol">B.</span>The government may cut taxes to increase aggregate demand</div><div class="mcq-opt"><span class="ol">C.</span>The government may follow a policy of a balanced budget</div><div class="mcq-opt"><span class="ol">D.</span>None of the above will work</div></div>
+        <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
+      </div>
+
+      <div class="mcq-card" data-correct="3">
+        <div class="mcq-q"><span class="qn">Q22</span>When governments compete with the private sector to borrow money for expansionary fiscal policy:</div>
+        <div class="mcq-opts"><div class="mcq-opt"><span class="ol">A.</span>Interest rates will go up and firms may not be willing to invest</div><div class="mcq-opt"><span class="ol">B.</span>Interest rates will go up and individuals too may be reluctant to borrow and spend</div><div class="mcq-opt"><span class="ol">C.</span>Interest rates will go up and the desired increase in aggregate demand may not be realized</div><div class="mcq-opt"><span class="ol">D.</span>All the above are possible</div></div>
         <div class="mcq-reveal"><button class="mcq-reveal-btn">Reveal answer</button></div>
       </div>
 
